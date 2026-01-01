@@ -6,3 +6,14 @@ theme = "PaperMod"
 [params]
   defaultTheme = "dark"
   ShowReadingTime = false
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
