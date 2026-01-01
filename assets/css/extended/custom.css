@@ -1,0 +1,54 @@
+/* 只改首页/列表页（不改文章详情页） */
+.home .post-entry,
+.list .post-entry {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* 左边正文区域占满 */
+.home .post-entry .entry-header,
+.home .post-entry .entry-content,
+.home .post-entry .entry-footer,
+.list .post-entry .entry-header,
+.list .post-entry .entry-content,
+.list .post-entry .entry-footer {
+  flex: 1 1 auto;
+}
+
+/* 右侧封面缩略图 */
+.home .post-entry .entry-cover,
+.list .post-entry .entry-cover {
+  order: 2;
+  flex: 0 0 240px;      /* 红框宽度，你可改 200/260 */
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  align-self: stretch;
+}
+
+/* 让图铺满红框 */
+.home .post-entry .entry-cover img,
+.list .post-entry .entry-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 小屏幕自动恢复“上图下文” */
+@media (max-width: 720px) {
+  .home .post-entry,
+  .list .post-entry {
+    display: block;
+  }
+  .home .post-entry .entry-cover,
+  .list .post-entry .entry-cover {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .home .post-entry .entry-cover img,
+  .list .post-entry .entry-cover img {
+    height: auto;
+  }
+}
