@@ -1,0 +1,8 @@
+baseURL = "http://localhost/"
+languageCode = "zh-cn"
+title = "Meditationes Sansepulcristarum"
+theme = "PaperMod"
+
+[params]
+  defaultTheme = "dark"
+  ShowReadingTime = false
