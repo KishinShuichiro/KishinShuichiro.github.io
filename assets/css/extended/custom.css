@@ -51,4 +51,15 @@
   .list .post-entry .entry-cover img {
     height: auto;
   }
+
+/* 修复标题被挤成竖排的问题 */
+.home .post-entry .entry-header,
+.home .post-entry .entry-content,
+.home .post-entry .entry-footer,
+.list .post-entry .entry-header,
+.list .post-entry .entry-content,
+.list .post-entry .entry-footer {
+  min-width: 0;              /* ⭐ 关键 */
+  word-break: break-word;    /* 正常断词 */
+  overflow-wrap: anywhere;  /* 防止被挤成单字一行 */
 }
