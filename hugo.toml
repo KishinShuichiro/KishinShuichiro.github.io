@@ -7,6 +7,10 @@ theme = "PaperMod"
   defaultTheme = "dark"
   ShowReadingTime = false
 
+[params.cover]
+  hiddenInList = false
+  hiddenInSingle = false
+
 [menu]
   [[menu.main]]
     name = "Posts"
