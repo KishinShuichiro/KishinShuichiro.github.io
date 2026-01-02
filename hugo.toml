@@ -9,11 +9,6 @@ theme = "PaperMod"
   ShowFirstPost = false
   mainSections = ["posts"]
 
-[params.homeInfoParams]
-  Title = "Welcome"
-  Content = "测试一下。\n\n*Liebe dein Symptom wie dich selbst.*"
-
-
 [params.cover]
   hiddenInList = false
   hiddenInSingle = false
