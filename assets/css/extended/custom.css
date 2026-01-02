@@ -75,4 +75,33 @@
     width: 100%;
     aspect-ratio: 4 / 3;
   }
+
+/* ===============================
+   强制取消首页首篇文章的 single / first-entry 行为
+   =============================== */
+
+/* 不论它叫什么，首页第一篇一律按列表卡片处理 */
+.home article:first-of-type {
+  display: grid !important;
+  grid-template-columns: 1fr 200px;
+  column-gap: 18px;
+  align-items: start;
+}
+
+/* 第一篇封面也缩成 4:3 小缩略图 */
+.home article:first-of-type .entry-cover {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  width: 200px;
+  aspect-ratio: 4 / 3;
+  align-self: start;
+}
+
+/* 禁止首页出现 single-page 正文样式 */
+.home article:first-of-type .post-content,
+.home article:first-of-type .toc,
+.home article:first-of-type .post-footer {
+  display: none;
+}
+
 }
