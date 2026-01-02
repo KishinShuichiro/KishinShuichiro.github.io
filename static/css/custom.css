@@ -55,40 +55,28 @@ body.list main article.first-entry figure.entry-cover img{
   }
 
 /* =========================================================
-   首页 Welcome（home-info）改为无框、背景融合、居中展示
+   首页 _index.md 序言：无框、居中、背景融合
    ========================================================= */
 
-/* 整个 Welcome 容器 */
-.home-info {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
+body.list main .page-content {
+  max-width: 720px;
+  margin: 3rem auto 2.5rem;
+  padding: 0 1rem;
 
-  padding: 3rem 1rem 2.5rem !important;
-  margin: 0 auto 2.5rem !important;
-
-  text-align: center !important;
-  max-width: 720px; /* 控制行宽，避免一行太长 */
+  text-align: center;
 }
 
-/* Welcome 标题 */
-.home-info h1 {
-  font-size: 2.2rem !important;
-  font-weight: 600;
-  margin-bottom: 1rem !important;
+body.list main .page-content h1,
+body.list main .page-content h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
 }
 
-/* Welcome 正文 */
-.home-info .entry-content {
-  font-size: 1rem !important;
-  line-height: 1.8 !important;
-  color: var(--secondary) !important;
+body.list main .page-content p {
+  line-height: 1.8;
+  color: var(--secondary);
 }
 
-/* 去掉原本卡片的 hover / active 行为（如果有） */
-.home-info:hover {
-  transform: none !important;
-}
 
 }
