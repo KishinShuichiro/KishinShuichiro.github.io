@@ -1,0 +1,56 @@
+/* 首页第一篇（article.first-entry）强制缩略卡片 */
+body.list main article.first-entry{
+  display:grid !important;
+  grid-template-columns:1fr 200px !important;
+  column-gap:18px !important;
+  align-items:start !important;
+
+  min-height:unset !important;
+  margin:var(--gap) 0 !important;
+  padding:var(--gap) !important;
+
+  background:var(--entry) !important;
+  border-radius:var(--radius) !important;
+  border:1px solid var(--border) !important;
+}
+
+body.list main article.first-entry .entry-header,
+body.list main article.first-entry .entry-content,
+body.list main article.first-entry .entry-footer{
+  grid-column:1 !important;
+  min-width:0 !important;
+}
+
+body.list main article.first-entry figure.entry-cover{
+  grid-column:2 !important;
+  grid-row:1 / span 3 !important;
+
+  margin:0 !important;
+  width:200px !important;
+  aspect-ratio:4 / 3 !important;
+
+  overflow:hidden !important;
+  border-radius:14px !important;
+  align-self:start !important;
+}
+
+body.list main article.first-entry figure.entry-cover img{
+  width:100% !important;
+  height:100% !important;     /* 干掉主题的 height:auto */
+  object-fit:cover !important;
+  display:block !important;
+}
+
+/* 小屏幕恢复上图下文 */
+@media (max-width: 720px){
+  body.list main article.first-entry{
+    grid-template-columns:1fr !important;
+    row-gap:12px !important;
+  }
+  body.list main article.first-entry figure.entry-cover{
+    grid-column:1 !important;
+    grid-row:auto !important;
+    width:100% !important;
+    aspect-ratio:4/3 !important;
+  }
+}
