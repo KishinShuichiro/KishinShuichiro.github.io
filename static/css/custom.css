@@ -78,5 +78,58 @@ body.list main .page-content p {
   color: var(--secondary);
 }
 
+  /* =========================================================
+   首页序言（content/_index.md）排版优化
+   ========================================================= */
+
+/* 整个首页正文容器 */
+body.list main .page-content {
+  max-width: 920px;            /* ✅ 页幅更宽（默认约 720） */
+  margin: 4rem auto 3.5rem;    /* ✅ 与上方/下方明显隔开 */
+  padding: 0 1.5rem;
+
+  text-align: left;            /* 正文不居中，阅读更自然 */
+}
+
+/* 段落文字本身 */
+body.list main .page-content p {
+  font-size: 0.95rem;          /* ✅ 字号略小于文章正文 */
+  line-height: 1.95;           /* 行距舒展 */
+  margin: 0 0 1.8rem 0;        /* ✅ 段间距明显拉开 */
+  color: var(--secondary);
+}
+
+/* 如果你在序言里用了强调（斜体） */
+body.list main .page-content em {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* 如果你未来加了小标题（可选） */
+body.list main .page-content h2,
+body.list main .page-content h3 {
+  margin: 3rem 0 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* 移动端微调 */
+@media (max-width: 720px) {
+  body.list main .page-content {
+    max-width: 100%;
+    margin: 3rem auto 2.5rem;
+    padding: 0 1.2rem;
+  }
+
+  body.list main .page-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+  body.list main .page-content p {
+  color: rgba(255,255,255,0.72);
+}
+
 
 }
