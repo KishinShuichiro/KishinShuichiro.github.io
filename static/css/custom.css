@@ -1,7 +1,7 @@
 /* =========================================================
    PaperMod 自定义（首页 list 页为主）
    - 首篇(first-entry)缩略卡片化：左文右图 4:3
-   - 首页序言(post-content)：更宽、更小字、更大段距、上下隔开
+   - 首页序言(post-content)：更小字、更大段距、上下分割线
    ========================================================= */
 
 
@@ -46,7 +46,7 @@ body.list main article.first-entry figure.entry-cover {
 
 body.list main article.first-entry figure.entry-cover img {
   width: 100% !important;
-  height: 100% !important; /* 干掉主题的 height:auto */
+  height: 100% !important;
   object-fit: cover !important;
   display: block !important;
 }
@@ -68,55 +68,8 @@ body.list main article.first-entry figure.entry-cover img {
 
 
 /* =========================================================
-   2) 首页序言（div.post-content）排版优化
-   说明：你的 DOM 显示首页序言是 <div class="post-content">
+   2) 首页序言（div.post-content）
    ========================================================= */
-
-/* 桌面端：首页 main 放宽（必须在 @media 外，否则只窄屏生效） */
-/* body.list main.main {
-/*max-width: 1120px !important; /* 你想更宽可改 1200 */
-/*}
-
-/* 序言容器本身：在更宽的 main 里保持克制宽度 + 上下留白 */
-body.list main.main > .post-content {
-  max-width: 100% !important;   /* 关键：别比卡片窄 */
-  margin: 4rem 0 3.5rem !important;
-  padding: 0 1.5rem !important;
-}
-
-/* 段落：字号更小、段距更大 */
-body.list main.main > .post-content p {
-  font-size: 0.92rem !important;
-  line-height: 2.0 !important;
-  margin: 0 0 2.1rem 0 !important;
-  color: rgba(255, 255, 255, 0.7) !important; /* 比 secondary 更“冷”一点 */
-}
-
-/* 斜体/强调 */
-body.list main.main > .post-content em {
-  opacity: 0.9;
-}
-
-/* 小屏幕：序言回退为自适应宽度 */
-@media (max-width: 720px) {
-  body.list main.main {
-    max-width: 100% !important;
-  }
-
-  body.list main.main > .post-content {
-    max-width: 100% !important;
-    margin: 3rem auto 2.5rem !important;
-    padding: 0 1.2rem !important;
-  }
-
-  body.list main.main > .post-content p {
-    margin-bottom: 1.8rem !important;
-  }
-
-/* =========================================================
-首页序言（div.post-content）
-上下分割线 + 排版优化
-========================================================= */
 
 body.list main.main > .post-content {
   max-width: 100% !important;
@@ -130,7 +83,6 @@ body.list main.main > .post-content::before {
   content: "";
   display: block;
   height: 1px;
-  max-width: 100%;
   margin: 0 auto 3rem;
   opacity: 0.18;
   background: currentColor;
@@ -141,7 +93,6 @@ body.list main.main > .post-content::after {
   content: "";
   display: block;
   height: 1px;
-  max-width: 100%;
   margin: 3rem auto 0;
   opacity: 0.18;
   background: currentColor;
@@ -152,10 +103,14 @@ body.list main.main > .post-content p {
   font-size: 0.92rem !important;
   line-height: 2.0 !important;
   margin: 0 0 2.1rem 0 !important;
-  color: var(--secondary) !important;
+  color: rgba(255, 255, 255, 0.70) !important;
 }
 
-/* 移动端 */
+body.list main.main > .post-content em {
+  opacity: 0.9;
+}
+
+/* 小屏幕：序言微调 */
 @media (max-width: 720px) {
   body.list main.main > .post-content {
     margin: 3rem 0 2.5rem !important;
@@ -165,6 +120,4 @@ body.list main.main > .post-content p {
   body.list main.main > .post-content p {
     margin-bottom: 1.8rem !important;
   }
-}
-
 }
