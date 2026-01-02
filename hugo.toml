@@ -6,7 +6,8 @@ theme = "PaperMod"
 [params]
   defaultTheme = "dark"
   ShowReadingTime = false
-  ShowFirstPost = false 
+  ShowFirstPost = false
+  mainSections = ["posts"]
 
 [params.cover]
   hiddenInList = false
