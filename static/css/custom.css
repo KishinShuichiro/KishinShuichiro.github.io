@@ -73,16 +73,15 @@ body.list main article.first-entry figure.entry-cover img {
    ========================================================= */
 
 /* 桌面端：首页 main 放宽（必须在 @media 外，否则只窄屏生效） */
-body.list main.main {
-  max-width: 1120px !important; /* 你想更宽可改 1200 */
-}
+/* body.list main.main {
+/*max-width: 1120px !important; /* 你想更宽可改 1200 */
+/*}
 
 /* 序言容器本身：在更宽的 main 里保持克制宽度 + 上下留白 */
 body.list main.main > .post-content {
-  max-width: 980px !important;
-  margin: 4rem auto 3.5rem !important; /* 与上方/下方隔开 */
+  max-width: 100% !important;   /* 关键：别比卡片窄 */
+  margin: 4rem 0 3.5rem !important;
   padding: 0 1.5rem !important;
-  text-align: left;
 }
 
 /* 段落：字号更小、段距更大 */
@@ -90,7 +89,7 @@ body.list main.main > .post-content p {
   font-size: 0.92rem !important;
   line-height: 2.0 !important;
   margin: 0 0 2.1rem 0 !important;
-  color: rgba(255, 255, 255, 0.72) !important; /* 比 secondary 更“冷”一点 */
+  color: rgba(255, 255, 255, 0.7) !important; /* 比 secondary 更“冷”一点 */
 }
 
 /* 斜体/强调 */
