@@ -1,9 +1,20 @@
 {{ define "main" }}
 
-{{/* 取 mainSections；如果你没配，就默认用 posts */}}
+{{/* 你期望的主栏目；默认 posts */}}
 {{ $main := site.Params.mainSections | default (slice "posts") }}
-{{ $pages := where site.RegularPages "Type" "in" $main }}
 
+{{/* 优先按 Section 过滤（比 Type 更可靠） */}}
+{{ $pages := where site.RegularPages "Section" "in" $main }}
+
+{{/* 兜底：如果过滤后为空，就显示全部 RegularPages（避免首页变空） */}}
+{{ if eq (len $pages) 0 }}
+  {{ $pages = site.RegularPages }}
+{{ end }}
+
+{{/* 排序：最新在前 */}}
+{{ $pages = $pages.ByDate.Reverse }}
+
+{{/* 分页（如果你不想分页也可以去掉 Paginate） */}}
 {{ $paginator := .Paginate $pages }}
 
 {{ range $paginator.Pages }}
