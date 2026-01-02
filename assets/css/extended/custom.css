@@ -1,18 +1,18 @@
 /* =========================================================
    PaperMod 自定义：仅影响 首页(home) 与 列表页(list)
-   目标：左文右图（封面在右侧红框位置），标题在上，摘要在下
+   目标：左文右图（4:3 小缩略图），标题在上，摘要在下
    ========================================================= */
 
-/* ✅ 卡片容器：用 Grid 防止 header/content/footer 被挤成竖排 */
+/* ✅ 卡片容器：Grid 布局，左文右图 */
 .home .post-entry,
 .list .post-entry {
   display: grid !important;
-  grid-template-columns: 1fr 240px; /* 右侧封面宽度：可改 200/260 */
+  grid-template-columns: 1fr 200px; /* ⭐ 小缩略图宽度（200px） */
   column-gap: 18px;
-  align-items: stretch;
+  align-items: start;
 }
 
-/* ✅ 左列：标题/摘要/日期等都固定在第一列 */
+/* ✅ 左列：标题 / 摘要 / 日期 */
 .home .post-entry .entry-header,
 .home .post-entry .entry-content,
 .home .post-entry .entry-footer,
@@ -20,18 +20,18 @@
 .list .post-entry .entry-content,
 .list .post-entry .entry-footer {
   grid-column: 1;
-  min-width: 0;             /* ⭐ 关键：避免被挤成竖排 */
-  overflow-wrap: anywhere;  /* 允许在任何位置换行（防长词/长链接） */
+  min-width: 0;             /* 防止被挤成竖排 */
+  overflow-wrap: anywhere;
   word-break: break-word;
 }
 
-/* 让 footer（日期）尽量贴底（可选，喜欢就留，不喜欢删） */
+/* footer（日期）贴底（可选） */
 .home .post-entry .entry-footer,
 .list .post-entry .entry-footer {
   margin-top: auto;
 }
 
-/* ✅ 右列：封面图放第二列，并贯穿三行（标题/摘要/footer） */
+/* ✅ 右列：统一 4:3 小缩略图 */
 .home .post-entry .entry-cover,
 .list .post-entry .entry-cover {
   grid-column: 2;
@@ -39,10 +39,13 @@
   margin: 0;
   border-radius: 14px;
   overflow: hidden;
-  align-self: stretch;
+
+  width: 200px;             /* 与 grid 列宽一致 */
+  aspect-ratio: 4 / 3;      /* ⭐ 核心：统一 4:3 */
+  align-self: start;        /* ⭐ 不再被左侧内容拉伸 */
 }
 
-/* ✅ 封面图铺满红框 */
+/* 封面图铺满缩略图 */
 .home .post-entry .entry-cover img,
 .list .post-entry .entry-cover img {
   width: 100%;
@@ -51,14 +54,13 @@
   display: block;
 }
 
-/* ✅ 没有封面的文章：自动单列（不留右侧空白）
-   需要现代浏览器（Edge/Chrome 新版都支持） */
+/* ✅ 没有封面图的文章：自动单列 */
 .home .post-entry:not(:has(.entry-cover)),
 .list .post-entry:not(:has(.entry-cover)) {
   grid-template-columns: 1fr;
 }
 
-/* ✅ 小屏幕：恢复“上图下文” */
+/* ✅ 小屏幕：恢复上图下文 */
 @media (max-width: 720px) {
   .home .post-entry,
   .list .post-entry {
@@ -70,10 +72,7 @@
   .list .post-entry .entry-cover {
     grid-column: 1;
     grid-row: auto;
-  }
-
-  .home .post-entry .entry-cover img,
-  .list .post-entry .entry-cover img {
-    height: auto;
+    width: 100%;
+    aspect-ratio: 4 / 3;
   }
 }
