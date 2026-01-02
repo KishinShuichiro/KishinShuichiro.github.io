@@ -97,18 +97,6 @@ body.list main.main > .post-content em {
   opacity: 0.9;
 }
 
-/* 分隔线：让序言和文章列表视觉分离（不想要可删） */
-
-body.list main.main > .post-content::after {
-  content: "";
-  display: block;
-  height: 1px;
-  margin: 3rem auto 0;
-  max-width: 980px;
-  opacity: 0.18;
-  background: currentColor;
-}
-
 /* 小屏幕：序言回退为自适应宽度 */
 @media (max-width: 720px) {
   body.list main.main {
@@ -124,4 +112,59 @@ body.list main.main > .post-content::after {
   body.list main.main > .post-content p {
     margin-bottom: 1.8rem !important;
   }
+
+/* =========================================================
+首页序言（div.post-content）
+上下分割线 + 排版优化
+========================================================= */
+
+body.list main.main > .post-content {
+  max-width: 100% !important;
+  margin: 4rem 0 3.5rem !important;
+  padding: 0 1.5rem !important;
+  position: relative;
+}
+
+/* 顶部分割线 */
+body.list main.main > .post-content::before {
+  content: "";
+  display: block;
+  height: 1px;
+  max-width: 100%;
+  margin: 0 auto 3rem;
+  opacity: 0.18;
+  background: currentColor;
+}
+
+/* 底部分割线 */
+body.list main.main > .post-content::after {
+  content: "";
+  display: block;
+  height: 1px;
+  max-width: 100%;
+  margin: 3rem auto 0;
+  opacity: 0.18;
+  background: currentColor;
+}
+
+/* 段落排版 */
+body.list main.main > .post-content p {
+  font-size: 0.92rem !important;
+  line-height: 2.0 !important;
+  margin: 0 0 2.1rem 0 !important;
+  color: var(--secondary) !important;
+}
+
+/* 移动端 */
+@media (max-width: 720px) {
+  body.list main.main > .post-content {
+    margin: 3rem 0 2.5rem !important;
+    padding: 0 1.2rem !important;
+  }
+
+  body.list main.main > .post-content p {
+    margin-bottom: 1.8rem !important;
+  }
+}
+
 }
