@@ -131,5 +131,53 @@ body.list main .page-content h3 {
   color: rgba(255,255,255,0.72);
 }
 
+  /* =========================================================
+   首页序言（div.post-content）排版优化：更宽、更小字、更大段距、上下留白
+   仅影响首页（body.list）顶部那段自我介绍
+   ========================================================= */
+
+body.list main.main > .post-content {
+  max-width: 980px !important;       /* ✅ 页幅更宽 */
+  margin: 4rem auto 3.5rem !important; /* ✅ 与上方/下方隔开 */
+  padding: 0 1.5rem !important;
+}
+
+/* 段落：字号更小、段间距更大 */
+body.list main.main > .post-content p {
+  font-size: 0.92rem !important;     /* ✅ 字号更小 */
+  line-height: 2.0 !important;       /* 行距舒展 */
+  margin: 0 0 2.1rem 0 !important;   /* ✅ 段间距更大 */
+  color: var(--secondary) !important;
+}
+
+/* 如果你有引用/斜体 */
+body.list main.main > .post-content em {
+  opacity: 0.9;
+}
+
+/* 可选：给序言和下面文章列表加一道“空气分隔线”（不想要就删掉） */
+body.list main.main > .post-content::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 3rem auto 0;
+  max-width: 980px;
+  opacity: 0.18;
+  background: currentColor;
+}
+
+/* 移动端 */
+@media (max-width: 720px) {
+  body.list main.main > .post-content {
+    max-width: 100% !important;
+    margin: 3rem auto 2.5rem !important;
+    padding: 0 1.2rem !important;
+  }
+  body.list main.main > .post-content p {
+    font-size: 0.92rem !important;
+    margin-bottom: 1.8rem !important;
+  }
+}
+
 
 }
