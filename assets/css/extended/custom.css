@@ -76,32 +76,59 @@
     aspect-ratio: 4 / 3;
   }
 
-/* ===============================
-   强制取消首页首篇文章的 single / first-entry 行为
-   =============================== */
+/* =========================================================
+   强制把首页第一篇（first-entry）变成和其他卡片一样的缩略样式
+   ========================================================= */
 
-/* 不论它叫什么，首页第一篇一律按列表卡片处理 */
-.home article:first-of-type {
+/* 1) 首页第一篇也用“左文右图”布局 */
+.home .post-entry.first-entry {
   display: grid !important;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr 200px !important; /* 小缩略图宽度 */
   column-gap: 18px;
   align-items: start;
 }
 
-/* 第一篇封面也缩成 4:3 小缩略图 */
-.home article:first-of-type .entry-cover {
+/* 2) 第一篇的封面固定成 4:3 小缩略图 */
+.home .post-entry.first-entry .entry-cover {
   grid-column: 2;
   grid-row: 1 / span 3;
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+
   width: 200px;
   aspect-ratio: 4 / 3;
   align-self: start;
 }
 
-/* 禁止首页出现 single-page 正文样式 */
-.home article:first-of-type .post-content,
-.home article:first-of-type .toc,
-.home article:first-of-type .post-footer {
-  display: none;
+.home .post-entry.first-entry .entry-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+
+/* 3) 防止第一篇“像单篇文章那样”展开得太长：把摘要压成几行 */
+.home .post-entry.first-entry .entry-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       /* 你想几行就改这里：2/3/4 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 4) 小屏幕仍保持上图下文（与您原逻辑一致） */
+@media (max-width: 720px) {
+  .home .post-entry.first-entry {
+    grid-template-columns: 1fr !important;
+    row-gap: 12px;
+  }
+  .home .post-entry.first-entry .entry-cover {
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+  }
+}
+
 
 }
