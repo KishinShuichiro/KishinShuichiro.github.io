@@ -53,4 +53,42 @@ body.list main article.first-entry figure.entry-cover img{
     width:100% !important;
     aspect-ratio:4/3 !important;
   }
+
+/* =========================================================
+   首页 Welcome（home-info）改为无框、背景融合、居中展示
+   ========================================================= */
+
+/* 整个 Welcome 容器 */
+.home-info {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  padding: 3rem 1rem 2.5rem !important;
+  margin: 0 auto 2.5rem !important;
+
+  text-align: center !important;
+  max-width: 720px; /* 控制行宽，避免一行太长 */
+}
+
+/* Welcome 标题 */
+.home-info h1 {
+  font-size: 2.2rem !important;
+  font-weight: 600;
+  margin-bottom: 1rem !important;
+}
+
+/* Welcome 正文 */
+.home-info .entry-content {
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+  color: var(--secondary) !important;
+}
+
+/* 去掉原本卡片的 hover / active 行为（如果有） */
+.home-info:hover {
+  transform: none !important;
+}
+
 }
