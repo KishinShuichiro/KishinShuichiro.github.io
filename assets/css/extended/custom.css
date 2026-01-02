@@ -77,58 +77,88 @@
   }
 
 /* =========================================================
-   强制把首页第一篇（first-entry）变成和其他卡片一样的缩略样式
+   覆盖 PaperMod 默认 first-entry（首页第一篇大卡）样式
+   目标：让第一篇也变成“左文右图 + 右侧 4:3 小缩略图”
    ========================================================= */
 
-/* 1) 首页第一篇也用“左文右图”布局 */
-.home .post-entry.first-entry {
+/* 1) 把 first-entry 的 flex / min-height 全部打掉，改成与你的卡片一致的 Grid */
+.home .first-entry {
   display: grid !important;
   grid-template-columns: 1fr 200px !important; /* 小缩略图宽度 */
-  column-gap: 18px;
-  align-items: start;
+  column-gap: 18px !important;
+  align-items: start !important;
+
+  min-height: unset !important;
+  margin: var(--gap) 0 !important; /* 不要额外放大间距 */
+  padding: var(--gap) !important;
+
+  background: var(--entry) !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
 }
 
-/* 2) 第一篇的封面固定成 4:3 小缩略图 */
-.home .post-entry.first-entry .entry-cover {
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  margin: 0;
-  border-radius: 14px;
-  overflow: hidden;
-
-  width: 200px;
-  aspect-ratio: 4 / 3;
-  align-self: start;
+/* 2) 让首篇的 header/content/footer 都在左列 */
+.home .first-entry .entry-header,
+.home .first-entry .entry-content,
+.home .first-entry .entry-footer {
+  grid-column: 1 !important;
+  min-width: 0 !important;
 }
 
-.home .post-entry.first-entry .entry-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+/* 3) 首篇封面固定成右侧 4:3 小缩略图 */
+.home .first-entry .entry-cover {
+  grid-column: 2 !important;
+  grid-row: 1 / span 3 !important;
+
+  margin: 0 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+
+  width: 200px !important;
+  aspect-ratio: 4 / 3 !important;
+  align-self: start !important;
+
+  text-align: left !important; /* 防止居中导致怪异 */
 }
 
-/* 3) 防止第一篇“像单篇文章那样”展开得太长：把摘要压成几行 */
-.home .post-entry.first-entry .entry-content {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;       /* 你想几行就改这里：2/3/4 */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+/* 4) 关键：把主题默认的 img(height:auto) 改成填满容器 + cover */
+.home .first-entry .entry-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;  /* 容器已圆角，避免双圆角 */
+  display: block !important;
 }
 
-/* 4) 小屏幕仍保持上图下文（与您原逻辑一致） */
+/* 5) 首篇标题别再 34px 巨大化，回到普通卡片尺度（你想保留更大也可删掉这段） */
+.home .first-entry .entry-header h1,
+.home .first-entry .entry-header h2 {
+  font-size: 24px !important;
+  line-height: 1.3 !important;
+}
+
+/* 6) 摘要行数保持一致（可按喜好改 2/3/4） */
+.home .first-entry .entry-content {
+  margin: 8px 0 !important;
+  font-size: 14px !important;
+  -webkit-line-clamp: 4 !important;
+}
+
+/* 7) 小屏幕：恢复上图下文 */
 @media (max-width: 720px) {
-  .home .post-entry.first-entry {
+  .home .first-entry {
     grid-template-columns: 1fr !important;
-    row-gap: 12px;
+    row-gap: 12px !important;
   }
-  .home .post-entry.first-entry .entry-cover {
-    grid-column: 1;
-    grid-row: auto;
-    width: 100%;
-    aspect-ratio: 4 / 3;
+
+  .home .first-entry .entry-cover {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
   }
 }
+
 
 
 }
