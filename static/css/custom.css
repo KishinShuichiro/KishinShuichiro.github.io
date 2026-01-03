@@ -85,7 +85,7 @@ body.list main.main > .post-content::before {
   height: 1px;
   margin: 0 auto 1.5rem;
   background: var(--border);
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 /* 底部分割线 */
@@ -95,7 +95,7 @@ body.list main.main > .post-content::after {
   height: 1px;
   margin: 1.5rem auto 0;
   background: var(--border);
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 /* 首页序言段落：跟随 PaperMod 正文颜色变量 */
