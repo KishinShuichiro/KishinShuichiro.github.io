@@ -2,6 +2,7 @@ baseURL = "https://kishinshuichiro.github.io/"
 languageCode = "zh-cn"
 title = "Meditationes Sansepulcristarum"
 theme = "PaperMod"
+timeZone = "Asia/Tokyo"
 
 [params]
   defaultTheme = "dark"
