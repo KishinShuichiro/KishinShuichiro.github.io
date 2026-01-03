@@ -85,7 +85,8 @@ body.list main.main > .post-content::before {
   height: 1px;
   margin: 0 auto 1.5rem;
   opacity: 0.18;
-  background: currentColor;
+  background: var(--border);
+  opacity: 0.5;
 }
 
 /* 底部分割线 */
@@ -95,20 +96,23 @@ body.list main.main > .post-content::after {
   height: 1px;
   margin: 1.5rem auto 0;
   opacity: 0.18;
-  background: currentColor;
+  background: var(--border);
+  opacity: 0.5;
 }
 
-/* 段落排版 */
+/* 首页序言段落：跟随 PaperMod 正文颜色变量 */
 body.list main.main > .post-content p {
   font-size: 0.92rem !important;
   line-height: 2.0 !important;
   margin: 0 0 2.1rem 0 !important;
-  color: rgba(255, 255, 255, 0.70) !important;
+  color: var(--content) !important;   /* ⭐ 核心 */
 }
 
+/* 强调文本稍微弱一点，但仍跟主题 */
 body.list main.main > .post-content em {
-  opacity: 0.9;
+  color: var(--secondary);
 }
+
 
 /* 小屏幕：序言微调 */
 @media (max-width: 720px) {
