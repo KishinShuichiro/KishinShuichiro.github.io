@@ -4,14 +4,13 @@ title = "Meditationes Sansepulcristarum"
 theme = "PaperMod"
 timeZone = "Asia/Tokyo"
 
+disableKinds = ["RSS"]
+
 [params]
   defaultTheme = "dark"
   ShowReadingTime = false
   ShowFirstPost = false
   mainSections = ["posts"]
-
-[author]
-name = "Shuichiro Kishin"
 
 [params.cover]
   hiddenInList = false
