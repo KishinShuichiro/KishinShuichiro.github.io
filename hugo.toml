@@ -4,7 +4,8 @@ title = "Meditationes Sansepulcristarum"
 theme = "PaperMod"
 timeZone = "Asia/Tokyo"
 
-disableKinds = ["RSS"]
+[author]
+name = "Shuichiro Kishin"
 
 [params]
   defaultTheme = "dark"
