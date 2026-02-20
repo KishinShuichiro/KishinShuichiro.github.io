@@ -10,6 +10,9 @@ timeZone = "Asia/Tokyo"
   ShowFirstPost = false
   mainSections = ["posts"]
 
+[author]
+name = "Shuichiro Kishin"
+
 [params.cover]
   hiddenInList = false
   hiddenInSingle = false
