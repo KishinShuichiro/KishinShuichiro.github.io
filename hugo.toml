@@ -9,7 +9,7 @@ timeZone = "Asia/Tokyo"
   ShowReadingTime = false
   ShowFirstPost = false
   mainSections = ["posts"]
-  author = "Shuichiro Kishin"
+  author = "​"
 
 [params.cover]
   hiddenInList = false
@@ -25,3 +25,7 @@ timeZone = "Asia/Tokyo"
     name = "About"
     url = "/about/"
     weight = 2
+
+[markup.goldmark.renderer]
+  hardWraps = true
+  unsafe = true
