@@ -16,62 +16,105 @@
     margin-bottom: 2.5rem;
 }
 
+
+/* ---------- Project list ---------- */
+
 .project-list {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
 }
+
+
+/*
+   保持原来的纯列表效果：
+   - 没有背景色
+   - 没有圆角
+   - 没有阴影
+   - 只有上下边线
+*/
 
 .project-card {
-    padding: 1.4rem 1.5rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--entry);
+    margin: 0;
 
-    transition:
-        border-color 0.15s ease,
-        transform 0.15s ease,
-        background 0.15s ease;
+    border-top: 1px solid var(--border);
+
+    background: transparent;
 }
 
-.project-card:hover {
-    border-color: var(--secondary);
-    transform: translateY(-1px);
+
+/*
+   最后一项补下边线，
+   这样整个列表上下闭合。
+*/
+
+.project-card:last-child {
+    border-bottom: 1px solid var(--border);
 }
 
-.project-card:first-child {
-    padding-top: 0;
+
+/*
+   整块都可以点击。
+*/
+
+.project-card-link {
+    display: block;
+
+    padding: 1.35rem 0;
+
+    color: inherit;
+
+    text-decoration: none;
 }
+
+
+/*
+   Hover 不改变布局，
+   只略微提亮整项。
+*/
+
+.project-card-link:hover {
+    text-decoration: none;
+}
+
+.project-card-link:hover .project-card-title {
+    opacity: 0.8;
+}
+
+
+/* ---------- Card content ---------- */
 
 .project-card-title {
     margin: 0 0 0.45rem;
-    font-size: 1.35rem;
-}
 
-.project-card-title a {
-    text-decoration: none;
+    font-size: 1.35rem;
+
+    transition: opacity 0.15s ease;
 }
 
 .project-card-summary {
     margin: 0.4rem 0;
+
     line-height: 1.65;
+
     color: var(--secondary);
 }
 
 .project-card-meta {
     display: flex;
     flex-wrap: wrap;
+
     gap: 0.8rem;
 
     margin-top: 0.65rem;
 
     font-size: 0.8rem;
+
     color: var(--secondary);
 }
 
 
 /* ============================================================
-   2. Project detail page
+   2. Project detail
    /projects/example/
    ============================================================ */
 
@@ -86,32 +129,37 @@
 
 .project-header-panel {
     margin-bottom: 0;
+
     padding: 0 0 2rem;
 }
 
 .project-header-panel h1 {
     margin: 0 0 0.65rem;
+
     font-size: 2rem;
 }
 
 .project-meta {
     display: flex;
     flex-wrap: wrap;
+
     gap: 0.9rem;
 
     font-size: 0.8rem;
+
     color: var(--secondary);
 }
 
 .project-status {
     text-transform: uppercase;
+
     letter-spacing: 0.05em;
 }
 
 
 /* ------------------------------------------------------------
    2.2 Main workspace
-   Body + Notes
+   左正文 + 右 Notes
    ------------------------------------------------------------ */
 
 .project-workspace {
@@ -132,7 +180,7 @@
 
 
 /* ------------------------------------------------------------
-   2.3 Main body
+   2.3 Body
    ------------------------------------------------------------ */
 
 .project-body-panel {
@@ -149,6 +197,7 @@
 
 .project-content {
     font-size: 1rem;
+
     line-height: 1.9;
 }
 
@@ -160,6 +209,8 @@
 .project-notes-panel {
     min-width: 0;
 
+    height: 70vh;
+
     padding:
         1.5rem
         0
@@ -167,11 +218,11 @@
         0;
 
     display: flex;
+
     flex-direction: column;
 
-    height: 70vh;
-
     position: sticky;
+
     top: 1rem;
 }
 
@@ -185,6 +236,7 @@
     margin: 0;
 
     font-size: 1.05rem;
+
     font-weight: 600;
 }
 
@@ -208,7 +260,8 @@
 .project-note {
     padding: 1rem 0;
 
-    border-bottom: 1px solid var(--border);
+    border-bottom:
+        1px solid var(--border);
 }
 
 .project-note:first-child {
@@ -217,12 +270,15 @@
 
 .project-note-meta {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 0.55rem;
 
     margin-bottom: 0.35rem;
 
     font-size: 0.72rem;
+
     color: var(--secondary);
 }
 
@@ -230,13 +286,18 @@
     opacity: 0.7;
 
     text-transform: uppercase;
+
     letter-spacing: 0.05em;
 }
 
 .project-note-title {
-    margin: 0.15rem 0 0.4rem;
+    margin:
+        0.15rem
+        0
+        0.4rem;
 
     font-size: 0.95rem;
+
     line-height: 1.4;
 }
 
@@ -246,6 +307,7 @@
 
 .project-note-summary {
     font-size: 0.82rem;
+
     line-height: 1.55;
 
     color: var(--secondary);
@@ -266,30 +328,39 @@
     flex: 0 0 auto;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     gap: 0.8rem;
 
     padding-top: 0.9rem;
+
     margin-top: 0.7rem;
 
-    border-top: 1px solid var(--border);
+    border-top:
+        1px solid var(--border);
 
     font-size: 0.75rem;
+
     color: var(--secondary);
 }
 
 .project-note-pagination button {
     width: 2rem;
+
     height: 2rem;
 
     padding: 0;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid var(--border);
+
     border-radius: 50%;
 
     background: transparent;
+
     color: var(--primary);
 
     cursor: pointer;
@@ -303,7 +374,7 @@
 
 
 /* ------------------------------------------------------------
-   2.7 Scrollbar
+   2.7 Notes scrollbar
    ------------------------------------------------------------ */
 
 .project-note-list::-webkit-scrollbar {
@@ -316,12 +387,13 @@
 
 .project-note-list::-webkit-scrollbar-thumb {
     background: var(--border);
+
     border-radius: 999px;
 }
 
 
 /* ============================================================
-   3. Responsive
+   3. Tablet / narrow desktop
    ============================================================ */
 
 @media screen and (max-width: 800px) {
@@ -343,7 +415,8 @@
 
         min-height: 0;
 
-        border-top: 1px solid var(--border);
+        border-top:
+            1px solid var(--border);
     }
 
     .project-body-panel {
@@ -353,11 +426,14 @@
             3rem;
 
         border-right: 0;
-        border-bottom: 1px solid var(--border);
+
+        border-bottom:
+            1px solid var(--border);
     }
 
     .project-notes-panel {
         height: auto;
+
         max-height: 70vh;
 
         position: static;
@@ -376,13 +452,19 @@
 
 
 /* ============================================================
-   4. Narrow mobile
+   4. Mobile
    ============================================================ */
 
 @media screen and (max-width: 480px) {
 
     .projects-index {
         max-width: 100%;
+    }
+
+    .project-card-link {
+        padding:
+            1.15rem
+            0;
     }
 
     .project-card-title {
@@ -405,6 +487,7 @@
 
     .project-content {
         font-size: 0.98rem;
+
         line-height: 1.8;
     }
 
