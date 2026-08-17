@@ -82,28 +82,8 @@
 */}}
 
 {{ $projectDir := .File.Dir }}
-
-
-/*
-    Notes 目录，例如：
-
-    projects/测试项目/notes/
-*/}}
-
 {{ $notesDir := printf "%snotes/" $projectDir }}
-
-
-/*
-    找出这个 Project 下的所有 Notes。
-*/}}
-
 {{ $notes := where .RegularPagesRecursive "File.Dir" $notesDir }}
-
-
-/*
-    新的 Note 排在前面。
-*/}}
-
 {{ $notes = $notes.ByDate.Reverse }}
 
 
