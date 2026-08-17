@@ -5,14 +5,14 @@
 <main class="main projects-index">
 
   <header class="page-header">
-    <h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
+</header>
 
-    {{ with .Content }}
-      <div class="post-content projects-intro">
-        {{ . }}
-      </div>
-    {{ end }}
-  </header>
+{{ with .Content }}
+  <div class="post-content">
+    {{ . }}
+  </div>
+{{ end }}
 
 
   <div class="project-list">
