@@ -1,8 +1,9 @@
 {{ define "main" }}
 
 {{/* =========================================================
-     Level 1: /projects/
-     Projects 总目录
+     LEVEL 1
+     /projects/
+     Projects 总列表
      ========================================================= */}}
 
 {{ if .Parent.IsHome }}
@@ -18,6 +19,7 @@
       </div>
     {{ end }}
   </header>
+
 
   <div class="project-list">
 
@@ -63,11 +65,12 @@
 
 
 {{/* =========================================================
-     Level 2: /projects/example/
-     具体 Project 页面
+     LEVEL 2
+     /projects/example/
+     具体项目页
      ========================================================= */}}
 
-{{ else if .Parent.Parent.IsHome }}
+{{ else }}
 
 <main class="main project-page">
 
@@ -103,158 +106,126 @@
   </article>
 
 
-  {{/* ---------- Notes ---------- */}}
+  {{/* =======================================================
+       Notes
+       不需要 notes/_index.md
+       直接从当前项目目录下递归寻找 notes/ 里的 Markdown
+       ======================================================= */}}
 
-  {{ $notes := .GetPage "notes" }}
+  {{ $projectDir := .File.Dir }}
+  {{ $notesDir := printf "%snotes/" $projectDir }}
 
-  {{ with $notes }}
+  {{ $notes := where .RegularPagesRecursive "File.Dir" $notesDir }}
+  {{ $notes = $notes.ByDate.Reverse }}
 
-    {{ $pages := .RegularPages.ByDate.Reverse }}
 
-    <section class="project-notes">
+  <section class="project-notes">
 
-      <div class="project-divider"></div>
+    <div class="project-divider"></div>
 
-      <header class="project-notes-header">
 
-        <h2>Notes / Log</h2>
+    <header class="project-notes-header">
 
-        {{ if gt (len $pages) 5 }}
-          <a
-            class="project-notes-all"
-            href="{{ .RelPermalink }}"
+      <h2>Notes / Log</h2>
+
+      {{ if gt (len $notes) 5 }}
+        <button
+          id="project-notes-toggle"
+          class="project-notes-all"
+          type="button"
+        >
+          Show all →
+        </button>
+      {{ end }}
+
+    </header>
+
+
+    {{ if gt (len $notes) 0 }}
+
+      <div
+        id="project-note-list"
+        class="project-note-list"
+      >
+
+        {{ range $index, $note := $notes }}
+
+          <article
+            class="project-note{{ if ge $index 5 }} project-note-extra{{ end }}"
           >
-            All notes →
-          </a>
-        {{ end }}
 
-      </header>
+            <div class="project-note-meta">
 
+              <time datetime="{{ $note.Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ $note.Date.Format "2006-01-02" }}
+              </time>
 
-      {{ if gt (len $pages) 0 }}
-
-        <div class="project-note-list">
-
-          {{ range first 5 $pages }}
-
-            <article class="project-note">
-
-              <div class="project-note-meta">
-
-                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-                  {{ .Date.Format "2006-01-02" }}
-                </time>
-
-                {{ with .Params.kind }}
-                  <span class="project-note-kind">
-                    {{ . }}
-                  </span>
-                {{ end }}
-
-              </div>
-
-
-              <h3 class="project-note-title">
-                <a href="{{ .RelPermalink }}">
-                  {{ .Title }}
-                </a>
-              </h3>
-
-
-              {{ with .Summary }}
-                <div class="project-note-summary">
+              {{ with $note.Params.kind }}
+                <span class="project-note-kind">
                   {{ . }}
-                </div>
+                </span>
               {{ end }}
 
-            </article>
+            </div>
 
-          {{ end }}
 
-        </div>
+            <h3 class="project-note-title">
+              <a href="{{ $note.RelPermalink }}">
+                {{ $note.Title }}
+              </a>
+            </h3>
 
-      {{ else }}
 
-        <p class="project-notes-empty">
-          暂无记录。
-        </p>
+            {{ with $note.Summary }}
+              <div class="project-note-summary">
+                {{ . }}
+              </div>
+            {{ end }}
+
+          </article>
+
+        {{ end }}
+
+      </div>
+
+
+      {{ if gt (len $notes) 5 }}
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const button = document.getElementById("project-notes-toggle");
+            const extras = document.querySelectorAll(".project-note-extra");
+
+            if (!button) return;
+
+            let expanded = false;
+
+            button.addEventListener("click", function () {
+              expanded = !expanded;
+
+              extras.forEach(function (item) {
+                item.style.display = expanded ? "block" : "none";
+              });
+
+              button.textContent = expanded
+                ? "Show less ↑"
+                : "Show all →";
+            });
+          });
+        </script>
 
       {{ end }}
 
-    </section>
 
-  {{ end }}
+    {{ else }}
 
-</main>
-
-
-{{/* =========================================================
-     Level 3: /projects/example/notes/
-     全部 Notes
-     ========================================================= */}}
-
-{{ else }}
-
-<main class="main project-notes-page">
-
-  <header class="page-header">
-
-    <h1>{{ .Title }}</h1>
-
-    <p class="project-notes-back">
-      <a href="{{ .Parent.RelPermalink }}">
-        ← {{ .Parent.Title }}
-      </a>
-    </p>
-
-    {{ with .Content }}
-      <div class="post-content">
-        {{ . }}
-      </div>
-    {{ end }}
-
-  </header>
-
-
-  <div class="project-note-list project-note-list-all">
-
-    {{ range .RegularPages.ByDate.Reverse }}
-
-      <article class="project-note">
-
-        <div class="project-note-meta">
-
-          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-            {{ .Date.Format "2006-01-02" }}
-          </time>
-
-          {{ with .Params.kind }}
-            <span class="project-note-kind">
-              {{ . }}
-            </span>
-          {{ end }}
-
-        </div>
-
-
-        <h2 class="project-note-title">
-          <a href="{{ .RelPermalink }}">
-            {{ .Title }}
-          </a>
-        </h2>
-
-
-        {{ with .Summary }}
-          <div class="project-note-summary">
-            {{ . }}
-          </div>
-        {{ end }}
-
-      </article>
+      <p class="project-notes-empty">
+        暂无记录。
+      </p>
 
     {{ end }}
 
-  </div>
+  </section>
 
 </main>
 
