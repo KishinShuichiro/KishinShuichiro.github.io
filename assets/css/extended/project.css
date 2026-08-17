@@ -167,15 +167,13 @@
 
     grid-template-columns:
         minmax(0, 1fr)
-        200px;
+        220px;
 
     gap: 2rem;
 
     align-items: start;
 
     min-height: 70vh;
-
-    border-top: 1px solid var(--border);
 }
 
 
@@ -192,6 +190,7 @@
         3rem
         0;
 
+    border-top: 1px solid var(--border);
     border-right: 1px solid var(--border);
 }
 
