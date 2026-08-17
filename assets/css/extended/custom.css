@@ -259,6 +259,10 @@ body.list main article.first-entry .entry-content {
     width: auto;
 }
 
+.page-header h1 {
+  font-size: 40px;
+}
+
 
 /* ============================================================
    手机
