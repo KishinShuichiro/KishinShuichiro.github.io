@@ -1,0 +1,211 @@
+/* ============================================================
+   Projects
+   ============================================================ */
+
+
+/* ---------- Projects index ---------- */
+
+.projects-index {
+    max-width: 760px;
+}
+
+.projects-intro {
+    margin-bottom: 2.5rem;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.project-card {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-card:first-child {
+    padding-top: 0;
+}
+
+.project-card-title {
+    margin: 0 0 0.45rem;
+    font-size: 1.35rem;
+}
+
+.project-card-title a {
+    text-decoration: none;
+}
+
+.project-card-summary {
+    margin: 0.4rem 0;
+    line-height: 1.65;
+    color: var(--secondary);
+}
+
+.project-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.65rem;
+    font-size: 0.8rem;
+    color: var(--secondary);
+}
+
+
+/* ---------- Project main page ---------- */
+
+.project-page {
+    max-width: 760px;
+}
+
+.project-header {
+    margin-bottom: 2.5rem;
+}
+
+.project-header h1 {
+    margin-bottom: 0.6rem;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    color: var(--secondary);
+    font-size: 0.82rem;
+}
+
+.project-status {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.project-content {
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* ---------- Divider ---------- */
+
+.project-divider {
+    margin: 4.5rem 0 2.2rem;
+    border-top: 1px solid var(--border);
+}
+
+
+/* ---------- Notes block ---------- */
+
+.project-notes {
+    padding-bottom: 2rem;
+}
+
+.project-notes-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.8rem;
+}
+
+.project-notes-header h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.project-notes-all {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.project-note-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-note {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-note:first-child {
+    padding-top: 0;
+}
+
+.project-note-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.35rem;
+
+    font-size: 0.75rem;
+    color: var(--secondary);
+}
+
+.project-note-kind {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.project-note-title {
+    margin: 0.2rem 0 0.45rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.project-note-title a {
+    text-decoration: none;
+}
+
+.project-note-summary {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--secondary);
+}
+
+.project-notes-empty {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+
+/* ---------- All notes page ---------- */
+
+.project-notes-page {
+    max-width: 760px;
+}
+
+.project-notes-back {
+    margin: 0.8rem 0 2rem;
+    font-size: 0.82rem;
+    color: var(--secondary);
+}
+
+.project-notes-back a {
+    text-decoration: none;
+}
+
+.project-note-list-all .project-note-title {
+    font-size: 1.05rem;
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media screen and (max-width: 768px) {
+
+    .project-divider {
+        margin-top: 3.5rem;
+    }
+
+    .project-notes-header {
+        align-items: center;
+    }
+
+    .project-content {
+        line-height: 1.8;
+    }
+}
