@@ -162,3 +162,137 @@ body.list main article.first-entry .entry-content {
 }
 
 }
+
+/* ============================================================
+   Numeric pagination
+   首页 / Posts / 普通列表页
+   ============================================================ */
+
+.pagination.pagination-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.3rem;
+}
+
+
+.pagination-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 0.2rem;
+}
+
+
+.pagination-numbers .pagination-button,
+.pagination-numbers .pagination-page {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 2rem;
+    height: 2rem;
+
+    padding: 0 0.45rem;
+
+    border: 0;
+    border-radius: 4px;
+
+    background: transparent;
+
+    color: var(--secondary);
+
+    font-size: 0.9rem;
+    line-height: 1;
+
+    text-decoration: none;
+}
+
+
+.pagination-numbers a.pagination-button:hover,
+.pagination-numbers a.pagination-page:hover {
+    color: var(--primary);
+
+    background: var(--code-bg);
+}
+
+
+.pagination-numbers .pagination-page.current {
+    color: var(--primary);
+
+    font-weight: 600;
+
+    border-bottom: 1px solid var(--primary);
+}
+
+
+.pagination-numbers .pagination-button.disabled {
+    opacity: 0.25;
+
+    cursor: default;
+}
+
+
+.pagination-ellipsis {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 1.4rem;
+    height: 2rem;
+
+    color: var(--secondary);
+
+    user-select: none;
+}
+
+
+/* PaperMod 原本会给 prev / next 加特殊布局，
+   这里覆盖掉 */
+
+.pagination-numbers .prev,
+.pagination-numbers .next {
+    width: auto;
+}
+
+
+/* ============================================================
+   手机
+   ============================================================ */
+
+@media screen and (max-width: 600px) {
+
+    .pagination.pagination-numbers {
+        gap: 0.15rem;
+    }
+
+
+    .pagination-pages {
+        gap: 0.1rem;
+    }
+
+
+    .pagination-numbers .pagination-button,
+    .pagination-numbers .pagination-page {
+        min-width: 1.8rem;
+        height: 1.8rem;
+
+        padding: 0 0.3rem;
+
+        font-size: 0.82rem;
+    }
+
+
+    .pagination-ellipsis {
+        min-width: 1rem;
+
+        height: 1.8rem;
+
+        padding: 0;
+    }
+
+}
