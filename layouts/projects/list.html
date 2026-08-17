@@ -1,10 +1,5 @@
 {{ define "main" }}
 
-{{/* =========================================================
-     /projects/
-     Projects 总列表
-     ========================================================= */}}
-
 {{ if .Parent.IsHome }}
 
 <main class="main projects-index">
@@ -35,24 +30,33 @@
             {{ .Title }}
           </h2>
 
+
           {{ with .Params.summary }}
+
             <p class="project-card-summary">
               {{ . }}
             </p>
+
           {{ end }}
+
 
           <div class="project-card-meta">
 
             {{ with .Params.status }}
+
               <span class="project-status">
                 {{ . }}
               </span>
+
             {{ end }}
 
+
             {{ with .Lastmod }}
+
               <span>
                 Updated {{ .Format "2006-01-02" }}
               </span>
+
             {{ end }}
 
           </div>
@@ -68,42 +72,73 @@
 </main>
 
 
-{{/* =========================================================
-     /projects/example/
-     项目详情页
-     ========================================================= */}}
-
 {{ else }}
 
+
+{{/*
+    当前 Project 所在目录，例如：
+
+    projects/测试项目/
+*/}}
+
 {{ $projectDir := .File.Dir }}
+
+
+/*
+    Notes 目录，例如：
+
+    projects/测试项目/notes/
+*/}}
+
 {{ $notesDir := printf "%snotes/" $projectDir }}
 
+
+/*
+    找出这个 Project 下的所有 Notes。
+*/}}
+
 {{ $notes := where .RegularPagesRecursive "File.Dir" $notesDir }}
+
+
+/*
+    新的 Note 排在前面。
+*/}}
+
 {{ $notes = $notes.ByDate.Reverse }}
+
+
 
 <main class="main project-page project-layout">
 
 
-  {{/* =======================================================
-       1. 标题区
-       ======================================================= */}}
+  <!-- ======================================================
+       Project Header
+       ====================================================== -->
 
   <header class="project-header project-header-panel">
 
-    <h1>{{ .Title }}</h1>
+    <h1>
+      {{ .Title }}
+    </h1>
+
 
     <div class="project-meta">
 
       {{ with .Params.status }}
+
         <span class="project-status">
           {{ . }}
         </span>
+
       {{ end }}
 
+
       {{ with .Lastmod }}
+
         <span>
           Updated {{ .Format "2006-01-02" }}
         </span>
+
       {{ end }}
 
     </div>
@@ -111,39 +146,54 @@
   </header>
 
 
-  {{/* =======================================================
-       2 + 3
-       正文 / Notes
-       ======================================================= */}}
+
+  <!-- ======================================================
+       Workspace
+       ====================================================== -->
 
   <div class="project-workspace">
 
 
-    {{/* =======================
-         2. 正文
-         ======================= */}}
+    <!-- ====================================================
+         正文
+         ==================================================== -->
 
     <article class="project-main project-body-panel">
 
       <div class="post-content project-content">
+
         {{ .Content }}
+
       </div>
 
     </article>
 
 
-    {{/* =======================
-         3. Notes
-         ======================= */}}
+
+    <!-- ====================================================
+         Notes
+         ==================================================== -->
 
     <aside class="project-notes project-notes-panel">
 
+
       <header class="project-notes-header">
-        <h2>Notes / Log</h2>
+
+        <h2>
+          Notes / Log
+        </h2>
+
       </header>
 
 
+
       {{ if gt (len $notes) 0 }}
+
+
+        <!-- ================================================
+             Notes List
+             每页固定 5 条
+             ================================================ -->
 
         <div
           id="project-note-list"
@@ -151,14 +201,18 @@
           data-page-size="5"
         >
 
+
           {{ range $index, $note := $notes }}
+
 
             <article
               class="project-note"
               data-note-index="{{ $index }}"
             >
 
+
               <div class="project-note-meta">
+
 
                 <time
                   datetime="{{ $note.Date.Format "2006-01-02T15:04:05Z07:00" }}"
@@ -166,184 +220,742 @@
                   {{ $note.Date.Format "2006-01-02" }}
                 </time>
 
+
                 {{ with $note.Params.kind }}
+
                   <span class="project-note-kind">
                     {{ . }}
                   </span>
+
                 {{ end }}
+
 
               </div>
 
 
+
               <h3 class="project-note-title">
+
                 <a href="{{ $note.RelPermalink }}">
                   {{ $note.Title }}
                 </a>
+
               </h3>
 
 
+
               {{ with $note.Summary }}
+
                 <div class="project-note-summary">
                   {{ . }}
                 </div>
+
               {{ end }}
+
 
             </article>
 
+
           {{ end }}
+
 
         </div>
 
 
+
+        <!-- ================================================
+             Pagination
+
+             « = 第一页
+             ‹ = 上一页
+
+             数字页码
+
+             › = 下一页
+             » = 最后一页
+             ================================================ -->
+
         {{ if gt (len $notes) 5 }}
 
-          <nav class="project-note-pagination">
+          <nav
+            id="project-note-pagination"
+            class="project-note-pagination"
+            aria-label="Notes pagination"
+          >
+
+
+            <button
+              id="project-note-first"
+              type="button"
+              aria-label="First page"
+              title="First page"
+            >
+              «
+            </button>
+
 
             <button
               id="project-note-prev"
               type="button"
-              aria-label="Previous notes page"
+              aria-label="Previous page"
+              title="Previous page"
             >
-              ←
+              ‹
             </button>
 
-            <span id="project-note-page">
-              1 / 1
-            </span>
+
+
+            <div
+              id="project-note-pages"
+              class="project-note-pages"
+            ></div>
+
+
 
             <button
               id="project-note-next"
               type="button"
-              aria-label="Next notes page"
+              aria-label="Next page"
+              title="Next page"
             >
-              →
+              ›
             </button>
+
+
+            <button
+              id="project-note-last"
+              type="button"
+              aria-label="Last page"
+              title="Last page"
+            >
+              »
+            </button>
+
 
           </nav>
 
         {{ end }}
 
 
+
       {{ else }}
+
 
         <p class="project-notes-empty">
           暂无记录。
         </p>
 
+
       {{ end }}
 
+
     </aside>
+
 
   </div>
 
 </main>
 
 
-{{/* =========================================================
-     Notes 前端分页
-     ========================================================= */}}
+
+<!-- ========================================================
+     Notes Pagination JavaScript
+     ======================================================== -->
 
 {{ if gt (len $notes) 5 }}
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  const list =
-    document.getElementById("project-note-list");
-
-  const prev =
-    document.getElementById("project-note-prev");
-
-  const next =
-    document.getElementById("project-note-next");
-
-  const pageLabel =
-    document.getElementById("project-note-page");
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
 
 
-  if (!list || !prev || !next || !pageLabel) {
-    return;
-  }
+    /* ======================================================
+       获取 DOM
+       ====================================================== */
+
+    const list =
+      document.getElementById(
+        "project-note-list"
+      );
 
 
-  const notes = Array.from(
-    list.querySelectorAll(".project-note")
-  );
+    const pagination =
+      document.getElementById(
+        "project-note-pagination"
+      );
 
 
-  const pageSize =
-    Number(list.dataset.pageSize || 5);
+    const first =
+      document.getElementById(
+        "project-note-first"
+      );
 
 
-  const pageCount =
-    Math.ceil(notes.length / pageSize);
+    const prev =
+      document.getElementById(
+        "project-note-prev"
+      );
 
 
-  let page = 0;
+    const next =
+      document.getElementById(
+        "project-note-next"
+      );
 
 
-  function renderPage() {
-
-    const start =
-      page * pageSize;
-
-    const end =
-      start + pageSize;
+    const last =
+      document.getElementById(
+        "project-note-last"
+      );
 
 
-    notes.forEach(function (note, index) {
-
-      note.style.display =
-        index >= start && index < end
-          ? ""
-          : "none";
-
-    });
+    const pagesContainer =
+      document.getElementById(
+        "project-note-pages"
+      );
 
 
-    pageLabel.textContent =
-      (page + 1) + " / " + pageCount;
 
+    if (
+      !list ||
+      !pagination ||
+      !first ||
+      !prev ||
+      !next ||
+      !last ||
+      !pagesContainer
+    ) {
 
-    prev.disabled =
-      page === 0;
+      return;
 
-
-    next.disabled =
-      page >= pageCount - 1;
-
-
-    list.scrollTop = 0;
-
-  }
-
-
-  prev.addEventListener("click", function () {
-
-    if (page > 0) {
-      page--;
-      renderPage();
     }
 
-  });
 
 
-  next.addEventListener("click", function () {
+    /* ======================================================
+       Notes
+       ====================================================== */
 
-    if (page < pageCount - 1) {
-      page++;
-      renderPage();
+    const notes =
+      Array.from(
+        list.querySelectorAll(
+          ".project-note"
+        )
+      );
+
+
+
+    /* ======================================================
+       每页数量
+
+       HTML 中：
+
+       data-page-size="5"
+       ====================================================== */
+
+    const pageSize =
+      Number(
+        list.dataset.pageSize || 5
+      );
+
+
+
+    const pageCount =
+      Math.ceil(
+        notes.length / pageSize
+      );
+
+
+
+    /*
+      内部使用 0 开始：
+
+      page = 0 → 第 1 页
+      page = 1 → 第 2 页
+    */
+
+    let page = 0;
+
+
+
+    /* ======================================================
+       如果只有一页，不显示翻页
+       ====================================================== */
+
+    if (pageCount <= 1) {
+
+      pagination.style.display =
+        "none";
+
+      return;
+
     }
 
-  });
 
 
-  renderPage();
+    /* ======================================================
+       跳到指定页
+       ====================================================== */
 
-});
+    function goToPage(newPage) {
+
+
+      page =
+        Math.max(
+          0,
+          Math.min(
+            newPage,
+            pageCount - 1
+          )
+        );
+
+
+      renderPage();
+
+    }
+
+
+
+    /* ======================================================
+       创建数字按钮
+       ====================================================== */
+
+    function createPageButton(
+      pageIndex
+    ) {
+
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+
+      button.type =
+        "button";
+
+
+      button.className =
+        "project-note-page-number";
+
+
+      button.textContent =
+        pageIndex + 1;
+
+
+
+      /*
+        当前页
+      */
+
+      if (pageIndex === page) {
+
+
+        button.classList.add(
+          "current"
+        );
+
+
+        button.setAttribute(
+          "aria-current",
+          "page"
+        );
+
+      }
+
+
+
+      button.addEventListener(
+        "click",
+        function () {
+
+          goToPage(
+            pageIndex
+          );
+
+        }
+      );
+
+
+      return button;
+
+    }
+
+
+
+    /* ======================================================
+       创建省略号
+       ====================================================== */
+
+    function createEllipsis() {
+
+
+      const span =
+        document.createElement(
+          "span"
+        );
+
+
+      span.className =
+        "project-note-page-ellipsis";
+
+
+      span.textContent =
+        "…";
+
+
+      return span;
+
+    }
+
+
+
+    /* ======================================================
+       绘制页码
+       ====================================================== */
+
+    function renderNumbers() {
+
+
+      pagesContainer.innerHTML =
+        "";
+
+
+
+      /*
+        总页数 <= 7
+
+        全部显示：
+
+        1 2 3 4 5 6 7
+      */
+
+      if (pageCount <= 7) {
+
+
+        for (
+          let i = 0;
+          i < pageCount;
+          i++
+        ) {
+
+
+          pagesContainer.appendChild(
+            createPageButton(i)
+          );
+
+
+        }
+
+
+        return;
+
+      }
+
+
+
+      /*
+        页数很多时：
+
+        永远显示：
+
+        第一页
+        最后一页
+        当前页
+        当前页前 2 页
+        当前页后 2 页
+
+
+        例如：
+
+        1 … 6 7 8 9 10 … 20
+      */
+
+      const visiblePages =
+        new Set([
+
+          0,
+
+          pageCount - 1,
+
+          page - 2,
+
+          page - 1,
+
+          page,
+
+          page + 1,
+
+          page + 2
+
+        ]);
+
+
+
+      /*
+        删除超出范围的页码，
+        然后排序。
+      */
+
+      const validPages =
+        Array
+          .from(
+            visiblePages
+          )
+          .filter(
+            function (index) {
+
+              return (
+                index >= 0 &&
+                index < pageCount
+              );
+
+            }
+          )
+          .sort(
+            function (a, b) {
+
+              return a - b;
+
+            }
+          );
+
+
+
+      let previousIndex =
+        null;
+
+
+
+      validPages.forEach(
+        function (pageIndex) {
+
+
+          /*
+            中间有断层，
+            插入省略号。
+          */
+
+          if (
+            previousIndex !== null &&
+            pageIndex -
+              previousIndex >
+              1
+          ) {
+
+
+            pagesContainer.appendChild(
+              createEllipsis()
+            );
+
+
+          }
+
+
+
+          pagesContainer.appendChild(
+            createPageButton(
+              pageIndex
+            )
+          );
+
+
+          previousIndex =
+            pageIndex;
+
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       显示当前页
+       ====================================================== */
+
+    function renderPage() {
+
+
+      const start =
+        page * pageSize;
+
+
+      const end =
+        start + pageSize;
+
+
+
+      /*
+        只显示当前页的 5 条。
+      */
+
+      notes.forEach(
+        function (
+          note,
+          index
+        ) {
+
+
+          if (
+            index >= start &&
+            index < end
+          ) {
+
+
+            note.style.display =
+              "";
+
+
+          } else {
+
+
+            note.style.display =
+              "none";
+
+
+          }
+
+
+        }
+      );
+
+
+
+      /* ====================================================
+         首尾按钮状态
+         ==================================================== */
+
+      first.disabled =
+        page === 0;
+
+
+      prev.disabled =
+        page === 0;
+
+
+      next.disabled =
+        page >=
+        pageCount - 1;
+
+
+      last.disabled =
+        page >=
+        pageCount - 1;
+
+
+
+      /* ====================================================
+         更新数字页码
+         ==================================================== */
+
+      renderNumbers();
+
+
+
+      /* ====================================================
+         桌面 Notes 有独立滚轮时，
+         翻页以后回到 Notes 顶部。
+         ==================================================== */
+
+      list.scrollTop =
+        0;
+
+    }
+
+
+
+    /* ======================================================
+       第一页
+       ====================================================== */
+
+    first.addEventListener(
+      "click",
+      function () {
+
+
+        goToPage(0);
+
+
+      }
+    );
+
+
+
+    /* ======================================================
+       上一页
+       ====================================================== */
+
+    prev.addEventListener(
+      "click",
+      function () {
+
+
+        goToPage(
+          page - 1
+        );
+
+
+      }
+    );
+
+
+
+    /* ======================================================
+       下一页
+       ====================================================== */
+
+    next.addEventListener(
+      "click",
+      function () {
+
+
+        goToPage(
+          page + 1
+        );
+
+
+      }
+    );
+
+
+
+    /* ======================================================
+       最后一页
+       ====================================================== */
+
+    last.addEventListener(
+      "click",
+      function () {
+
+
+        goToPage(
+          pageCount - 1
+        );
+
+
+      }
+    );
+
+
+
+    /* ======================================================
+       初始显示第 1 页
+       ====================================================== */
+
+    renderPage();
+
+
+  }
+);
+
 </script>
 
 {{ end }}
+
 
 {{ end }}
 
