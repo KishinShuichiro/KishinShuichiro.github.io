@@ -23,8 +23,15 @@
 }
 
 .project-card {
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--border);
+    padding: 1.4rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--entry);
+
+    transition:
+        border-color 0.15s ease,
+        transform 0.15s ease,
+        background 0.15s ease;
 }
 
 .project-card:first-child {
