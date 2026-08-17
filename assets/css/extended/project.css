@@ -34,6 +34,11 @@
         background 0.15s ease;
 }
 
+.project-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-1px);
+}
+
 .project-card:first-child {
     padding-top: 0;
 }
