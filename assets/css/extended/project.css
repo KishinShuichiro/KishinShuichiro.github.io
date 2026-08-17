@@ -464,60 +464,21 @@
 
 @media screen and (max-width: 800px) {
 
-    /* 整体恢复单栏 */
-    .project-layout {
-        width: 100%;
-        max-width: 100%;
-    }
-
     .project-workspace {
         display: block;
         width: 100%;
         min-height: 0;
     }
 
-
-    /* ---------- Header ---------- */
-
-    .project-header-panel {
-        padding-bottom: 1.25rem;
-    }
-
-    .project-header-panel h1 {
-        font-size: 1.8rem;
-        line-height: 1.25;
-    }
-
-    .project-meta {
-        gap: 0.55rem;
-        font-size: 0.75rem;
-    }
-
-
-    /* ---------- 正文 ---------- */
-
     .project-body-panel {
         width: 100%;
         max-width: none;
 
-        padding:
-            1.25rem
-            0
-            2.5rem;
+        padding: 1.25rem 0 2.5rem;
 
         border-right: 0;
+        border-left: 0;
     }
-
-    .project-content {
-        width: 100%;
-        max-width: none;
-
-        font-size: 1rem;
-        line-height: 1.8;
-    }
-
-
-    /* ---------- Notes ---------- */
 
     .project-notes-panel {
         position: static;
@@ -529,69 +490,89 @@
         max-height: none;
 
         margin: 0;
-        padding:
-            1.5rem
-            0
-            1rem;
+        padding: 1.5rem 0 1rem;
 
         border-top: 1px solid var(--border);
+        border-left: 0;
+        border-right: 0;
 
-        display: flex;
-        flex-direction: column;
+        display: block;
     }
 
     .project-notes-header {
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
     }
 
     .project-notes-header h2 {
+        margin: 0;
         font-size: 1.05rem;
     }
 
-
-    /* Notes 本身仍然可以独立滚动，
-       但不要占满整个手机屏幕 */
+    /* 手机端不允许 Notes 内部滚动 */
     .project-note-list {
         width: 100%;
 
-        max-height: 45vh;
+        height: auto;
+        max-height: none;
 
-        overflow-y: auto;
+        overflow: visible;
 
-        padding-right: 0.35rem;
+        padding: 0;
     }
 
-
-    /* ---------- Note ---------- */
-
     .project-note {
-        padding: 1rem 0;
+        padding: 1.15rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .project-note:first-child {
+        padding-top: 0;
     }
 
     .project-note-meta {
-        font-size: 0.72rem;
+        margin-bottom: 0.4rem;
+        font-size: 0.75rem;
     }
 
     .project-note-title {
-        font-size: 0.98rem;
+        margin: 0.2rem 0 0.45rem;
+        font-size: 1rem;
     }
 
     .project-note-summary {
-        font-size: 0.86rem;
-        line-height: 1.55;
+        font-size: 0.88rem;
+        line-height: 1.6;
     }
 
-
-    /* ---------- 翻页 ---------- */
-
     .project-note-pagination {
-        padding-top: 0.8rem;
-        margin-top: 0.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 1rem;
+
+        margin-top: 1rem;
+        padding-top: 1rem;
+
+        border-top: 0;
+
+        font-size: 0.8rem;
     }
 
     .project-note-pagination button {
         width: 2.2rem;
         height: 2.2rem;
+
+        padding: 0;
+
+        border: 1px solid var(--border);
+        border-radius: 50%;
+
+        background: transparent;
+        color: var(--primary);
     }
 
+    .project-note-pagination button:disabled {
+        opacity: 0.3;
+    }
 }
