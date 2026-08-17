@@ -3,7 +3,10 @@
    ============================================================ */
 
 
-/* ---------- Projects index ---------- */
+/* ============================================================
+   1. Projects index
+   /projects/
+   ============================================================ */
 
 .projects-index {
     max-width: 760px;
@@ -47,37 +50,89 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
+
     margin-top: 0.65rem;
+
     font-size: 0.8rem;
     color: var(--secondary);
 }
 
 
-/* ---------- Project main page ---------- */
+/* ============================================================
+   2. Project detail page
+   /projects/example/
+   ============================================================ */
 
-.project-page {
-    max-width: 760px;
+.project-layout {
+    max-width: 1000px;
 }
 
-.project-header {
-    margin-bottom: 2.5rem;
+
+/* ------------------------------------------------------------
+   2.1 Header
+   ------------------------------------------------------------ */
+
+.project-header-panel {
+    margin-bottom: 0;
+    padding: 0 0 2rem;
 }
 
-.project-header h1 {
-    margin-bottom: 0.6rem;
+.project-header-panel h1 {
+    margin: 0 0 0.65rem;
+    font-size: 2rem;
 }
 
 .project-meta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.85rem;
+    gap: 0.9rem;
+
+    font-size: 0.8rem;
     color: var(--secondary);
-    font-size: 0.82rem;
 }
 
 .project-status {
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
+}
+
+
+/* ------------------------------------------------------------
+   2.2 Main workspace
+   Body + Notes
+   ------------------------------------------------------------ */
+
+.project-workspace {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2.25fr)
+        minmax(260px, 1fr);
+
+    gap: 1.5rem;
+
+    align-items: stretch;
+
+    min-height: 70vh;
+
+    border-top: 1px solid var(--border);
+}
+
+
+/* ------------------------------------------------------------
+   2.3 Main body
+   ------------------------------------------------------------ */
+
+.project-body-panel {
+    min-width: 0;
+
+    padding:
+        1.5rem
+        2rem
+        3rem
+        0;
+
+    border-right: 1px solid var(--border);
 }
 
 .project-content {
@@ -86,47 +141,61 @@
 }
 
 
-/* ---------- Divider ---------- */
+/* ------------------------------------------------------------
+   2.4 Notes panel
+   ------------------------------------------------------------ */
 
-.project-divider {
-    margin: 4.5rem 0 2.2rem;
-    border-top: 1px solid var(--border);
-}
+.project-notes-panel {
+    min-width: 0;
 
+    padding:
+        1.5rem
+        0
+        1rem
+        0;
 
-/* ---------- Notes block ---------- */
+    display: flex;
+    flex-direction: column;
 
-.project-notes {
-    padding-bottom: 2rem;
+    height: 70vh;
+
+    position: sticky;
+    top: 1rem;
 }
 
 .project-notes-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-bottom: 1.8rem;
+    flex: 0 0 auto;
+
+    margin-bottom: 1rem;
 }
 
 .project-notes-header h2 {
     margin: 0;
-    font-size: 1.15rem;
+
+    font-size: 1.05rem;
     font-weight: 600;
 }
 
-.project-notes-all {
-    font-size: 0.8rem;
-    color: var(--secondary);
-    text-decoration: none;
-}
+
+/* ------------------------------------------------------------
+   2.5 Notes scroll area
+   ------------------------------------------------------------ */
 
 .project-note-list {
-    display: flex;
-    flex-direction: column;
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding-right: 0.6rem;
+
+    scrollbar-width: thin;
 }
 
 .project-note {
-    padding: 1.2rem 0;
+    padding: 1rem 0;
+
     border-bottom: 1px solid var(--border);
 }
 
@@ -136,24 +205,27 @@
 
 .project-note-meta {
     display: flex;
-    align-items: center;
-    gap: 0.65rem;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+
     margin-bottom: 0.35rem;
 
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: var(--secondary);
 }
 
 .project-note-kind {
     opacity: 0.7;
+
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
 
 .project-note-title {
-    margin: 0.2rem 0 0.45rem;
-    font-size: 1rem;
-    font-weight: 600;
+    margin: 0.15rem 0 0.4rem;
+
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 .project-note-title a {
@@ -161,51 +233,179 @@
 }
 
 .project-note-summary {
-    font-size: 0.88rem;
-    line-height: 1.65;
+    font-size: 0.82rem;
+    line-height: 1.55;
+
     color: var(--secondary);
 }
 
 .project-notes-empty {
     color: var(--secondary);
-    font-size: 0.9rem;
+
+    font-size: 0.85rem;
 }
 
 
-/* ---------- All notes page ---------- */
+/* ------------------------------------------------------------
+   2.6 Pagination
+   ------------------------------------------------------------ */
 
-.project-notes-page {
-    max-width: 760px;
-}
+.project-note-pagination {
+    flex: 0 0 auto;
 
-.project-notes-back {
-    margin: 0.8rem 0 2rem;
-    font-size: 0.82rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.8rem;
+
+    padding-top: 0.9rem;
+    margin-top: 0.7rem;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 0.75rem;
     color: var(--secondary);
 }
 
-.project-notes-back a {
-    text-decoration: none;
+.project-note-pagination button {
+    width: 2rem;
+    height: 2rem;
+
+    padding: 0;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--primary);
+
+    cursor: pointer;
 }
 
-.project-note-list-all .project-note-title {
-    font-size: 1.05rem;
+.project-note-pagination button:disabled {
+    opacity: 0.3;
+
+    cursor: default;
 }
 
 
-/* ---------- Mobile ---------- */
+/* ------------------------------------------------------------
+   2.7 Scrollbar
+   ------------------------------------------------------------ */
 
-@media screen and (max-width: 768px) {
+.project-note-list::-webkit-scrollbar {
+    width: 6px;
+}
 
-    .project-divider {
-        margin-top: 3.5rem;
+.project-note-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-note-list::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
+}
+
+
+/* ============================================================
+   3. Responsive
+   ============================================================ */
+
+@media screen and (max-width: 800px) {
+
+    .project-layout {
+        max-width: 760px;
     }
 
-    .project-notes-header {
-        align-items: center;
+    .project-header-panel {
+        padding-bottom: 1.5rem;
+    }
+
+    .project-header-panel h1 {
+        font-size: 1.8rem;
+    }
+
+    .project-workspace {
+        display: block;
+
+        min-height: 0;
+
+        border-top: 1px solid var(--border);
+    }
+
+    .project-body-panel {
+        padding:
+            1.5rem
+            0
+            3rem;
+
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .project-notes-panel {
+        height: auto;
+        max-height: 70vh;
+
+        position: static;
+
+        padding:
+            2rem
+            0
+            1rem;
+    }
+
+    .project-note-list {
+        max-height: 50vh;
+    }
+
+}
+
+
+/* ============================================================
+   4. Narrow mobile
+   ============================================================ */
+
+@media screen and (max-width: 480px) {
+
+    .projects-index {
+        max-width: 100%;
+    }
+
+    .project-card-title {
+        font-size: 1.2rem;
+    }
+
+    .project-layout {
+        max-width: 100%;
+    }
+
+    .project-header-panel h1 {
+        font-size: 1.65rem;
+    }
+
+    .project-meta {
+        gap: 0.65rem;
+
+        font-size: 0.75rem;
     }
 
     .project-content {
+        font-size: 0.98rem;
         line-height: 1.8;
     }
+
+    .project-notes-header h2 {
+        font-size: 1rem;
+    }
+
+    .project-note-title {
+        font-size: 0.92rem;
+    }
+
+    .project-note-summary {
+        font-size: 0.8rem;
+    }
+
 }
