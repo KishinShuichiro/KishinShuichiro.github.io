@@ -208,24 +208,26 @@
 .project-notes-panel {
     min-width: 0;
 
-    width: 240px;
+    width: 220px;
 
     height: calc(100vh - 140px);
 
     padding:
         1.5rem
         0
-        1rem
-        0;
+        1rem;
 
     display: flex;
     flex-direction: column;
 
     position: sticky;
-
     top: 90px;
 
     align-self: start;
+
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    padding-left: 2rem;
 }
 
 .project-notes-header {
