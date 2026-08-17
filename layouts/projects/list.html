@@ -1,5 +1,10 @@
 {{ define "main" }}
 
+{{/* =========================================================
+     /projects/
+     Projects 总列表
+     ========================================================= */}}
+
 {{ if .Parent.IsHome }}
 
 <main class="main projects-index">
@@ -14,39 +19,45 @@
     {{ end }}
   </header>
 
+
   <div class="project-list">
 
     {{ range .Sections.ByLastmod.Reverse }}
 
       <article class="project-card">
 
-        <h2 class="project-card-title">
-          <a href="{{ .RelPermalink }}">
+        <a
+          class="project-card-link"
+          href="{{ .RelPermalink }}"
+        >
+
+          <h2 class="project-card-title">
             {{ .Title }}
-          </a>
-        </h2>
+          </h2>
 
-        {{ with .Params.summary }}
-          <p class="project-card-summary">
-            {{ . }}
-          </p>
-        {{ end }}
-
-        <div class="project-card-meta">
-
-          {{ with .Params.status }}
-            <span class="project-status">
+          {{ with .Params.summary }}
+            <p class="project-card-summary">
               {{ . }}
-            </span>
+            </p>
           {{ end }}
 
-          {{ with .Lastmod }}
-            <span>
-              Updated {{ .Format "2006-01-02" }}
-            </span>
-          {{ end }}
+          <div class="project-card-meta">
 
-        </div>
+            {{ with .Params.status }}
+              <span class="project-status">
+                {{ . }}
+              </span>
+            {{ end }}
+
+            {{ with .Lastmod }}
+              <span>
+                Updated {{ .Format "2006-01-02" }}
+              </span>
+            {{ end }}
+
+          </div>
+
+        </a>
 
       </article>
 
@@ -57,18 +68,25 @@
 </main>
 
 
+{{/* =========================================================
+     /projects/example/
+     项目详情页
+     ========================================================= */}}
+
 {{ else }}
 
 {{ $projectDir := .File.Dir }}
 {{ $notesDir := printf "%snotes/" $projectDir }}
+
 {{ $notes := where .RegularPagesRecursive "File.Dir" $notesDir }}
 {{ $notes = $notes.ByDate.Reverse }}
 
 <main class="main project-page project-layout">
 
-  <!-- =========================
-       1. Header
-       ========================= -->
+
+  {{/* =======================================================
+       1. 标题区
+       ======================================================= */}}
 
   <header class="project-header project-header-panel">
 
@@ -93,15 +111,17 @@
   </header>
 
 
-  <!-- =========================
-       2 + 3 两栏
-       ========================= -->
+  {{/* =======================================================
+       2 + 3
+       正文 / Notes
+       ======================================================= */}}
 
   <div class="project-workspace">
 
-    <!-- =======================
+
+    {{/* =======================
          2. 正文
-         ======================= -->
+         ======================= */}}
 
     <article class="project-main project-body-panel">
 
@@ -112,9 +132,9 @@
     </article>
 
 
-    <!-- =======================
+    {{/* =======================
          3. Notes
-         ======================= -->
+         ======================= */}}
 
     <aside class="project-notes project-notes-panel">
 
@@ -140,7 +160,9 @@
 
               <div class="project-note-meta">
 
-                <time datetime="{{ $note.Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                <time
+                  datetime="{{ $note.Date.Format "2006-01-02T15:04:05Z07:00" }}"
+                >
                   {{ $note.Date.Format "2006-01-02" }}
                 </time>
 
@@ -152,11 +174,13 @@
 
               </div>
 
+
               <h3 class="project-note-title">
                 <a href="{{ $note.RelPermalink }}">
                   {{ $note.Title }}
                 </a>
               </h3>
+
 
               {{ with $note.Summary }}
                 <div class="project-note-summary">
@@ -178,6 +202,7 @@
             <button
               id="project-note-prev"
               type="button"
+              aria-label="Previous notes page"
             >
               ←
             </button>
@@ -189,6 +214,7 @@
             <button
               id="project-note-next"
               type="button"
+              aria-label="Next notes page"
             >
               →
             </button>
@@ -213,66 +239,104 @@
 </main>
 
 
+{{/* =========================================================
+     Notes 前端分页
+     ========================================================= */}}
+
 {{ if gt (len $notes) 5 }}
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const list = document.getElementById("project-note-list");
-  const prev = document.getElementById("project-note-prev");
-  const next = document.getElementById("project-note-next");
-  const pageLabel = document.getElementById("project-note-page");
+  const list =
+    document.getElementById("project-note-list");
 
-  if (!list || !prev || !next || !pageLabel) return;
+  const prev =
+    document.getElementById("project-note-prev");
+
+  const next =
+    document.getElementById("project-note-next");
+
+  const pageLabel =
+    document.getElementById("project-note-page");
+
+
+  if (!list || !prev || !next || !pageLabel) {
+    return;
+  }
+
 
   const notes = Array.from(
     list.querySelectorAll(".project-note")
   );
 
-  const pageSize = Number(
-    list.dataset.pageSize || 5
-  );
 
-  const pageCount = Math.ceil(
-    notes.length / pageSize
-  );
+  const pageSize =
+    Number(list.dataset.pageSize || 5);
+
+
+  const pageCount =
+    Math.ceil(notes.length / pageSize);
+
 
   let page = 0;
 
+
   function renderPage() {
 
-    const start = page * pageSize;
-    const end = start + pageSize;
+    const start =
+      page * pageSize;
 
-    notes.forEach(function(note, index) {
+    const end =
+      start + pageSize;
+
+
+    notes.forEach(function (note, index) {
+
       note.style.display =
         index >= start && index < end
           ? ""
           : "none";
+
     });
+
 
     pageLabel.textContent =
       (page + 1) + " / " + pageCount;
 
-    prev.disabled = page === 0;
-    next.disabled = page >= pageCount - 1;
+
+    prev.disabled =
+      page === 0;
+
+
+    next.disabled =
+      page >= pageCount - 1;
+
 
     list.scrollTop = 0;
+
   }
 
-  prev.addEventListener("click", function() {
+
+  prev.addEventListener("click", function () {
+
     if (page > 0) {
       page--;
       renderPage();
     }
+
   });
 
-  next.addEventListener("click", function() {
+
+  next.addEventListener("click", function () {
+
     if (page < pageCount - 1) {
       page++;
       renderPage();
     }
+
   });
+
 
   renderPage();
 
