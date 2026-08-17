@@ -1,38 +1,263 @@
 {{ define "main" }}
-<main class="main">
+
+{{/* =========================================================
+     Level 1: /projects/
+     Projects 总目录
+     ========================================================= */}}
+
+{{ if .Parent.IsHome }}
+
+<main class="main projects-index">
 
   <header class="page-header">
     <h1>{{ .Title }}</h1>
+
     {{ with .Content }}
-      <div class="post-content">
+      <div class="post-content projects-intro">
         {{ . }}
       </div>
     {{ end }}
   </header>
 
   <div class="project-list">
-    {{ range .Sections.ByTitle }}
+
+    {{ range .Sections.ByLastmod.Reverse }}
+
       <article class="project-card">
-        <h2>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+
+        <h2 class="project-card-title">
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
         </h2>
 
         {{ with .Params.summary }}
-          <p>{{ . }}</p>
+          <p class="project-card-summary">
+            {{ . }}
+          </p>
         {{ end }}
 
-        <div class="project-meta">
+        <div class="project-card-meta">
+
           {{ with .Params.status }}
-            <span>{{ . }}</span>
+            <span class="project-status">
+              {{ . }}
+            </span>
           {{ end }}
 
           {{ with .Lastmod }}
-            <span>Updated {{ .Format "2006-01-02" }}</span>
+            <span>
+              Updated {{ .Format "2006-01-02" }}
+            </span>
           {{ end }}
+
         </div>
+
       </article>
+
     {{ end }}
+
   </div>
 
 </main>
+
+
+{{/* =========================================================
+     Level 2: /projects/example/
+     具体 Project 页面
+     ========================================================= */}}
+
+{{ else if .Parent.Parent.IsHome }}
+
+<main class="main project-page">
+
+  <article class="project-main">
+
+    <header class="project-header">
+
+      <h1>{{ .Title }}</h1>
+
+      <div class="project-meta">
+
+        {{ with .Params.status }}
+          <span class="project-status">
+            {{ . }}
+          </span>
+        {{ end }}
+
+        {{ with .Lastmod }}
+          <span>
+            Updated {{ .Format "2006-01-02" }}
+          </span>
+        {{ end }}
+
+      </div>
+
+    </header>
+
+
+    <div class="post-content project-content">
+      {{ .Content }}
+    </div>
+
+  </article>
+
+
+  {{/* ---------- Notes ---------- */}}
+
+  {{ $notes := .GetPage "notes" }}
+
+  {{ with $notes }}
+
+    {{ $pages := .RegularPages.ByDate.Reverse }}
+
+    <section class="project-notes">
+
+      <div class="project-divider"></div>
+
+      <header class="project-notes-header">
+
+        <h2>Notes / Log</h2>
+
+        {{ if gt (len $pages) 5 }}
+          <a
+            class="project-notes-all"
+            href="{{ .RelPermalink }}"
+          >
+            All notes →
+          </a>
+        {{ end }}
+
+      </header>
+
+
+      {{ if gt (len $pages) 0 }}
+
+        <div class="project-note-list">
+
+          {{ range first 5 $pages }}
+
+            <article class="project-note">
+
+              <div class="project-note-meta">
+
+                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                  {{ .Date.Format "2006-01-02" }}
+                </time>
+
+                {{ with .Params.kind }}
+                  <span class="project-note-kind">
+                    {{ . }}
+                  </span>
+                {{ end }}
+
+              </div>
+
+
+              <h3 class="project-note-title">
+                <a href="{{ .RelPermalink }}">
+                  {{ .Title }}
+                </a>
+              </h3>
+
+
+              {{ with .Summary }}
+                <div class="project-note-summary">
+                  {{ . }}
+                </div>
+              {{ end }}
+
+            </article>
+
+          {{ end }}
+
+        </div>
+
+      {{ else }}
+
+        <p class="project-notes-empty">
+          暂无记录。
+        </p>
+
+      {{ end }}
+
+    </section>
+
+  {{ end }}
+
+</main>
+
+
+{{/* =========================================================
+     Level 3: /projects/example/notes/
+     全部 Notes
+     ========================================================= */}}
+
+{{ else }}
+
+<main class="main project-notes-page">
+
+  <header class="page-header">
+
+    <h1>{{ .Title }}</h1>
+
+    <p class="project-notes-back">
+      <a href="{{ .Parent.RelPermalink }}">
+        ← {{ .Parent.Title }}
+      </a>
+    </p>
+
+    {{ with .Content }}
+      <div class="post-content">
+        {{ . }}
+      </div>
+    {{ end }}
+
+  </header>
+
+
+  <div class="project-note-list project-note-list-all">
+
+    {{ range .RegularPages.ByDate.Reverse }}
+
+      <article class="project-note">
+
+        <div class="project-note-meta">
+
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+            {{ .Date.Format "2006-01-02" }}
+          </time>
+
+          {{ with .Params.kind }}
+            <span class="project-note-kind">
+              {{ . }}
+            </span>
+          {{ end }}
+
+        </div>
+
+
+        <h2 class="project-note-title">
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }}
+          </a>
+        </h2>
+
+
+        {{ with .Summary }}
+          <div class="project-note-summary">
+            {{ . }}
+          </div>
+        {{ end }}
+
+      </article>
+
+    {{ end }}
+
+  </div>
+
+</main>
+
+{{ end }}
+
 {{ end }}
