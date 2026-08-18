@@ -227,7 +227,7 @@
               {{ with $note.Summary }}
 
                 <div class="project-note-summary">
-                  {{ . }}
+                  {{ $note.Plain | truncate 120 }}
                 </div>
 
               {{ end }}
