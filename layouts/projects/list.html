@@ -5,14 +5,14 @@
 <main class="main projects-index">
 
   <header class="page-header">
-  <h1>{{ .Title }}</h1>
-</header>
+    <h1>{{ .Title }}</h1>
+  </header>
 
-{{ with .Content }}
-  <div class="post-content">
-    {{ . }}
-  </div>
-{{ end }}
+  {{ with .Content }}
+    <div class="post-content">
+      {{ . }}
+    </div>
+  {{ end }}
 
 
   <div class="project-list">
@@ -138,13 +138,115 @@
          正文
          ==================================================== -->
 
-    <article class="project-main project-body-panel">
+    <article
+      id="project-main"
+      class="project-main project-body-panel"
+    >
 
-      <div class="post-content project-content">
+
+      <!--
+        Hugo 原始正文。
+
+        JavaScript 会读取这里面的段落 / 标题 / 列表等，
+        然后按照字数重新组成若干页。
+
+        如果 JavaScript 没有运行，
+        原正文仍然能够正常显示。
+      -->
+
+      <div
+        id="project-content-source"
+        class="post-content project-content"
+      >
 
         {{ .Content }}
 
       </div>
+
+
+
+      <!--
+        分页后的正文会放到这里。
+      -->
+
+      <div
+        id="project-content-pages"
+        class="post-content project-content"
+        style="display: none;"
+      ></div>
+
+
+
+      <!-- ==================================================
+           正文 Pagination
+
+           « = 第一页
+           ‹ = 上一页
+
+           数字页码
+
+           › = 下一页
+           » = 最后一页
+           ================================================== -->
+
+      <nav
+        id="project-content-pagination"
+        class="project-note-pagination project-content-pagination"
+        aria-label="Project content pagination"
+        style="display: none;"
+      >
+
+
+        <button
+          id="project-content-first"
+          type="button"
+          aria-label="First page"
+          title="First page"
+        >
+          «
+        </button>
+
+
+        <button
+          id="project-content-prev"
+          type="button"
+          aria-label="Previous page"
+          title="Previous page"
+        >
+          ‹
+        </button>
+
+
+
+        <div
+          id="project-content-page-numbers"
+          class="project-note-pages project-content-page-numbers"
+        ></div>
+
+
+
+        <button
+          id="project-content-next"
+          type="button"
+          aria-label="Next page"
+          title="Next page"
+        >
+          ›
+        </button>
+
+
+        <button
+          id="project-content-last"
+          type="button"
+          aria-label="Last page"
+          title="Last page"
+        >
+          »
+        </button>
+
+
+      </nav>
+
 
     </article>
 
@@ -244,7 +346,7 @@
 
 
         <!-- ================================================
-             Pagination
+             Notes Pagination
 
              « = 第一页
              ‹ = 上一页
@@ -335,6 +437,794 @@
   </div>
 
 </main>
+
+
+
+<!-- ========================================================
+     Project Content Pagination JavaScript
+     ======================================================== -->
+
+<script>
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+
+    /* ======================================================
+       每页正文目标字数
+
+       这里修改每页长度。
+
+       2500 = 大约每页 2500 个非空白字符
+       2000 = 页面更短
+       3000 = 页面更长
+       ====================================================== */
+
+    const PAGE_CHAR_LIMIT = 3000;
+
+
+
+    /* ======================================================
+       获取 DOM
+       ====================================================== */
+
+    const source =
+      document.getElementById(
+        "project-content-source"
+      );
+
+
+    const pagesContainer =
+      document.getElementById(
+        "project-content-pages"
+      );
+
+
+    const pagination =
+      document.getElementById(
+        "project-content-pagination"
+      );
+
+
+    const first =
+      document.getElementById(
+        "project-content-first"
+      );
+
+
+    const prev =
+      document.getElementById(
+        "project-content-prev"
+      );
+
+
+    const next =
+      document.getElementById(
+        "project-content-next"
+      );
+
+
+    const last =
+      document.getElementById(
+        "project-content-last"
+      );
+
+
+    const numbers =
+      document.getElementById(
+        "project-content-page-numbers"
+      );
+
+
+    const projectMain =
+      document.getElementById(
+        "project-main"
+      );
+
+
+
+    if (
+      !source ||
+      !pagesContainer ||
+      !pagination ||
+      !first ||
+      !prev ||
+      !next ||
+      !last ||
+      !numbers
+    ) {
+
+      return;
+
+    }
+
+
+
+    /* ======================================================
+       计算一个 HTML 块包含多少正文字符
+
+       空格、换行、Tab 不计算。
+
+       所以中文：
+
+       "这是正文"
+       = 4 个字符
+
+       英文：
+
+       "Hello world"
+       = 10 个非空白字符
+       ====================================================== */
+
+    function countChars(element) {
+
+      return (
+        element.textContent || ""
+      )
+        .replace(
+          /\s+/g,
+          ""
+        )
+        .length;
+
+    }
+
+
+
+    /* ======================================================
+       获取 Markdown 渲染出来的一级块
+
+       通常包括：
+
+       p
+       h1 h2 h3...
+       ul
+       ol
+       blockquote
+       table
+       pre
+       figure
+       img 所在容器
+       等等
+
+       不直接切 HTML 字符串，
+       避免把标签切坏。
+       ====================================================== */
+
+    const blocks =
+      Array.from(
+        source.children
+      );
+
+
+
+    /* ======================================================
+       如果正文没有正常块元素
+
+       比如极特殊情况下只有纯文本节点，
+       就不分页。
+       ====================================================== */
+
+    if (blocks.length === 0) {
+
+      return;
+
+    }
+
+
+
+    /* ======================================================
+       构建分页
+       ====================================================== */
+
+    const contentPages = [];
+
+
+    let currentPage =
+      document.createElement(
+        "div"
+      );
+
+
+    currentPage.className =
+      "project-content-page";
+
+
+    let currentChars =
+      0;
+
+
+
+    blocks.forEach(
+      function (block) {
+
+
+        const blockChars =
+          countChars(
+            block
+          );
+
+
+
+        /*
+          如果：
+
+          当前页已经有内容，
+
+          并且加入这个段落以后
+          会超过 PAGE_CHAR_LIMIT，
+
+          那么先结束当前页。
+
+          注意：
+
+          不会从一个段落中间硬切。
+        */
+
+        if (
+          currentPage.children.length > 0 &&
+          currentChars + blockChars >
+            PAGE_CHAR_LIMIT
+        ) {
+
+
+          contentPages.push(
+            currentPage
+          );
+
+
+          currentPage =
+            document.createElement(
+              "div"
+            );
+
+
+          currentPage.className =
+            "project-content-page";
+
+
+          currentChars =
+            0;
+
+        }
+
+
+
+        /*
+          克隆原来的 HTML 块。
+
+          所以：
+
+          Markdown 格式
+          链接
+          图片
+          强调
+          表格
+          代码块
+
+          都会被保留。
+        */
+
+        currentPage.appendChild(
+          block.cloneNode(
+            true
+          )
+        );
+
+
+        currentChars +=
+          blockChars;
+
+
+      }
+    );
+
+
+
+    /* ======================================================
+       放入最后一页
+       ====================================================== */
+
+    if (
+      currentPage.children.length > 0
+    ) {
+
+      contentPages.push(
+        currentPage
+      );
+
+    }
+
+
+
+    /* ======================================================
+       如果实际上只有一页
+
+       不做分页，
+       保持原来的正文。
+       ====================================================== */
+
+    if (
+      contentPages.length <= 1
+    ) {
+
+      pagination.style.display =
+        "none";
+
+
+      return;
+
+    }
+
+
+
+    /* ======================================================
+       正式使用分页后的正文
+       ====================================================== */
+
+    source.style.display =
+      "none";
+
+
+    pagesContainer.innerHTML =
+      "";
+
+
+    contentPages.forEach(
+      function (contentPage) {
+
+        pagesContainer.appendChild(
+          contentPage
+        );
+
+      }
+    );
+
+
+    pagesContainer.style.display =
+      "";
+
+
+
+    /* ======================================================
+       当前页
+
+       0 = 第一页
+       1 = 第二页
+       ====================================================== */
+
+    let page =
+      0;
+
+
+    const pageCount =
+      contentPages.length;
+
+
+
+    /* ======================================================
+       创建数字页码按钮
+       ====================================================== */
+
+    function createPageButton(
+      pageIndex
+    ) {
+
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+
+      button.type =
+        "button";
+
+
+      /*
+        直接复用 Notes 页码的 CSS。
+      */
+
+      button.className =
+        "project-note-page-number project-content-page-number";
+
+
+      button.textContent =
+        pageIndex + 1;
+
+
+
+      if (
+        pageIndex === page
+      ) {
+
+
+        button.classList.add(
+          "current"
+        );
+
+
+        button.setAttribute(
+          "aria-current",
+          "page"
+        );
+
+      }
+
+
+
+      button.addEventListener(
+        "click",
+        function () {
+
+          goToPage(
+            pageIndex
+          );
+
+        }
+      );
+
+
+      return button;
+
+    }
+
+
+
+    /* ======================================================
+       省略号
+       ====================================================== */
+
+    function createEllipsis() {
+
+
+      const span =
+        document.createElement(
+          "span"
+        );
+
+
+      span.className =
+        "project-note-page-ellipsis";
+
+
+      span.textContent =
+        "…";
+
+
+      return span;
+
+    }
+
+
+
+    /* ======================================================
+       绘制数字页码
+       ====================================================== */
+
+    function renderNumbers() {
+
+
+      numbers.innerHTML =
+        "";
+
+
+
+      /*
+        总页数不超过 7：
+
+        1 2 3 4 5 6 7
+      */
+
+      if (
+        pageCount <= 7
+      ) {
+
+
+        for (
+          let i = 0;
+          i < pageCount;
+          i++
+        ) {
+
+
+          numbers.appendChild(
+            createPageButton(
+              i
+            )
+          );
+
+
+        }
+
+
+        return;
+
+      }
+
+
+
+      /*
+        页数很多：
+
+        1 … 5 6 7 8 9 … 20
+
+        始终显示：
+
+        第一页
+        最后一页
+        当前页
+        当前页前后各两页
+      */
+
+      const visiblePages =
+        new Set([
+
+          0,
+
+          pageCount - 1,
+
+          page - 2,
+
+          page - 1,
+
+          page,
+
+          page + 1,
+
+          page + 2
+
+        ]);
+
+
+
+      const validPages =
+        Array
+          .from(
+            visiblePages
+          )
+          .filter(
+            function (index) {
+
+              return (
+                index >= 0 &&
+                index <
+                  pageCount
+              );
+
+            }
+          )
+          .sort(
+            function (
+              a,
+              b
+            ) {
+
+              return a - b;
+
+            }
+          );
+
+
+
+      let previousIndex =
+        null;
+
+
+
+      validPages.forEach(
+        function (
+          pageIndex
+        ) {
+
+
+          if (
+            previousIndex !== null &&
+            pageIndex -
+              previousIndex >
+              1
+          ) {
+
+
+            numbers.appendChild(
+              createEllipsis()
+            );
+
+
+          }
+
+
+
+          numbers.appendChild(
+            createPageButton(
+              pageIndex
+            )
+          );
+
+
+          previousIndex =
+            pageIndex;
+
+
+        }
+      );
+
+    }
+
+
+
+    /* ======================================================
+       显示指定正文页
+       ====================================================== */
+
+    function renderPage() {
+
+
+      contentPages.forEach(
+        function (
+          contentPage,
+          index
+        ) {
+
+
+          contentPage.style.display =
+            index === page
+              ? ""
+              : "none";
+
+
+        }
+      );
+
+
+
+      /* ====================================================
+         首尾按钮状态
+         ==================================================== */
+
+      first.disabled =
+        page === 0;
+
+
+      prev.disabled =
+        page === 0;
+
+
+      next.disabled =
+        page >=
+        pageCount - 1;
+
+
+      last.disabled =
+        page >=
+        pageCount - 1;
+
+
+
+      renderNumbers();
+
+    }
+
+
+
+    /* ======================================================
+       前往正文页
+       ====================================================== */
+
+    function goToPage(
+      newPage
+    ) {
+
+
+      page =
+        Math.max(
+          0,
+          Math.min(
+            newPage,
+            pageCount - 1
+          )
+        );
+
+
+      renderPage();
+
+
+
+      /*
+        翻页以后把正文区域滚回顶部。
+      */
+
+      if (
+        projectMain
+      ) {
+
+
+        projectMain.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+
+      }
+
+    }
+
+
+
+    /* ======================================================
+       按钮
+       ====================================================== */
+
+    first.addEventListener(
+      "click",
+      function () {
+
+        goToPage(
+          0
+        );
+
+      }
+    );
+
+
+    prev.addEventListener(
+      "click",
+      function () {
+
+        goToPage(
+          page - 1
+        );
+
+      }
+    );
+
+
+    next.addEventListener(
+      "click",
+      function () {
+
+        goToPage(
+          page + 1
+        );
+
+      }
+    );
+
+
+    last.addEventListener(
+      "click",
+      function () {
+
+        goToPage(
+          pageCount - 1
+        );
+
+      }
+    );
+
+
+
+    /* ======================================================
+       显示分页栏
+       ====================================================== */
+
+    pagination.style.display =
+      "";
+
+
+
+    /* ======================================================
+       初始显示第一页
+       ====================================================== */
+
+    renderPage();
+
+
+  }
+);
+
+</script>
 
 
 
@@ -464,7 +1354,9 @@ document.addEventListener(
        如果只有一页，不显示翻页
        ====================================================== */
 
-    if (pageCount <= 1) {
+    if (
+      pageCount <= 1
+    ) {
 
       pagination.style.display =
         "none";
@@ -479,7 +1371,9 @@ document.addEventListener(
        跳到指定页
        ====================================================== */
 
-    function goToPage(newPage) {
+    function goToPage(
+      newPage
+    ) {
 
 
       page =
@@ -526,11 +1420,9 @@ document.addEventListener(
 
 
 
-      /*
-        当前页
-      */
-
-      if (pageIndex === page) {
+      if (
+        pageIndex === page
+      ) {
 
 
         button.classList.add(
@@ -604,15 +1496,9 @@ document.addEventListener(
 
 
 
-      /*
-        总页数 <= 7
-
-        全部显示：
-
-        1 2 3 4 5 6 7
-      */
-
-      if (pageCount <= 7) {
+      if (
+        pageCount <= 7
+      ) {
 
 
         for (
@@ -623,7 +1509,9 @@ document.addEventListener(
 
 
           pagesContainer.appendChild(
-            createPageButton(i)
+            createPageButton(
+              i
+            )
           );
 
 
@@ -635,23 +1523,6 @@ document.addEventListener(
       }
 
 
-
-      /*
-        页数很多时：
-
-        永远显示：
-
-        第一页
-        最后一页
-        当前页
-        当前页前 2 页
-        当前页后 2 页
-
-
-        例如：
-
-        1 … 6 7 8 9 10 … 20
-      */
 
       const visiblePages =
         new Set([
@@ -674,11 +1545,6 @@ document.addEventListener(
 
 
 
-      /*
-        删除超出范围的页码，
-        然后排序。
-      */
-
       const validPages =
         Array
           .from(
@@ -689,13 +1555,17 @@ document.addEventListener(
 
               return (
                 index >= 0 &&
-                index < pageCount
+                index <
+                  pageCount
               );
 
             }
           )
           .sort(
-            function (a, b) {
+            function (
+              a,
+              b
+            ) {
 
               return a - b;
 
@@ -710,13 +1580,10 @@ document.addEventListener(
 
 
       validPages.forEach(
-        function (pageIndex) {
+        function (
+          pageIndex
+        ) {
 
-
-          /*
-            中间有断层，
-            插入省略号。
-          */
 
           if (
             previousIndex !== null &&
@@ -761,17 +1628,15 @@ document.addEventListener(
 
 
       const start =
-        page * pageSize;
+        page *
+        pageSize;
 
 
       const end =
-        start + pageSize;
+        start +
+        pageSize;
 
 
-
-      /*
-        只显示当前页的 5 条。
-      */
 
       notes.forEach(
         function (
@@ -805,10 +1670,6 @@ document.addEventListener(
 
 
 
-      /* ====================================================
-         首尾按钮状态
-         ==================================================== */
-
       first.disabled =
         page === 0;
 
@@ -828,18 +1689,14 @@ document.addEventListener(
 
 
 
-      /* ====================================================
-         更新数字页码
-         ==================================================== */
-
       renderNumbers();
 
 
 
-      /* ====================================================
-         桌面 Notes 有独立滚轮时，
-         翻页以后回到 Notes 顶部。
-         ==================================================== */
+      /*
+        Notes 翻页以后，
+        Notes 自己回到顶部。
+      */
 
       list.scrollTop =
         0;
@@ -856,9 +1713,9 @@ document.addEventListener(
       "click",
       function () {
 
-
-        goToPage(0);
-
+        goToPage(
+          0
+        );
 
       }
     );
@@ -873,11 +1730,9 @@ document.addEventListener(
       "click",
       function () {
 
-
         goToPage(
           page - 1
         );
-
 
       }
     );
@@ -892,11 +1747,9 @@ document.addEventListener(
       "click",
       function () {
 
-
         goToPage(
           page + 1
         );
-
 
       }
     );
@@ -911,11 +1764,9 @@ document.addEventListener(
       "click",
       function () {
 
-
         goToPage(
           pageCount - 1
         );
-
 
       }
     );
@@ -923,7 +1774,7 @@ document.addEventListener(
 
 
     /* ======================================================
-       初始显示第 1 页
+       初始显示第一页
        ====================================================== */
 
     renderPage();
