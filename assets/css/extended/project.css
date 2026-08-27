@@ -481,6 +481,88 @@
 }
 
 
+/* =========================================================
+   自动目录层级
+   h1 / h2 / h3
+   ========================================================= */
+
+.project-toc-link {
+    display: flex;
+
+    align-items: baseline;
+
+    justify-content: space-between;
+
+    gap: 0.6rem;
+
+    width: 100%;
+
+    padding-top: 0.28rem;
+    padding-bottom: 0.28rem;
+
+    color: var(--secondary);
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+}
+
+
+/* h1：章 / 部 */
+
+.project-toc-level-1 {
+    padding-left: 0;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    margin-top: 0.45rem;
+}
+
+
+.project-toc-level-1:first-child {
+    margin-top: 0;
+}
+
+
+/* h2：节 */
+
+.project-toc-level-2 {
+    padding-left: 0.9rem;
+
+    font-size: 0.84rem;
+
+    font-weight: 400;
+}
+
+
+/* h3：小节 */
+
+.project-toc-level-3 {
+    padding-left: 1.8rem;
+
+    font-size: 0.78rem;
+
+    font-weight: 400;
+
+    opacity: 0.9;
+}
+
+
+.project-toc-link:hover,
+.project-toc-link:focus-visible {
+    color: var(--primary);
+}
+
+
+.project-toc-link.current {
+    color: var(--primary);
+
+    font-weight: 600;
+}
+
+
 .project-toc-title {
     min-width:
         0;
