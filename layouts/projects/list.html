@@ -88,7 +88,7 @@
 
 
 
-<main class="main project-page project-layout">
+<main class="main project-page project-layout{{ if .Params.toc }} has-project-toc{{ end }}">
 
 
   <!-- ======================================================
@@ -258,14 +258,40 @@
 
     <aside class="project-notes project-notes-panel">
 
+      {{ if .Params.toc }}
 
-      <header class="project-notes-header">
+      <section class="project-sidebar-section project-toc-section">
 
-        <h2>
-          Notes / Log
-        </h2>
+        <header class="project-notes-header">
 
-      </header>
+          <h2>
+            目录
+          </h2>
+
+        </header>
+
+
+        <div
+          class="project-toc"
+          data-project-toc
+        >
+          {{ .TableOfContents }}
+        </div>
+
+      </section>
+
+      {{ end }}
+
+
+      <section class="project-sidebar-section project-notes-section">
+
+        <header class="project-notes-header">
+
+          <h2>
+            Notes / Log
+          </h2>
+
+        </header>
 
 
 
@@ -430,6 +456,7 @@
 
       {{ end }}
 
+      </section>
 
     </aside>
 
@@ -1113,7 +1140,8 @@ document.addEventListener(
        ====================================================== */
 
     function goToPage(
-      newPage
+      newPage,
+      scrollTarget
     ) {
 
 
@@ -1135,9 +1163,16 @@ document.addEventListener(
         翻页以后把正文区域滚回顶部。
       */
 
-      if (
-        projectMain
-      ) {
+      if (scrollTarget) {
+
+
+        scrollTarget.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+
+      } else if (projectMain) {
 
 
         projectMain.scrollIntoView({
@@ -1147,6 +1182,120 @@ document.addEventListener(
 
 
       }
+
+    }
+
+
+
+    /* ======================================================
+       目录跳转
+
+       正文分页后，标题位于克隆出的页面中。目录点击时先切到
+       标题所在页，再滚动到标题，避免跳到隐藏的原始正文。
+       ====================================================== */
+
+    const toc =
+      document.querySelector(
+        "[data-project-toc]"
+      );
+
+
+    function decodeHash(hash) {
+
+      try {
+        return decodeURIComponent(
+          hash.replace(/^#/, "")
+        );
+      } catch (error) {
+        return hash.replace(/^#/, "");
+      }
+
+    }
+
+
+    function findHeading(targetId) {
+
+      for (
+        let pageIndex = 0;
+        pageIndex < contentPages.length;
+        pageIndex++
+      ) {
+
+        const headings =
+          contentPages[pageIndex]
+            .querySelectorAll("[id]");
+
+        for (const heading of headings) {
+
+          if (heading.id === targetId) {
+            return {
+              pageIndex: pageIndex,
+              heading: heading
+            };
+          }
+
+        }
+
+      }
+
+      return null;
+
+    }
+
+
+    function openHeading(targetId, updateHistory) {
+
+      const target =
+        findHeading(targetId);
+
+      if (!target) {
+        return false;
+      }
+
+      goToPage(
+        target.pageIndex,
+        target.heading
+      );
+
+      if (updateHistory) {
+        history.replaceState(
+          null,
+          "",
+          "#" + encodeURIComponent(targetId)
+        );
+      }
+
+      return true;
+
+    }
+
+
+    if (toc) {
+
+      toc.addEventListener(
+        "click",
+        function (event) {
+
+          const link =
+            event.target.closest(
+              'a[href^="#"]'
+            );
+
+          if (!link) {
+            return;
+          }
+
+          const targetId =
+            decodeHash(
+              link.getAttribute("href")
+            );
+
+          if (openHeading(targetId, true)) {
+            event.preventDefault();
+          }
+
+        }
+      );
 
     }
 
@@ -1219,6 +1368,16 @@ document.addEventListener(
        ====================================================== */
 
     renderPage();
+
+
+    if (window.location.hash) {
+
+      openHeading(
+        decodeHash(window.location.hash),
+        false
+      );
+
+    }
 
 
   }

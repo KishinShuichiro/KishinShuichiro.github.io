@@ -171,6 +171,12 @@
     min-height: 70vh;
 }
 
+.project-layout.has-project-toc .project-workspace {
+    grid-template-columns:
+        minmax(0, 1fr)
+        280px;
+}
+
 
 /* ------------------------------------------------------------
    2.3 Body
@@ -196,6 +202,44 @@
 
     font-size: 1rem;
     line-height: 1.9;
+}
+
+/* ---------- Long-form reading typography ---------- */
+
+.project-content p {
+    margin: 0 0 1.35em;
+
+    line-height: 2;
+}
+
+.project-content h1,
+.project-content h2,
+.project-content h3,
+.project-content h4,
+.project-content h5,
+.project-content h6 {
+    line-height: 1.45;
+    scroll-margin-top: 6rem;
+}
+
+.project-content h1 {
+    margin: 2.5rem 0 1.15rem;
+}
+
+.project-content h2 {
+    margin: 2.1rem 0 1rem;
+}
+
+.project-content h3,
+.project-content h4,
+.project-content h5,
+.project-content h6 {
+    margin: 1.8rem 0 0.85rem;
+}
+
+.project-content > :first-child,
+.project-content-page > :first-child {
+    margin-top: 0;
 }
 
 
@@ -228,6 +272,30 @@
     padding-left: 2rem;
 }
 
+.project-layout.has-project-toc .project-notes-panel {
+    width: 280px;
+}
+
+.project-sidebar-section {
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-toc-section {
+    flex: 1 1 58%;
+
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.project-notes-section {
+    flex: 1 1 42%;
+}
+
 .project-notes-header {
     flex: 0 0 auto;
 
@@ -240,6 +308,65 @@
     font-size: 1.05rem;
 
     font-weight: 600;
+}
+
+
+/* ------------------------------------------------------------
+   2.5 Project table of contents
+   ------------------------------------------------------------ */
+
+.project-toc {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    padding-right: 0.65rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    scrollbar-width: thin;
+}
+
+.project-toc nav > ul {
+    padding-left: 0;
+}
+
+.project-toc ul {
+    margin: 0;
+    padding-left: 0.85rem;
+    list-style: none;
+}
+
+.project-toc ul ul {
+    margin: 0.3rem 0 0.6rem 0.25rem;
+    border-left: 1px solid var(--border);
+}
+
+.project-toc li {
+    margin: 0.38rem 0;
+}
+
+.project-toc a {
+    display: block;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.project-toc a:hover,
+.project-toc a:focus-visible {
+    color: var(--primary);
+}
+
+.project-toc::-webkit-scrollbar {
+    width: 6px;
+}
+
+.project-toc::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.project-toc::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 999px;
 }
 
 
@@ -460,6 +587,23 @@
             1rem;
     }
 
+    .project-layout.has-project-toc .project-notes-panel {
+        width: 100%;
+    }
+
+    .project-toc {
+        max-height: 55vh;
+    }
+
+    .project-sidebar-section {
+        display: block;
+    }
+
+    .project-toc-section {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
     .project-note-list {
         max-height: 50vh;
     }
@@ -583,5 +727,24 @@
 
     .project-note-pagination button:disabled {
         opacity: 0.3;
+    }
+
+    .project-content-pagination {
+        gap: 0.2rem;
+    }
+
+    .project-content-pagination .project-note-pages {
+        gap: 0.12rem;
+    }
+
+    .project-content-pagination button {
+        width: 1.7rem;
+        min-width: 1.7rem;
+        height: 1.7rem;
+    }
+
+    .project-content-pagination #project-content-first,
+    .project-content-pagination #project-content-last {
+        display: none;
     }
 }
