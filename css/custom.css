@@ -1,0 +1,160 @@
+/* =========================================================
+   PaperMod 自定义（首页 list 页为主）
+   - 首篇(first-entry)缩略卡片化：左文右图 4:3
+   - 首页序言(post-content)：更小字、更大段距、上下分割线
+   ========================================================= */
+
+
+/* =========================================================
+   1) 首页第一篇（article.first-entry）强制缩略卡片
+   ========================================================= */
+
+body.list main article.first-entry {
+  display: grid !important;
+  grid-template-columns: 1fr 200px !important;
+  column-gap: 18px !important;
+  align-items: start !important;
+
+  min-height: unset !important;
+  margin: var(--gap) 0 !important;
+  padding: var(--gap) !important;
+
+  background: var(--entry) !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.list main article.first-entry .entry-header,
+body.list main article.first-entry .entry-content,
+body.list main article.first-entry .entry-footer {
+  grid-column: 1 !important;
+  min-width: 0 !important;
+}
+
+body.list main article.first-entry figure.entry-cover {
+  grid-column: 2 !important;
+  grid-row: 1 / span 3 !important;
+
+  margin: 0 !important;
+  width: 200px !important;
+  aspect-ratio: 4 / 3 !important;
+
+  overflow: hidden !important;
+  border-radius: 14px !important;
+  align-self: start !important;
+}
+
+body.list main article.first-entry figure.entry-cover img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* 小屏幕：首篇恢复上图下文 */
+@media (max-width: 720px) {
+  body.list main article.first-entry {
+    grid-template-columns: 1fr !important;
+    row-gap: 12px !important;
+  }
+
+  body.list main article.first-entry figure.entry-cover {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+}
+
+
+/* =========================================================
+   2) 首页序言（div.post-content）
+   ========================================================= */
+
+body.list main.main > .post-content {
+  max-width: 100% !important;
+  margin: 4rem 0 3.5rem !important;
+  padding: 0 1.5rem !important;
+  position: relative;
+}
+
+/* 顶部分割线 */
+body.list main.main > .post-content::before {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0 auto 1.5rem;
+  background: var(--border);
+  opacity: 0.75;
+}
+
+/* 底部分割线 */
+body.list main.main > .post-content::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 1.5rem auto 0;
+  background: var(--border);
+  opacity: 0.75;
+}
+
+/* 首页序言段落：跟随 PaperMod 正文颜色变量 */
+body.list main.main > .post-content p {
+  font-size: 0.92rem !important;
+  line-height: 2.0 !important;
+  margin: 0 0 2.1rem 0 !important;
+  color: var(--content) !important;   /* ⭐ 核心 */
+}
+
+/* 强调文本稍微弱一点，但仍跟主题 */
+body.list main.main > .post-content em {
+  color: var(--secondary);
+}
+
+
+/* 小屏幕：序言微调 */
+@media (max-width: 720px) {
+  body.list main.main > .post-content {
+    margin: 3rem 0 2.5rem !important;
+    padding: 0 1.2rem !important;
+  }
+
+  body.list main.main > .post-content p {
+    margin-bottom: 1.8rem !important;
+  }
+}
+
+/* =========================================================
+   首页第一篇：如果【没有封面】，退化成普通文章卡片
+   ========================================================= */
+
+body.list main article.first-entry:not(:has(.entry-cover)) {
+  display: block !important;
+
+  padding: var(--gap) !important;
+  margin-bottom: var(--gap) !important;
+
+  background: var(--entry) !important;
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* 字体尺寸退回普通文章 */
+body.list main article.first-entry:not(:has(.entry-cover)) .entry-header h1 {
+  font-size: 24px !important;
+  line-height: 1.3 !important;
+}
+
+body.list main article.first-entry:not(:has(.entry-cover)) .entry-content {
+  font-size: 14px !important;
+  -webkit-line-clamp: 2 !important;
+}
+
+body.list main article.first-entry:not(:has(.entry-cover)) .entry-footer {
+  font-size: 13px !important;
+}
+
+/* 确保没有封面时不留图位 */
+body.list main article.first-entry:not(:has(.entry-cover)) .entry-cover {
+  display: none !important;
+}
