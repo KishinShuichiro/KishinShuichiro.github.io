@@ -200,22 +200,22 @@
 
 
       <!-- 自动目录 -->
-    <section
-      id="project-toc-section"
-      class="project-sidebar-section project-toc-section"
-      hidden
-    >
+      <section
+        id="project-toc-section"
+        class="project-sidebar-section project-toc-section"
+        hidden
+      >
 
-      <header class="project-notes-header">
-        <h2>Contents</h2>
-      </header>
+        <header class="project-notes-header">
+          <h2>Contents</h2>
+        </header>
 
-      <div
-        id="project-toc"
-        class="project-toc"
-      ></div>
+        <div
+          id="project-toc"
+          class="project-toc"
+        ></div>
 
-    </section>
+      </section>
 
 
       <!-- Notes -->
@@ -456,7 +456,7 @@ document.addEventListener(
     /* ======================================================
        构建逻辑页
        - 约 3000 非空白字符一页
-       - h2 强制另起一页
+       - h1 强制另起一页
        - 不从段落中间硬切
        ====================================================== */
 
@@ -512,11 +512,11 @@ document.addEventListener(
             : "";
 
         const isChapter =
-          tagName === "h2";
+          tagName === "h1";
 
 
         /*
-          h2 视为“章”。
+          h1 视为“章”。
           如果上一页已有内容，则另起一页。
         */
         if (
@@ -779,7 +779,8 @@ document.addEventListener(
 
 
     /* ======================================================
-       TOC
+       自动 Contents
+       直接扫描分页后的正文 h1 / h2 / h3
        ====================================================== */
 
     const tocEntries = [];
@@ -790,7 +791,7 @@ document.addEventListener(
       try {
 
         return decodeURIComponent(
-          hash.replace(
+          String(hash || "").replace(
             /^#/,
             ""
           )
@@ -798,59 +799,12 @@ document.addEventListener(
 
       } catch (error) {
 
-        return hash.replace(
+        return String(hash || "").replace(
           /^#/,
           ""
         );
 
       }
-
-    }
-
-
-    function findHeading(
-      targetId
-    ) {
-
-      for (
-        let pageIndex = 0;
-        pageIndex <
-          contentPages.length;
-        pageIndex++
-      ) {
-
-        const headings =
-          contentPages[
-            pageIndex
-          ].querySelectorAll(
-            "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
-          );
-
-        for (
-          const heading
-          of headings
-        ) {
-
-          if (
-            heading.id ===
-              targetId
-          ) {
-
-            return {
-              pageIndex:
-                pageIndex,
-
-              heading:
-                heading
-            };
-
-          }
-
-        }
-
-      }
-
-      return null;
 
     }
 
@@ -864,127 +818,198 @@ document.addEventListener(
         return;
       }
 
-      const links =
-        Array.from(
-          toc.querySelectorAll(
-            'a[href^="#"]'
-          )
-        );
 
-      /*
-        Hugo 没生成 h2/h3 目录：
-        整个 Contents 区保持 hidden。
-        Notes 会自动占满右栏。
-      */
-      if (
-        links.length === 0
-      ) {
+      toc.innerHTML =
+        "";
 
-        tocSection.hidden =
-          true;
-
-        return;
-      }
+      tocEntries.length =
+        0;
 
 
-      tocEntries.length = 0;
+      let headingCounter =
+        0;
 
-      let mappedCount = 0;
+
+      contentPages.forEach(
+        function (
+          contentPage,
+          pageIndex
+        ) {
 
 
-      links.forEach(
-        function (link) {
-
-          const targetId =
-            decodeHash(
-              link.getAttribute(
-                "href"
-              )
+          const headings =
+            contentPage.querySelectorAll(
+              "h1, h2, h3"
             );
 
-          const target =
-            findHeading(
-              targetId
-            );
 
-          if (!target) {
-            return;
-          }
+          headings.forEach(
+            function (heading) {
 
 
-          mappedCount++;
+              const headingText =
+                (
+                  heading.textContent ||
+                  ""
+                ).trim();
 
 
-          const pageNumber =
-            document.createElement(
-              "span"
-            );
-
-          pageNumber.className =
-            "project-toc-page";
-
-          pageNumber.textContent =
-            target.pageIndex + 1;
+              if (!headingText) {
+                return;
+              }
 
 
-          /*
-            把原来链接文字包起来，
-            形成“标题 + 页码”两端布局。
-          */
+              /*
+                Hugo 通常会给 Markdown 标题生成 id。
+                没有时自动补一个稳定的页面内 id。
+              */
 
-          const oldText =
-            link.textContent.trim();
+              if (!heading.id) {
 
-          link.textContent =
-            "";
+                heading.id =
+                  "project-heading-" +
+                  headingCounter;
 
-
-          const title =
-            document.createElement(
-              "span"
-            );
-
-          title.className =
-            "project-toc-title";
-
-          title.textContent =
-            oldText;
+              }
 
 
-          link.appendChild(
-            title
+              const level =
+                Number(
+                  heading.tagName.substring(
+                    1
+                  )
+                );
+
+
+              const link =
+                document.createElement(
+                  "a"
+                );
+
+
+              link.href =
+                "#" +
+                encodeURIComponent(
+                  heading.id
+                );
+
+
+              link.className =
+                "project-toc-link " +
+                "project-toc-level-" +
+                level;
+
+
+              const title =
+                document.createElement(
+                  "span"
+                );
+
+
+              title.className =
+                "project-toc-title";
+
+
+              title.textContent =
+                headingText;
+
+
+              const pageNumber =
+                document.createElement(
+                  "span"
+                );
+
+
+              pageNumber.className =
+                "project-toc-page";
+
+
+              pageNumber.textContent =
+                pageIndex + 1;
+
+
+              link.appendChild(
+                title
+              );
+
+
+              link.appendChild(
+                pageNumber
+              );
+
+
+              link.addEventListener(
+                "click",
+                function (event) {
+
+
+                  event.preventDefault();
+
+
+                  goToPage(
+                    pageIndex,
+                    heading
+                  );
+
+
+                  history.replaceState(
+                    null,
+                    "",
+                    "#" +
+                    encodeURIComponent(
+                      heading.id
+                    )
+                  );
+
+
+                }
+              );
+
+
+              toc.appendChild(
+                link
+              );
+
+
+              tocEntries.push({
+
+                link:
+                  link,
+
+                heading:
+                  heading,
+
+                pageIndex:
+                  pageIndex
+
+              });
+
+
+              headingCounter++;
+
+            }
           );
 
-          link.appendChild(
-            pageNumber
-          );
-
-
-          tocEntries.push({
-
-            link:
-              link,
-
-            targetId:
-              targetId,
-
-            pageIndex:
-              target.pageIndex
-
-          });
 
         }
       );
 
 
+      /*
+        没有 h1 / h2 / h3：
+        整个 Contents 区域彻底隐藏，
+        Notes 自动顶到右侧顶部。
+      */
+
       if (
-        mappedCount === 0
+        tocEntries.length === 0
       ) {
 
         tocSection.hidden =
           true;
 
         return;
+
       }
 
 
@@ -993,6 +1018,10 @@ document.addEventListener(
 
     }
 
+
+    /* ======================================================
+       当前章节高亮
+       ====================================================== */
 
     function updateTOCActive() {
 
@@ -1013,6 +1042,7 @@ document.addEventListener(
           index
         ) {
 
+
           if (
             entry.pageIndex <=
               page
@@ -1022,6 +1052,7 @@ document.addEventListener(
               index;
 
           }
+
 
         }
       );
@@ -1033,19 +1064,20 @@ document.addEventListener(
           index
         ) {
 
-          const isCurrent =
+
+          const current =
             index ===
               activeIndex;
 
 
           entry.link.classList.toggle(
             "current",
-            isCurrent
+            current
           );
 
 
           if (
-            isCurrent
+            current
           ) {
 
             entry.link.setAttribute(
@@ -1060,6 +1092,7 @@ document.addEventListener(
             );
 
           }
+
 
         }
       );
@@ -1085,6 +1118,56 @@ document.addEventListener(
         });
 
       }
+
+    }
+
+
+    function findHeading(
+      targetId
+    ) {
+
+      for (
+        let pageIndex = 0;
+        pageIndex <
+          contentPages.length;
+        pageIndex++
+      ) {
+
+        const heading =
+          Array.from(
+            contentPages[
+              pageIndex
+            ].querySelectorAll(
+              "h1, h2, h3"
+            )
+          ).find(
+            function (item) {
+
+              return (
+                item.id ===
+                targetId
+              );
+
+            }
+          );
+
+
+        if (heading) {
+
+          return {
+            pageIndex:
+              pageIndex,
+
+            heading:
+              heading
+          };
+
+        }
+
+      }
+
+
+      return null;
 
     }
 
@@ -1225,51 +1308,6 @@ document.addEventListener(
 
 
       return true;
-
-    }
-
-
-    /* ======================================================
-       目录点击 = 直接翻到标题所在页
-       ====================================================== */
-
-    if (toc) {
-
-      toc.addEventListener(
-        "click",
-        function (event) {
-
-          const link =
-            event.target.closest(
-              'a[href^="#"]'
-            );
-
-          if (!link) {
-            return;
-          }
-
-
-          const targetId =
-            decodeHash(
-              link.getAttribute(
-                "href"
-              )
-            );
-
-
-          if (
-            openHeading(
-              targetId,
-              true
-            )
-          ) {
-
-            event.preventDefault();
-
-          }
-
-        }
-      );
 
     }
 
