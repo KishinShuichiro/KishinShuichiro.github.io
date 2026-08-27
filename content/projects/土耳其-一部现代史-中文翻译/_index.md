@@ -1,7 +1,7 @@
 ---
 title: "土耳其：一部现代史"
 date: 2026-08-28
-lastmod: 2026-08-28T04:07:57+09:00
+lastmod: 2026-08-28T04:11:47+09:00
 summary: "埃里克·J. 泽尔彻"
 status: "active"
 ---
@@ -72,382 +72,198 @@ HDP 在库尔德人中取得成功（它赢得了东南部几乎每一个席位�
 
 过去 23 年里，我学到了很多东西。1993 年，我曾写道，理解一个主题的最佳方式是讲授它；这一点至今仍然成立。善于批判思考的学生（以及其他听众）能够磨砺思想。1993 年以来，我有幸指导近 30 名博士生，其中 19 人现已通过论文答辩。最重要的是，与新一代土耳其史学家就他们和我的研究展开讨论，为我带来了新的视角。因此，将这个新版《土耳其：一部现代史》献给我过去和现在的博士生，是再恰当不过的。
 
-埃里克·扬·泽尔彻
+埃里克·J·泽尔彻
 
 莱顿，2017 年 2 月
 
 # 术语表
 
 注：本术语表按土耳其语字母顺序排列。
-
 **adab**：绅士的行为与品味准则
-
 **adalet**：正义；政府不逾越其 hudud（见该条）的一种特征
-
 **alaylı**：从士兵行伍中晋升的军官
-
 **Alevî**：什叶派伊斯兰教一种混合形态的信奉者，即阿列维派
-
 **altı ok**：“六箭”；共和人民党的原则
-
 **aman**：伊斯兰法规定的安全保障，使不属于 dhimmi（见该条）的非穆斯林得以居住在穆斯林国家
-
 **askeri**：帝国中携带武器、免税的统治精英成员，由苏丹的臣仆构成
-
 **aşar**：什一税
-
 **ayan**：地方显贵
-
 **bab-ı Ali**：“崇高朴特”或“朴特”，既指奥斯曼政府所在的主要建筑，也指奥斯曼政府整体
-
 **berat**：确认某人为外国势力臣民、享有 aman（见该条）的文书
-
 **casus foederi**：属于条约条款适用范围，或促使条约生效的情形
-
 **ciziye**：dhimmi（见该条）应缴纳的人头税
-
 **çiftlik**：私人所有的农场
-
 **damat**：女婿；与皇室女性成婚的男子
-
 **dervish**：tarikat（见该条）的成员；德尔维希
-
 **divan**：帝国御前会议
-
 **dokuz umde**：“九项原则”；人民党 1923 年的纲领
-
 **dönüm**：四分之一英亩
-
 **dragoman**：翻译，尤指外国使馆雇用的翻译
-
 **evkaf**：vakıf（见该条）的复数形式
-
 **fetva**：以 şeriat（见该条）为依据的法律意见，即教法判令
-
 **fitne**：动乱，叛乱
-
 **gazi**：“征服英雄”，授予成功军人的称号
-
 **gecekondu**：“一夜建成”；违章棚户住宅
-
 **halk evi**：“人民之家”；在外省城镇传播凯末尔主义理念的地方教育机构
-
 **halk odası**：“人民室”；与 halk evi 相同，但规模较小，设在村庄
-
 **harbiye**：军事学院
-
 **hatt-i humayun**：苏丹敕令
-
 **hatt-i şerif**：见 hatt-i humayun
-
 **hudud**：任何个人或群体为不侵犯他人权利而必须遵守的界限
-
 **İdadiye**：男子中学
-
 **iltizam**：包税制
-
 **imam**：穆斯林礼拜领拜人；也指什叶派（见 Shi’i）穆斯林承认的先知继承者
-
 **janissaries**：见 yeni çeri
-
 **jurnal**：政府密探的报告
-
 **kadi**：şeriat（见该条）法官，即卡迪
-
 **kadi sicilleri**：地方法庭档案
-
 **kâhya**：大维齐尔的管事
-
 **kaime**：奥斯曼政府债券，作纸币使用
-
 **kanun**：见 örf
-
 **kariye**：村庄
-
 **kaymakam**：县长
-
 **kaza**：区
-
 **khedive**：埃及世袭总督，即赫迪夫
-
 **mabeyn**：宫廷秘书处
-
 **medrese**：宗教学院
-
 **mektep**：传统小学
-
 **mektepli**：军事学院毕业的军官
-
 **millet**：民族；dhimmi（见该条）共同体，即米利特
-
 **mir**：埃米尔，尤指库尔德斯坦的埃米尔
-
 **miri**：国有不动产
-
 **muhassil**：税吏
-
 **mutasarrif**：县长（另见 sancak）
-
 **müftü**：宗教法专家，负责发布 fetva（见该条），即穆夫提
-
 **mülk**：私人所有的不动产
-
 **mülkiye**：文官学院
-
 **nahiye**：乡村基层行政区
-
 **nizam-i cedid**：塞利姆三世的改革方案（“新秩序”），也指他建立的新式西化军队
-
 **nizamiye**：正规军
-
 **örf**：由苏丹敕令制定的法律
-
 **reaya**：奥斯曼国家的纳税臣民
-
 **redif**：陆军预备役
-
 **reisülküttab**：首席书记官，大维齐尔的秘书
-
 **Rüşdiye**：招收 10 至 15 岁男生的学校
-
 **sadrazam**：大维齐尔，苏丹的首席大臣
-
 **sancak**：县
-
 **scribes**：奥斯曼中央政府在向现代官僚体制转型前的行政文书人员群体
-
 **serasker**：总司令（位于苏丹之下）
-
 **Shi’i**：什叶派穆斯林，只承认先知的女婿兼侄子阿里的男性后裔为穆斯林共同体的合法领袖
-
 **sipahi**：半封建骑兵成员，即西帕希
-
 **softa**：medrese（见该条）的学生
-
 **Sufi**：见 dervish
-
 **Sultaniye**：学院（高级中学）
-
 **Sunni**：逊尼派穆斯林，承认民选哈里发作为穆斯林共同体领袖继承先知。奥斯曼帝国穆斯林中的绝大多数
-
 **Şeriat**：伊斯兰教法
-
 **şeyhülislam**：帝国的首席 müftü（见该条），即伊斯兰教长
-
 **tanzimat**：改革，尤指 1839 至 1873 年间的中央集权化和西方化改革，即坦志麦特
-
 **tarikat**：伊斯兰神秘主义教团或兄弟会
-
 **tekke**：tarikat（见该条）的修道场所
-
 **tercüme odası**：朴特的翻译局（另见 bab-ı Ali）
-
 **timar**：封地，即蒂马尔
-
 **türbe**：宗教圣所，穆斯林圣人的陵墓
-
 **ulema**：伊斯兰法学者，即乌理玛
-
 **vakıf**：宗教慈善基金，即瓦克夫
-
 **vali**：省总督（另见 vilayet）
-
 **varlık vergisi**：第二次世界大战期间征收的歧视性财产税
-
 **vekil**：1920 至 1923 年间民族主义政府中的委员、部长
-
 **vilayet**：省
-
 **yeni çeri**：领取薪饷的常备步兵，在西方称为 janissaries，即耶尼切里禁卫军
-
 **zülm**：暴政，压迫
 
 # 首字母缩略词与缩写
-
 **AFU**：武装部队联盟（Armed Forces Union）
-
 **AKP**：Adalet ve Kalkınma Partisi（同 JDP，正义与发展党）
-
 **AKUT**：Arama Kurtarma Derneği（搜救协会）
-
 **ANAP**：Anavatan Partisi（同 MP，祖国党）
-
 **AP**：Adalet Partisi（正义党）
-
 **ASALA**：亚美尼亚解放亚美尼亚秘密军（Armenian Secret Army for the Liberation of Armenia）
-
 **BDP**：Barış ve Demokrasi Partisi（和平与民主党）
-
 **CENTO**：中央条约组织（Central Treaty Organization）
-
 **CHP**：Cumhuriyet Halk Partisi（同 RPP，共和人民党）
-
 **CIA**：中央情报局（Central Intelligence Agency）
-
 **CUP**：联合进步委员会（İttihad ve Terakki Cemiyeti）
-
 **DeP**：Demokrasi Partisi（民主党）
-
 **DİSK**：Devrimci İşçi Sendikaları Konfederasyonu（革命工会联合会）
-
 **DLP**：民主左翼党（Demokratik Sol Partisi）
-
 **DP**：Demokrat Parti（民主党）
-
 **DSP**：Demokratik Sol Parti（同 DLP）
-
 **DTP**：Demokratik Toplum Partisi（民主社会党）
-
 **DYP**：Doğru Yol Partisi（正确道路党）
-
 **EOKA**：Ethniki Organosis Kyprion Agoniston／塞浦路斯战士全国组织
-
 **EU**：欧洲联盟（European Union）
-
 **FP**：Fazilet Partisi（美德党）（同 VP）
-
 **FRP**：自由共和党（Serbest Cumhuriyet Partisi）
-
 **GAP**：Güneydogu Anadolu Projesi（东南安纳托利亚工程）
-
 **GUP**：大团结党（Büyük Birlik Partisi）
-
 **HaDeP**：Halkın Demokrasi Partisi（人民民主党）
-
 **HDP**：Halkların Demokratik Partisi（人民民主党）
-
 **İBDA**：İslamî Büyük Doğu Akıncıları（伊斯兰大东方突击队）
-
 **ICFTU**：国际自由工会联合会（International Conference of Free Trade Unions）
-
 **İHH**：İnsan Hak ve Hürriyetleri İnsani Yardım Vakfı（人道救援基金会）
-
 **ILO**：国际劳工组织（International Labour Organization）
-
 **IMF**：国际货币基金组织（International Monetary Fund）
-
 **IMRO**：马其顿内部革命组织（Internal Macedonian Revolutionary Organization）
-
 **IS**：伊斯兰国（Islamic State）
-
 **JDP**：正义与发展党（同 AKP）
-
 **JİTEM**：Jandarma İstihbarat ve Terörle Mücadele（宪兵情报与反恐单位）
-
 **JP**：正义党（同 AP）
-
 **KADEK**：库尔德自由与民主大会（Kurdish Freedom and Democracy Congress）
-
 **KCK**：Koma Civakên Kurdistan（库尔德斯坦社群联盟）
-
 **MDD**：Millî Demokratik Devrim（民族民主革命）
-
 **MGK**：Millî Güvenlik Kurulu（国家安全委员会）
-
 **MHP**：Milliyetçi Hareket Partisi（民族主义行动党）
-
 **MİSK**：Milliyetçi İşçi Sendikaları Konfederasyonu（民族主义工会联合会）
-
 **MİT**：Milli İstihbarat Teşkilatı（国家情报组织）
-
 **MP**：祖国党（同 ANAP）
-
 **MÜSİAD**：Müstakil İş Adamları Derneği（独立商人协会）
-
 **NAP**：民族主义行动党（同 MHP）
-
 **NATO**：北大西洋公约组织（North Atlantic Treaty Organization）
-
 **NDM**：新民主运动（Yeni Demokrasi Hareketi）
-
 **NDP**：民族发展党（Millî Kalkınma Partisi）
-
 **NOP**：民族秩序党（Millî Nizam Partisi）
-
 **NSC**：国家安全委员会（同 MGK）
-
 **NP**：民族党（Millet Partisi）
-
 **NSP**：民族救国党（Millî Selamet Partisi）
-
 **NTP**：新土耳其党（Yeni Türkiye Partisi）
-
 **NUC**：民族团结委员会（Millî Birlik Komitesi）
-
 **OECD**：经济合作与发展组织（Organization for Economic Cooperation and Development）
-
 **OHAL**：Olağanüstü Hal（紧急状态）；Bölgesi（紧急状态地区）
-
 **PDA**：公共债务管理局（Public Debt Administration）
-
 **PDK**：库尔德斯坦民主党（Democratic Party of Kurdistan）
-
 **PDL**：民主左翼党（同 DSP）
-
 **PKK**：Partiye Karkeren Kurdestane（库尔德斯坦工人党）
-
 **PLP**：人民劳动党（Halkın Emek Partisi）
-
 **PND**：民族主义民主党（Milliyetçi Demokrasi Partisi）
-
 **PP**：人民党（Halk Fırkası）（同 CHP 和 RPP）
-
 **PRP**：进步共和党（Terakkiperver Cumhuriyet Fırkası）
-
 **PTP**：正确道路党（同 DYP）
-
 **PUK**：库尔德斯坦爱国联盟（Patriotic Union of Kurdistan）
-
 **PYD**：Partiya Yekîtiya Demokrat（民主联盟党）
-
 **RPNP**：共和农民民族党（Cumhuriyetçi Köylü Millet Partisi）
-
 **RPP**：共和人民党（同 CHP）
-
 **SDP**：社会民主党（Social Democrat Party）
-
 **SP**：Saadet Partisi（幸福党）
-
 **SPO**：国家计划局（State Planning Office）
-
 **SPP**：社会民主平民党（Sosyal Demokrat Halkçı Parti）
-
 **STFA**：一家土耳其建筑公司的名称
-
 **TEM**：跨欧洲高速公路（Trans-European Motorway）
-
 **THKO**：Türkiye Halk Kurtuluş Ordusu（土耳其人民解放军）
-
 **THKP/C**：Türkiye Halk Kurtuluş Partisi/Cephesi（土耳其人民解放党／阵线）
-
 **TİKA**：土耳其合作与协调署（Turkish Cooperation and Coordination Agency）
-
 **TİKKO**：Türkiye İşçi Köylü Kurtuluş Ordusu（土耳其工农解放军）
-
 **TİP**：Türkiye İşçi Partisi（土耳其工人党）（同 WPT）
-
 **TOBB**：Türkiye Odalar ve Borsalar Birliği（土耳其商会、工业协会及交易所联盟）
-
 **TKP**：Türkiye Komünist Partisi（土耳其共产党）
-
 **TMO**：Toprak Mahsulleri Ofisi（土地产品局）
-
 **TOKİ**：Toplu Konut İşletmesi（公共住房管理局）
-
 **TSP**：Türkiye Sosyalist Partisi（土耳其社会党）
-
 **TSWPP**：土耳其社会主义工农党（Turkish Socialist Workers and Peasants’ Party）
-
 **TÜSIAD**：Türkiye Sanaicileri ve İş Adamları Derneği（土耳其工业家与商人协会）
-
 **UCPT**：土耳其联合共产党（United Communist Party of Turkey）
-
 **VP**：美德党（同 FP）
-
 **WP**：工人党（İşçi Partisi）
-
 **WPT**：土耳其工人党（同 TİP）
-
 **YPG**：Yekîneyên Parastina Gel（人民保护部队）
 
 # 第一部分
