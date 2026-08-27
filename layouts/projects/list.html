@@ -14,7 +14,6 @@
     </div>
   {{ end }}
 
-
   <div class="project-list">
 
     {{ range .Sections.ByLastmod.Reverse }}
@@ -30,33 +29,24 @@
             {{ .Title }}
           </h2>
 
-
           {{ with .Params.summary }}
-
             <p class="project-card-summary">
               {{ . }}
             </p>
-
           {{ end }}
-
 
           <div class="project-card-meta">
 
             {{ with .Params.status }}
-
               <span class="project-status">
                 {{ . }}
               </span>
-
             {{ end }}
 
-
             {{ with .Lastmod }}
-
               <span>
                 Updated {{ .Format "2006-01-02" }}
               </span>
-
             {{ end }}
 
           </div>
@@ -75,21 +65,13 @@
 {{ else }}
 
 
-{{/*
-    当前 Project 所在目录，例如：
-
-    projects/测试项目/
-*/}}
-
 {{ $projectDir := .File.Dir }}
 {{ $notesDir := printf "%snotes/" $projectDir }}
 {{ $notes := where .RegularPagesRecursive "File.Dir" $notesDir }}
 {{ $notes = $notes.ByDate.Reverse }}
 
 
-
-<main class="main project-page project-layout{{ if .Params.toc }} has-project-toc{{ end }}">
-
+<main class="main project-page project-layout">
 
   <!-- ======================================================
        Project Header
@@ -101,24 +83,18 @@
       {{ .Title }}
     </h1>
 
-
     <div class="project-meta">
 
       {{ with .Params.status }}
-
         <span class="project-status">
           {{ . }}
         </span>
-
       {{ end }}
 
-
       {{ with .Lastmod }}
-
         <span>
           Updated {{ .Format "2006-01-02" }}
         </span>
-
       {{ end }}
 
     </div>
@@ -126,9 +102,9 @@
   </header>
 
 
-
   <!-- ======================================================
        Workspace
+       左正文 + 右 Contents / Notes
        ====================================================== -->
 
   <div class="project-workspace">
@@ -143,32 +119,16 @@
       class="project-main project-body-panel"
     >
 
-
-      <!--
-        Hugo 原始正文。
-
-        JavaScript 会读取这里面的段落 / 标题 / 列表等，
-        然后按照字数重新组成若干页。
-
-        如果 JavaScript 没有运行，
-        原正文仍然能够正常显示。
-      -->
-
+      <!-- Hugo 原始正文 -->
       <div
         id="project-content-source"
         class="post-content project-content"
       >
-
         {{ .Content }}
-
       </div>
 
 
-
-      <!--
-        分页后的正文会放到这里。
-      -->
-
+      <!-- JS 分页后的正文 -->
       <div
         id="project-content-pages"
         class="post-content project-content"
@@ -176,26 +136,13 @@
       ></div>
 
 
-
-      <!-- ==================================================
-           正文 Pagination
-
-           « = 第一页
-           ‹ = 上一页
-
-           数字页码
-
-           › = 下一页
-           » = 最后一页
-           ================================================== -->
-
+      <!-- 正文分页 -->
       <nav
         id="project-content-pagination"
         class="project-note-pagination project-content-pagination"
         aria-label="Project content pagination"
         style="display: none;"
       >
-
 
         <button
           id="project-content-first"
@@ -206,7 +153,6 @@
           «
         </button>
 
-
         <button
           id="project-content-prev"
           type="button"
@@ -216,14 +162,10 @@
           ‹
         </button>
 
-
-
         <div
           id="project-content-page-numbers"
           class="project-note-pages project-content-page-numbers"
         ></div>
-
-
 
         <button
           id="project-content-next"
@@ -234,7 +176,6 @@
           ›
         </button>
 
-
         <button
           id="project-content-last"
           type="button"
@@ -244,34 +185,33 @@
           »
         </button>
 
-
       </nav>
-
 
     </article>
 
 
-
     <!-- ====================================================
-         Notes
+         右侧栏
+         Contents 自动占在 Notes 上方
+         没有 h2 / h3 时 Contents 整块隐藏
          ==================================================== -->
 
     <aside class="project-notes project-notes-panel">
 
-      {{ if .Params.toc }}
 
-      <section class="project-sidebar-section project-toc-section">
+      <!-- 自动目录 -->
+      <section
+        id="project-toc-section"
+        class="project-sidebar-section project-toc-section"
+        hidden
+      >
 
         <header class="project-notes-header">
-
-          <h2>
-            目录
-          </h2>
-
+          <h2>Contents</h2>
         </header>
 
-
         <div
+          id="project-toc"
           class="project-toc"
           data-project-toc
         >
@@ -280,195 +220,137 @@
 
       </section>
 
-      {{ end }}
 
-
+      <!-- Notes -->
       <section class="project-sidebar-section project-notes-section">
 
         <header class="project-notes-header">
-
-          <h2>
-            Notes / Log
-          </h2>
-
+          <h2>Notes / Log</h2>
         </header>
 
 
+        {{ if gt (len $notes) 0 }}
 
-      {{ if gt (len $notes) 0 }}
+          <div
+            id="project-note-list"
+            class="project-note-list"
+            data-page-size="5"
+          >
 
+            {{ range $index, $note := $notes }}
 
-        <!-- ================================================
-             Notes List
-             每页固定 5 条
-             ================================================ -->
+              <article
+                class="project-note"
+                data-note-index="{{ $index }}"
+              >
 
-        <div
-          id="project-note-list"
-          class="project-note-list"
-          data-page-size="5"
-        >
+                <div class="project-note-meta">
 
+                  <time
+                    datetime="{{ $note.Date.Format "2006-01-02T15:04:05Z07:00" }}"
+                  >
+                    {{ $note.Date.Format "2006-01-02" }}
+                  </time>
 
-          {{ range $index, $note := $notes }}
+                  {{ with $note.Params.kind }}
+                    <span class="project-note-kind">
+                      {{ . }}
+                    </span>
+                  {{ end }}
 
-
-            <article
-              class="project-note"
-              data-note-index="{{ $index }}"
-            >
-
-
-              <div class="project-note-meta">
-
-
-                <time
-                  datetime="{{ $note.Date.Format "2006-01-02T15:04:05Z07:00" }}"
-                >
-                  {{ $note.Date.Format "2006-01-02" }}
-                </time>
-
-
-                {{ with $note.Params.kind }}
-
-                  <span class="project-note-kind">
-                    {{ . }}
-                  </span>
-
-                {{ end }}
-
-
-              </div>
-
-
-
-              <h3 class="project-note-title">
-
-                <a href="{{ $note.RelPermalink }}">
-                  {{ $note.Title }}
-                </a>
-
-              </h3>
-
-
-
-              {{ with $note.Summary }}
-
-                <div class="project-note-summary">
-                  {{ $note.Plain | truncate 120 }}
                 </div>
 
-              {{ end }}
+                <h3 class="project-note-title">
+                  <a href="{{ $note.RelPermalink }}">
+                    {{ $note.Title }}
+                  </a>
+                </h3>
+
+                {{ with $note.Summary }}
+                  <div class="project-note-summary">
+                    {{ $note.Plain | truncate 120 }}
+                  </div>
+                {{ end }}
+
+              </article>
+
+            {{ end }}
+
+          </div>
 
 
-            </article>
+          {{ if gt (len $notes) 5 }}
 
+            <nav
+              id="project-note-pagination"
+              class="project-note-pagination"
+              aria-label="Notes pagination"
+            >
+
+              <button
+                id="project-note-first"
+                type="button"
+                aria-label="First page"
+                title="First page"
+              >
+                «
+              </button>
+
+              <button
+                id="project-note-prev"
+                type="button"
+                aria-label="Previous page"
+                title="Previous page"
+              >
+                ‹
+              </button>
+
+              <div
+                id="project-note-pages"
+                class="project-note-pages"
+              ></div>
+
+              <button
+                id="project-note-next"
+                type="button"
+                aria-label="Next page"
+                title="Next page"
+              >
+                ›
+              </button>
+
+              <button
+                id="project-note-last"
+                type="button"
+                aria-label="Last page"
+                title="Last page"
+              >
+                »
+              </button>
+
+            </nav>
 
           {{ end }}
 
+        {{ else }}
 
-        </div>
-
-
-
-        <!-- ================================================
-             Notes Pagination
-
-             « = 第一页
-             ‹ = 上一页
-
-             数字页码
-
-             › = 下一页
-             » = 最后一页 
-             ================================================ -->
-
-        {{ if gt (len $notes) 5 }}
-
-          <nav
-            id="project-note-pagination"
-            class="project-note-pagination"
-            aria-label="Notes pagination"
-          >
-
-
-            <button
-              id="project-note-first"
-              type="button"
-              aria-label="First page"
-              title="First page"
-            >
-              «
-            </button>
-
-
-            <button
-              id="project-note-prev"
-              type="button"
-              aria-label="Previous page"
-              title="Previous page"
-            >
-              ‹
-            </button>
-
-
-
-            <div
-              id="project-note-pages"
-              class="project-note-pages"
-            ></div>
-
-
-
-            <button
-              id="project-note-next"
-              type="button"
-              aria-label="Next page"
-              title="Next page"
-            >
-              ›
-            </button>
-
-
-            <button
-              id="project-note-last"
-              type="button"
-              aria-label="Last page"
-              title="Last page"
-            >
-              »
-            </button>
-
-
-          </nav>
+          <p class="project-notes-empty">
+            暂无记录。
+          </p>
 
         {{ end }}
-
-
-
-      {{ else }}
-
-
-        <p class="project-notes-empty">
-          暂无记录。
-        </p>
-
-
-      {{ end }}
 
       </section>
 
     </aside>
-
 
   </div>
 
 </main>
 
 
-
 <!-- ========================================================
-     Project Content Pagination JavaScript
+     Project Content Pagination + Book TOC
      ======================================================== -->
 
 <script>
@@ -477,78 +359,63 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
 
-
-    /* ======================================================
-       每页正文目标字数
-
-       这里修改每页长度。
-
-       2500 = 大约每页 2500 个非空白字符
-       2000 = 页面更短
-       3000 = 页面更长
-       ====================================================== */
-
+    /* 每页正文目标字数 */
     const PAGE_CHAR_LIMIT = 3000;
-
-
-
-    /* ======================================================
-       获取 DOM
-       ====================================================== */
 
     const source =
       document.getElementById(
         "project-content-source"
       );
 
-
     const pagesContainer =
       document.getElementById(
         "project-content-pages"
       );
-
 
     const pagination =
       document.getElementById(
         "project-content-pagination"
       );
 
-
     const first =
       document.getElementById(
         "project-content-first"
       );
-
 
     const prev =
       document.getElementById(
         "project-content-prev"
       );
 
-
     const next =
       document.getElementById(
         "project-content-next"
       );
-
 
     const last =
       document.getElementById(
         "project-content-last"
       );
 
-
     const numbers =
       document.getElementById(
         "project-content-page-numbers"
       );
-
 
     const projectMain =
       document.getElementById(
         "project-main"
       );
 
+    const tocSection =
+      document.getElementById(
+        "project-toc-section"
+      );
+
+    const toc =
+      document.getElementById(
+        "project-toc"
+      );
 
 
     if (
@@ -561,28 +428,9 @@ document.addEventListener(
       !last ||
       !numbers
     ) {
-
       return;
-
     }
 
-
-
-    /* ======================================================
-       计算一个 HTML 块包含多少正文字符
-
-       空格、换行、Tab 不计算。
-
-       所以中文：
-
-       "这是正文"
-       = 4 个字符
-
-       英文：
-
-       "Hello world"
-       = 10 个非空白字符
-       ====================================================== */
 
     function countChars(element) {
 
@@ -598,140 +446,104 @@ document.addEventListener(
     }
 
 
-
-    /* ======================================================
-       获取 Markdown 渲染出来的一级块
-
-       通常包括：
-
-       p
-       h1 h2 h3...
-       ul
-       ol
-       blockquote
-       table
-       pre
-       figure
-       img 所在容器
-       等等
-
-       不直接切 HTML 字符串，
-       避免把标签切坏。
-       ====================================================== */
-
     const blocks =
       Array.from(
         source.children
       );
 
-
-
-    /* ======================================================
-       如果正文没有正常块元素
-
-       比如极特殊情况下只有纯文本节点，
-       就不分页。
-       ====================================================== */
-
     if (blocks.length === 0) {
-
       return;
-
     }
 
 
-
     /* ======================================================
-       构建分页
+       构建逻辑页
+       - 约 3000 非空白字符一页
+       - h2 强制另起一页
+       - 不从段落中间硬切
        ====================================================== */
 
     const contentPages = [];
-
 
     let currentPage =
       document.createElement(
         "div"
       );
 
-
     currentPage.className =
       "project-content-page";
 
+    let currentChars = 0;
 
-    let currentChars =
-      0;
 
+    function pushCurrentPage() {
+
+      if (
+        currentPage.children.length === 0
+      ) {
+        return;
+      }
+
+      contentPages.push(
+        currentPage
+      );
+
+      currentPage =
+        document.createElement(
+          "div"
+        );
+
+      currentPage.className =
+        "project-content-page";
+
+      currentChars = 0;
+
+    }
 
 
     blocks.forEach(
       function (block) {
-
 
         const blockChars =
           countChars(
             block
           );
 
+        const tagName =
+          block.tagName
+            ? block.tagName.toLowerCase()
+            : "";
+
+        const isChapter =
+          tagName === "h2";
 
 
         /*
-          如果：
-
-          当前页已经有内容，
-
-          并且加入这个段落以后
-          会超过 PAGE_CHAR_LIMIT，
-
-          那么先结束当前页。
-
-          注意：
-
-          不会从一个段落中间硬切。
+          h2 视为“章”。
+          如果上一页已有内容，则另起一页。
         */
-
         if (
+          isChapter &&
+          currentPage.children.length > 0
+        ) {
+
+          pushCurrentPage();
+
+        }
+
+        /*
+          普通按字数分页。
+        */
+        else if (
           currentPage.children.length > 0 &&
           currentChars + blockChars >
             PAGE_CHAR_LIMIT
         ) {
 
-
-          contentPages.push(
-            currentPage
-          );
-
-
-          currentPage =
-            document.createElement(
-              "div"
-            );
-
-
-          currentPage.className =
-            "project-content-page";
-
-
-          currentChars =
-            0;
+          pushCurrentPage();
 
         }
 
-
-
-        /*
-          克隆原来的 HTML 块。
-
-          所以：
-
-          Markdown 格式
-          链接
-          图片
-          强调
-          表格
-          代码块
-
-          都会被保留。
-        */
 
         currentPage.appendChild(
           block.cloneNode(
@@ -739,64 +551,32 @@ document.addEventListener(
           )
         );
 
-
         currentChars +=
           blockChars;
-
 
       }
     );
 
 
+    pushCurrentPage();
 
-    /* ======================================================
-       放入最后一页
-       ====================================================== */
 
     if (
-      currentPage.children.length > 0
+      contentPages.length === 0
     ) {
-
-      contentPages.push(
-        currentPage
-      );
-
-    }
-
-
-
-    /* ======================================================
-       如果实际上只有一页
-
-       不做分页，
-       保持原来的正文。
-       ====================================================== */
-
-    if (
-      contentPages.length <= 1
-    ) {
-
-      pagination.style.display =
-        "none";
-
-
       return;
-
     }
 
 
-
     /* ======================================================
-       正式使用分页后的正文
+       使用分页后的正文
        ====================================================== */
 
     source.style.display =
       "none";
 
-
     pagesContainer.innerHTML =
       "";
-
 
     contentPages.forEach(
       function (contentPage) {
@@ -808,69 +588,45 @@ document.addEventListener(
       }
     );
 
-
     pagesContainer.style.display =
       "";
 
 
-
-    /* ======================================================
-       当前页
-
-       0 = 第一页
-       1 = 第二页
-       ====================================================== */
-
-    let page =
-      0;
-
+    let page = 0;
 
     const pageCount =
       contentPages.length;
 
 
-
     /* ======================================================
-       创建数字页码按钮
+       页码按钮
        ====================================================== */
 
     function createPageButton(
       pageIndex
     ) {
 
-
       const button =
         document.createElement(
           "button"
         );
 
-
       button.type =
         "button";
-
-
-      /*
-        直接复用 Notes 页码的 CSS。
-      */
 
       button.className =
         "project-note-page-number project-content-page-number";
 
-
       button.textContent =
         pageIndex + 1;
-
-
 
       if (
         pageIndex === page
       ) {
 
-
         button.classList.add(
           "current"
         );
-
 
         button.setAttribute(
           "aria-current",
@@ -878,8 +634,6 @@ document.addEventListener(
         );
 
       }
-
-
 
       button.addEventListener(
         "click",
@@ -892,62 +646,37 @@ document.addEventListener(
         }
       );
 
-
       return button;
 
     }
 
 
-
-    /* ======================================================
-       省略号
-       ====================================================== */
-
     function createEllipsis() {
-
 
       const span =
         document.createElement(
           "span"
         );
 
-
       span.className =
         "project-note-page-ellipsis";
 
-
       span.textContent =
         "…";
-
 
       return span;
 
     }
 
 
-
-    /* ======================================================
-       绘制数字页码
-       ====================================================== */
-
     function renderNumbers() {
-
 
       numbers.innerHTML =
         "";
 
-
-
-      /*
-        总页数不超过 7：
-
-        1 2 3 4 5 6 7
-      */
-
       if (
         pageCount <= 7
       ) {
-
 
         for (
           let i = 0;
@@ -955,35 +684,17 @@ document.addEventListener(
           i++
         ) {
 
-
           numbers.appendChild(
             createPageButton(
               i
             )
           );
 
-
         }
 
-
         return;
-
       }
 
-
-
-      /*
-        页数很多：
-
-        1 … 5 6 7 8 9 … 20
-
-        始终显示：
-
-        第一页
-        最后一页
-        当前页
-        当前页前后各两页
-      */
 
       const visiblePages =
         new Set([
@@ -1003,7 +714,6 @@ document.addEventListener(
           page + 2
 
         ]);
-
 
 
       const validPages =
@@ -1034,17 +744,14 @@ document.addEventListener(
           );
 
 
-
       let previousIndex =
         null;
-
 
 
       validPages.forEach(
         function (
           pageIndex
         ) {
-
 
           if (
             previousIndex !== null &&
@@ -1053,15 +760,11 @@ document.addEventListener(
               1
           ) {
 
-
             numbers.appendChild(
               createEllipsis()
             );
 
-
           }
-
-
 
           numbers.appendChild(
             createPageButton(
@@ -1069,10 +772,8 @@ document.addEventListener(
             )
           );
 
-
           previousIndex =
             pageIndex;
-
 
         }
       );
@@ -1080,13 +781,322 @@ document.addEventListener(
     }
 
 
+    /* ======================================================
+       TOC
+       ====================================================== */
+
+    const tocEntries = [];
+
+
+    function decodeHash(hash) {
+
+      try {
+
+        return decodeURIComponent(
+          hash.replace(
+            /^#/,
+            ""
+          )
+        );
+
+      } catch (error) {
+
+        return hash.replace(
+          /^#/,
+          ""
+        );
+
+      }
+
+    }
+
+
+    function findHeading(
+      targetId
+    ) {
+
+      for (
+        let pageIndex = 0;
+        pageIndex <
+          contentPages.length;
+        pageIndex++
+      ) {
+
+        const headings =
+          contentPages[
+            pageIndex
+          ].querySelectorAll(
+            "h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]"
+          );
+
+        for (
+          const heading
+          of headings
+        ) {
+
+          if (
+            heading.id ===
+              targetId
+          ) {
+
+            return {
+              pageIndex:
+                pageIndex,
+
+              heading:
+                heading
+            };
+
+          }
+
+        }
+
+      }
+
+      return null;
+
+    }
+
+
+    function buildTOC() {
+
+      if (
+        !toc ||
+        !tocSection
+      ) {
+        return;
+      }
+
+      const links =
+        Array.from(
+          toc.querySelectorAll(
+            'a[href^="#"]'
+          )
+        );
+
+      /*
+        Hugo 没生成 h2/h3 目录：
+        整个 Contents 区保持 hidden。
+        Notes 会自动占满右栏。
+      */
+      if (
+        links.length === 0
+      ) {
+
+        tocSection.hidden =
+          true;
+
+        return;
+      }
+
+
+      tocEntries.length = 0;
+
+      let mappedCount = 0;
+
+
+      links.forEach(
+        function (link) {
+
+          const targetId =
+            decodeHash(
+              link.getAttribute(
+                "href"
+              )
+            );
+
+          const target =
+            findHeading(
+              targetId
+            );
+
+          if (!target) {
+            return;
+          }
+
+
+          mappedCount++;
+
+
+          const pageNumber =
+            document.createElement(
+              "span"
+            );
+
+          pageNumber.className =
+            "project-toc-page";
+
+          pageNumber.textContent =
+            target.pageIndex + 1;
+
+
+          /*
+            把原来链接文字包起来，
+            形成“标题 + 页码”两端布局。
+          */
+
+          const oldText =
+            link.textContent.trim();
+
+          link.textContent =
+            "";
+
+
+          const title =
+            document.createElement(
+              "span"
+            );
+
+          title.className =
+            "project-toc-title";
+
+          title.textContent =
+            oldText;
+
+
+          link.appendChild(
+            title
+          );
+
+          link.appendChild(
+            pageNumber
+          );
+
+
+          tocEntries.push({
+
+            link:
+              link,
+
+            targetId:
+              targetId,
+
+            pageIndex:
+              target.pageIndex
+
+          });
+
+        }
+      );
+
+
+      if (
+        mappedCount === 0
+      ) {
+
+        tocSection.hidden =
+          true;
+
+        return;
+      }
+
+
+      tocSection.hidden =
+        false;
+
+    }
+
+
+    function updateTOCActive() {
+
+      if (
+        tocEntries.length === 0
+      ) {
+        return;
+      }
+
+
+      let activeIndex =
+        null;
+
+
+      tocEntries.forEach(
+        function (
+          entry,
+          index
+        ) {
+
+          if (
+            entry.pageIndex <=
+              page
+          ) {
+
+            activeIndex =
+              index;
+
+          }
+
+        }
+      );
+
+
+      tocEntries.forEach(
+        function (
+          entry,
+          index
+        ) {
+
+          const isCurrent =
+            index ===
+              activeIndex;
+
+
+          entry.link.classList.toggle(
+            "current",
+            isCurrent
+          );
+
+
+          if (
+            isCurrent
+          ) {
+
+            entry.link.setAttribute(
+              "aria-current",
+              "location"
+            );
+
+          } else {
+
+            entry.link.removeAttribute(
+              "aria-current"
+            );
+
+          }
+
+        }
+      );
+
+
+      if (
+        activeIndex !== null &&
+        tocEntries[
+          activeIndex
+        ]
+      ) {
+
+        tocEntries[
+          activeIndex
+        ].link.scrollIntoView({
+
+          block:
+            "nearest",
+
+          inline:
+            "nearest"
+
+        });
+
+      }
+
+    }
+
 
     /* ======================================================
-       显示指定正文页
+       显示当前页
        ====================================================== */
 
     function renderPage() {
-
 
       contentPages.forEach(
         function (
@@ -1094,56 +1104,45 @@ document.addEventListener(
           index
         ) {
 
-
           contentPage.style.display =
             index === page
               ? ""
               : "none";
 
-
         }
       );
 
 
-
-      /* ====================================================
-         首尾按钮状态
-         ==================================================== */
-
       first.disabled =
         page === 0;
-
 
       prev.disabled =
         page === 0;
 
-
       next.disabled =
         page >=
         pageCount - 1;
-
 
       last.disabled =
         page >=
         pageCount - 1;
 
 
-
       renderNumbers();
+
+      updateTOCActive();
 
     }
 
 
-
     /* ======================================================
-       前往正文页
+       跳到指定正文页
        ====================================================== */
 
     function goToPage(
       newPage,
       scrollTarget
     ) {
-
 
       page =
         Math.max(
@@ -1158,117 +1157,84 @@ document.addEventListener(
       renderPage();
 
 
-
-      /*
-        翻页以后把正文区域滚回顶部。
-      */
-
-      if (scrollTarget) {
-
-
-        scrollTarget.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-
-      } else if (projectMain) {
-
-
-        projectMain.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-
-
-      }
-
-    }
-
-
-
-    /* ======================================================
-       目录跳转
-
-       正文分页后，标题位于克隆出的页面中。目录点击时先切到
-       标题所在页，再滚动到标题，避免跳到隐藏的原始正文。
-       ====================================================== */
-
-    const toc =
-      document.querySelector(
-        "[data-project-toc]"
-      );
-
-
-    function decodeHash(hash) {
-
-      try {
-        return decodeURIComponent(
-          hash.replace(/^#/, "")
-        );
-      } catch (error) {
-        return hash.replace(/^#/, "");
-      }
-
-    }
-
-
-    function findHeading(targetId) {
-
-      for (
-        let pageIndex = 0;
-        pageIndex < contentPages.length;
-        pageIndex++
+      if (
+        scrollTarget
       ) {
 
-        const headings =
-          contentPages[pageIndex]
-            .querySelectorAll("[id]");
+        scrollTarget.scrollIntoView({
 
-        for (const heading of headings) {
+          behavior:
+            "smooth",
 
-          if (heading.id === targetId) {
-            return {
-              pageIndex: pageIndex,
-              heading: heading
-            };
-          }
+          block:
+            "start"
 
-        }
+        });
+
+      } else if (
+        projectMain
+      ) {
+
+        projectMain.scrollIntoView({
+
+          behavior:
+            "smooth",
+
+          block:
+            "start"
+
+        });
 
       }
-
-      return null;
 
     }
 
 
-    function openHeading(targetId, updateHistory) {
+    function openHeading(
+      targetId,
+      updateHistory
+    ) {
 
       const target =
-        findHeading(targetId);
+        findHeading(
+          targetId
+        );
 
       if (!target) {
         return false;
       }
+
 
       goToPage(
         target.pageIndex,
         target.heading
       );
 
-      if (updateHistory) {
+
+      if (
+        updateHistory
+      ) {
+
         history.replaceState(
           null,
           "",
-          "#" + encodeURIComponent(targetId)
+          "#" +
+            encodeURIComponent(
+              targetId
+            )
         );
+
       }
+
 
       return true;
 
     }
 
+
+    /* ======================================================
+       目录点击 = 直接翻到标题所在页
+       ====================================================== */
 
     if (toc) {
 
@@ -1285,13 +1251,24 @@ document.addEventListener(
             return;
           }
 
+
           const targetId =
             decodeHash(
-              link.getAttribute("href")
+              link.getAttribute(
+                "href"
+              )
             );
 
-          if (openHeading(targetId, true)) {
+
+          if (
+            openHeading(
+              targetId,
+              true
+            )
+          ) {
+
             event.preventDefault();
+
           }
 
         }
@@ -1300,9 +1277,8 @@ document.addEventListener(
     }
 
 
-
     /* ======================================================
-       按钮
+       正文分页按钮
        ====================================================== */
 
     first.addEventListener(
@@ -1353,38 +1329,53 @@ document.addEventListener(
     );
 
 
+    /*
+      只有一页时不显示正文分页栏；
+      但 Contents 仍然可以正常工作。
+    */
 
-    /* ======================================================
-       显示分页栏
-       ====================================================== */
+    if (
+      pageCount > 1
+    ) {
 
-    pagination.style.display =
-      "";
+      pagination.style.display =
+        "";
+
+    } else {
+
+      pagination.style.display =
+        "none";
+
+    }
 
 
-
-    /* ======================================================
-       初始显示第一页
-       ====================================================== */
+    buildTOC();
 
     renderPage();
 
 
-    if (window.location.hash) {
+    /*
+      如果 URL 已经带 #章节，
+      打开页面后直接跳过去。
+    */
+
+    if (
+      window.location.hash
+    ) {
 
       openHeading(
-        decodeHash(window.location.hash),
+        decodeHash(
+          window.location.hash
+        ),
         false
       );
 
     }
 
-
   }
 );
 
 </script>
-
 
 
 <!-- ========================================================
@@ -1399,52 +1390,40 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
 
-
-    /* ======================================================
-       获取 DOM
-       ====================================================== */
-
     const list =
       document.getElementById(
         "project-note-list"
       );
-
 
     const pagination =
       document.getElementById(
         "project-note-pagination"
       );
 
-
     const first =
       document.getElementById(
         "project-note-first"
       );
-
 
     const prev =
       document.getElementById(
         "project-note-prev"
       );
 
-
     const next =
       document.getElementById(
         "project-note-next"
       );
-
 
     const last =
       document.getElementById(
         "project-note-last"
       );
 
-
     const pagesContainer =
       document.getElementById(
         "project-note-pages"
       );
-
 
 
     if (
@@ -1456,16 +1435,9 @@ document.addEventListener(
       !last ||
       !pagesContainer
     ) {
-
       return;
-
     }
 
-
-
-    /* ======================================================
-       Notes
-       ====================================================== */
 
     const notes =
       Array.from(
@@ -1475,43 +1447,22 @@ document.addEventListener(
       );
 
 
-
-    /* ======================================================
-       每页数量
-
-       HTML 中：
-
-       data-page-size="5"
-       ====================================================== */
-
     const pageSize =
       Number(
-        list.dataset.pageSize || 5
+        list.dataset.pageSize ||
+          5
       );
-
 
 
     const pageCount =
       Math.ceil(
-        notes.length / pageSize
+        notes.length /
+          pageSize
       );
 
 
-
-    /*
-      内部使用 0 开始：
-
-      page = 0 → 第 1 页
-      page = 1 → 第 2 页
-    */
-
     let page = 0;
 
-
-
-    /* ======================================================
-       如果只有一页，不显示翻页
-       ====================================================== */
 
     if (
       pageCount <= 1
@@ -1525,15 +1476,9 @@ document.addEventListener(
     }
 
 
-
-    /* ======================================================
-       跳到指定页
-       ====================================================== */
-
     function goToPage(
       newPage
     ) {
-
 
       page =
         Math.max(
@@ -1544,50 +1489,37 @@ document.addEventListener(
           )
         );
 
-
       renderPage();
 
     }
 
 
-
-    /* ======================================================
-       创建数字按钮
-       ====================================================== */
-
     function createPageButton(
       pageIndex
     ) {
-
 
       const button =
         document.createElement(
           "button"
         );
 
-
       button.type =
         "button";
-
 
       button.className =
         "project-note-page-number";
 
-
       button.textContent =
         pageIndex + 1;
-
 
 
       if (
         pageIndex === page
       ) {
 
-
         button.classList.add(
           "current"
         );
-
 
         button.setAttribute(
           "aria-current",
@@ -1595,7 +1527,6 @@ document.addEventListener(
         );
 
       }
-
 
 
       button.addEventListener(
@@ -1615,50 +1546,33 @@ document.addEventListener(
     }
 
 
-
-    /* ======================================================
-       创建省略号
-       ====================================================== */
-
     function createEllipsis() {
-
 
       const span =
         document.createElement(
           "span"
         );
 
-
       span.className =
         "project-note-page-ellipsis";
 
-
       span.textContent =
         "…";
-
 
       return span;
 
     }
 
 
-
-    /* ======================================================
-       绘制页码
-       ====================================================== */
-
     function renderNumbers() {
-
 
       pagesContainer.innerHTML =
         "";
 
 
-
       if (
         pageCount <= 7
       ) {
-
 
         for (
           let i = 0;
@@ -1666,21 +1580,17 @@ document.addEventListener(
           i++
         ) {
 
-
           pagesContainer.appendChild(
             createPageButton(
               i
             )
           );
 
-
         }
-
 
         return;
 
       }
-
 
 
       const visiblePages =
@@ -1701,7 +1611,6 @@ document.addEventListener(
           page + 2
 
         ]);
-
 
 
       const validPages =
@@ -1732,17 +1641,14 @@ document.addEventListener(
           );
 
 
-
       let previousIndex =
         null;
-
 
 
       validPages.forEach(
         function (
           pageIndex
         ) {
-
 
           if (
             previousIndex !== null &&
@@ -1751,14 +1657,11 @@ document.addEventListener(
               1
           ) {
 
-
             pagesContainer.appendChild(
               createEllipsis()
             );
 
-
           }
-
 
 
           pagesContainer.appendChild(
@@ -1771,30 +1674,21 @@ document.addEventListener(
           previousIndex =
             pageIndex;
 
-
         }
       );
 
     }
 
 
-
-    /* ======================================================
-       显示当前页
-       ====================================================== */
-
     function renderPage() {
-
 
       const start =
         page *
         pageSize;
 
-
       const end =
         start +
         pageSize;
-
 
 
       notes.forEach(
@@ -1803,70 +1697,40 @@ document.addEventListener(
           index
         ) {
 
-
-          if (
-            index >= start &&
-            index < end
-          ) {
-
-
-            note.style.display =
-              "";
-
-
-          } else {
-
-
-            note.style.display =
-              "none";
-
-
-          }
-
+          note.style.display =
+            (
+              index >= start &&
+              index < end
+            )
+              ? ""
+              : "none";
 
         }
       );
 
 
-
       first.disabled =
         page === 0;
-
 
       prev.disabled =
         page === 0;
 
-
       next.disabled =
         page >=
         pageCount - 1;
-
 
       last.disabled =
         page >=
         pageCount - 1;
 
 
-
       renderNumbers();
-
-
-
-      /*
-        Notes 翻页以后，
-        Notes 自己回到顶部。
-      */
 
       list.scrollTop =
         0;
 
     }
 
-
-
-    /* ======================================================
-       第一页
-       ====================================================== */
 
     first.addEventListener(
       "click",
@@ -1880,11 +1744,6 @@ document.addEventListener(
     );
 
 
-
-    /* ======================================================
-       上一页
-       ====================================================== */
-
     prev.addEventListener(
       "click",
       function () {
@@ -1896,11 +1755,6 @@ document.addEventListener(
       }
     );
 
-
-
-    /* ======================================================
-       下一页
-       ====================================================== */
 
     next.addEventListener(
       "click",
@@ -1914,11 +1768,6 @@ document.addEventListener(
     );
 
 
-
-    /* ======================================================
-       最后一页
-       ====================================================== */
-
     last.addEventListener(
       "click",
       function () {
@@ -1931,13 +1780,7 @@ document.addEventListener(
     );
 
 
-
-    /* ======================================================
-       初始显示第一页
-       ====================================================== */
-
     renderPage();
-
 
   }
 );
