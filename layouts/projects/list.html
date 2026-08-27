@@ -531,16 +531,41 @@ document.addEventListener(
         /*
           普通按字数分页。
         */
-        else if (
-          currentPage.children.length > 0 &&
-          currentChars + blockChars >
-            PAGE_CHAR_LIMIT
-        ) {
+        else {
 
-          pushCurrentPage();
+  /*
+    检查当前页是否已经有真正的正文内容。
 
-        }
+    如果当前页只有 h1 / h2 / h3 等标题，
+    不允许因为字数限制立刻换页，
+    避免出现“只有章节标题的一页”。
+  */
 
+  const hasBodyContent =
+    Array.from(
+      currentPage.children
+    ).some(
+      function (element) {
+
+        return !/^H[1-6]$/.test(
+          element.tagName
+        );
+
+      }
+    );
+
+
+  if (
+    hasBodyContent &&
+    currentChars + blockChars >
+      PAGE_CHAR_LIMIT
+  ) {
+
+    pushCurrentPage();
+
+  }
+
+}
 
         currentPage.appendChild(
           block.cloneNode(
