@@ -4,12 +4,24 @@ title = "Meditationes Sansepulcristarum"
 theme = "PaperMod"
 timeZone = "Asia/Tokyo"
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
   defaultTheme = "dark"
   ShowReadingTime = false
   ShowFirstPost = false
   mainSections = ["posts"]
   author = "​"
+
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 1
+  keys = ["title", "permalink", "summary", "content"]
 
 [params.cover]
   hiddenInList = false
@@ -21,15 +33,20 @@ timeZone = "Asia/Tokyo"
     url = "/posts/"
     weight = 1
 
- [[menu.main]]
+  [[menu.main]]
     name = "Projects"
     url = "/projects/"
     weight = 2
 
   [[menu.main]]
+    name = "Search"
+    url = "/search/"
+    weight = 3
+
+  [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 4
 
 [markup.goldmark.renderer]
   hardWraps = true
