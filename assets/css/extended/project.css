@@ -1211,3 +1211,21 @@
     }
 
 }
+
+/* =========================================================
+   从 Search 跳入 Project 时的命中高亮
+   ========================================================= */
+
+.project-search-hit {
+    background: rgba(255, 210, 70, 0.34);
+    color: inherit;
+
+    border-radius: 3px;
+
+    padding: 0 2px;
+
+    scroll-margin-top: 100px;
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
