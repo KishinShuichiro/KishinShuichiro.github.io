@@ -259,6 +259,21 @@ body.list main article.first-entry .entry-content {
     width: auto;
 }
 
+/* 全站搜索落地高亮 */
+.global-search-hit {
+    background: rgba(255, 210, 70, 0.34);
+    color: inherit;
+
+    border-radius: 3px;
+
+    padding: 0 2px;
+
+    scroll-margin-top: 100px;
+
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
 /* ============================================================
    手机
    ============================================================ */
