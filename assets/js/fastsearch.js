@@ -202,9 +202,9 @@ function findSnippets(content, query) {
         pos = found + q.length;
 
         // 防止极端情况下单篇文章产生几千个 DOM 数据
-        if (snippets.length >= 500) {
-            break;
-        }
+        //if (snippets.length >= 500) {
+        //    break;
+        //}
     }
 
     /*
