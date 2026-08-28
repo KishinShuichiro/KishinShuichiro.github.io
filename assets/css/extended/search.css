@@ -1,0 +1,43 @@
+#searchCount {
+    margin: 18px 4px 12px;
+    opacity: 0.65;
+    font-size: 15px;
+}
+
+#searchResults {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-search-result {
+    display: block;
+    padding: 16px 18px;
+    border-radius: 8px;
+    background: var(--entry);
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.custom-search-result:hover {
+    background: var(--tertiary);
+}
+
+.custom-search-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.custom-search-snippet {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.custom-search-snippet mark,
+.custom-search-title mark {
+    background: transparent;
+    color: #00a8ff;
+    font-weight: 700;
+}
