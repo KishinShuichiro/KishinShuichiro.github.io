@@ -149,61 +149,80 @@ function highlight(text, query) {
    从正文中截取命中附近片段
 ------------------------- */
 
-function makeSnippet(content, query) {
+function findSnippets(content, query) {
 
-    if (!content) {
-        return '';
+    if (!content || !query) {
+        return [];
     }
 
-    let clean = String(content)
+    const clean = String(content)
         .replace(/\s+/g, ' ')
         .trim();
 
-    let lower = clean.toLowerCase();
-    let q = query.toLowerCase();
-
-    let pos = lower.indexOf(q);
+    const lower = clean.toLowerCase();
+    const q = query.toLowerCase();
 
     const before = 90;
     const after = 160;
 
-    /*
-     Fuse 模糊匹配成功，但找不到精确字符串时，
-     暂时展示正文开头
-    */
-    if (pos === -1) {
+    let snippets = [];
+    let pos = 0;
 
-        let text = clean.substring(0, 250);
+    while (true) {
 
-        if (clean.length > 250) {
-            text += '…';
+        const found = lower.indexOf(q, pos);
+
+        if (found === -1) {
+            break;
         }
 
-        return text;
+        const start = Math.max(
+            0,
+            found - before
+        );
+
+        const end = Math.min(
+            clean.length,
+            found + query.length + after
+        );
+
+        let snippet =
+            clean.substring(start, end);
+
+        if (start > 0) {
+            snippet = '…' + snippet;
+        }
+
+        if (end < clean.length) {
+            snippet += '…';
+        }
+
+        snippets.push(snippet);
+
+        pos = found + q.length;
+
+        // 防止极端情况下单篇文章产生几千个 DOM 数据
+        if (snippets.length >= 500) {
+            break;
+        }
     }
 
-    let start = Math.max(
-        0,
-        pos - before
-    );
+    /*
+    Fuse 模糊搜到了文章，
+    但正文里没有精确字符串
+    */
+    if (snippets.length === 0) {
 
-    let end = Math.min(
-        clean.length,
-        pos + query.length + after
-    );
+        let snippet = clean.substring(0, 250);
 
-    let snippet =
-        clean.substring(start, end);
+        if (clean.length > 250) {
+            snippet += '…';
+        }
 
-    if (start > 0) {
-        snippet = '…' + snippet;
+        snippets.push(snippet);
     }
 
-    if (end < clean.length) {
-        snippet += '…';
-    }
-
-    return snippet;
+    return snippets;
 }
 
 
