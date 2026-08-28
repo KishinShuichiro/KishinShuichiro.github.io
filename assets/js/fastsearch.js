@@ -698,6 +698,46 @@ function () {
                  */
                 showMatch(0);
 
+               /* =====================================================
+                  整张搜索结果卡片都可以点击
+                  但左右翻页按钮除外
+                  ===================================================== */
+
+               card.addEventListener(
+                   'click',
+                   function (event) {
+
+                       /*
+                        * 点 ‹ › 时只切换命中，
+                        * 不跳转页面。
+                        */
+                       if (
+                           event.target.closest(
+                                  '.search-match-prev, .search-match-next'
+                           )
+                       ) {
+                              return;
+                          }
+               
+                          /*
+                           * 如果本身点的就是标题链接，
+                           * 浏览器自己处理，不重复跳转。
+                           */
+                          if (
+                              event.target.closest(
+                               '.custom-search-link'
+                              )
+                            ) {
+                           return;
+                          }
+
+                          if (link && link.href) {
+            window.location.href =
+                link.href;
+        }
+    }
+);
+
 
                 if (
                     !prev ||
