@@ -341,39 +341,81 @@ sInput.onkeyup = function () {
     let resultSet = '';
 
 
-    for (let result of results) {
+    for (let resultIndex = 0; resultIndex < results.length; resultIndex++) {
 
-        let item = result.item;
+    let result = results[resultIndex];
+    let item = result.item;
 
-        let snippet =
-            makeSnippet(
-                item.content,
-                query
-            );
+    let snippets =
+        findSnippets(
+            item.content,
+            query
+        );
 
+    let snippetsEncoded =
+        encodeURIComponent(
+            JSON.stringify(snippets)
+        );
 
-        resultSet += `
-            <article class="custom-search-result">
+    resultSet += `
+        <article
+            class="custom-search-result"
+            data-result-index="${resultIndex}"
+            data-snippets="${snippetsEncoded}"
+            data-current-match="0"
+        >
+
+            <div class="custom-search-top">
 
                 <a
                     class="custom-search-link"
                     href="${escapeHTML(item.permalink)}"
                     aria-label="${escapeHTML(item.title)}"
                 >
-
                     <div class="custom-search-title">
                         ${highlight(item.title, query)}
                     </div>
-
-                    <div class="custom-search-snippet">
-                        ${highlight(snippet, query)}
-                    </div>
-
                 </a>
 
-            </article>
-        `;
-    }
+                ${
+                    snippets.length > 1
+                    ? `
+                    <div class="search-match-nav">
+
+                        <span class="search-match-count">
+                            1 / ${snippets.length}
+                        </span>
+
+                        <button
+                            type="button"
+                            class="search-match-prev"
+                            aria-label="上一个匹配"
+                        >
+                            ‹
+                        </button>
+
+                        <button
+                            type="button"
+                            class="search-match-next"
+                            aria-label="下一个匹配"
+                        >
+                            ›
+                        </button>
+
+                    </div>
+                    `
+                    : ''
+                }
+
+            </div>
+
+            <div class="custom-search-snippet">
+                ${highlight(snippets[0], query)}
+            </div>
+
+        </article>
+    `;
+}
 
 
     resList.innerHTML = resultSet;
