@@ -420,6 +420,98 @@ sInput.onkeyup = function () {
 
     resList.innerHTML = resultSet;
 
+    resList.querySelectorAll('.custom-search-result')
+    .forEach(card => {
+
+        const encoded =
+            card.dataset.snippets;
+
+        const snippets =
+            JSON.parse(
+                decodeURIComponent(encoded)
+            );
+
+        const snippetBox =
+            card.querySelector(
+                '.custom-search-snippet'
+            );
+
+        const count =
+            card.querySelector(
+                '.search-match-count'
+            );
+
+        const prev =
+            card.querySelector(
+                '.search-match-prev'
+            );
+
+        const next =
+            card.querySelector(
+                '.search-match-next'
+            );
+
+        if (!prev || !next) {
+            return;
+        }
+
+        function showMatch(index) {
+
+            if (index < 0) {
+                index = snippets.length - 1;
+            }
+
+            if (index >= snippets.length) {
+                index = 0;
+            }
+
+            card.dataset.currentMatch =
+                String(index);
+
+            snippetBox.innerHTML =
+                highlight(
+                    snippets[index],
+                    query
+                );
+
+            count.textContent =
+                `${index + 1} / ${snippets.length}`;
+        }
+
+        prev.addEventListener(
+            'click',
+            function (e) {
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                let current =
+                    Number(
+                        card.dataset.currentMatch
+                    );
+
+                showMatch(current - 1);
+            }
+        );
+
+        next.addEventListener(
+            'click',
+            function (e) {
+
+                e.preventDefault();
+                e.stopPropagation();
+
+                let current =
+                    Number(
+                        card.dataset.currentMatch
+                    );
+
+                showMatch(current + 1);
+            }
+        );
+
+    });
+
     resultsAvailable = true;
 
     first =
