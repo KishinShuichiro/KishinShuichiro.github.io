@@ -109,3 +109,56 @@
 #searchResults li {
     position: static;
 }
+
+.custom-search-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.custom-search-top .custom-search-link {
+    flex: 1;
+    min-width: 0;
+    padding-bottom: 0;
+}
+
+.search-match-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    flex-shrink: 0;
+
+    color: var(--secondary);
+    font-size: 13px;
+}
+
+.search-match-count {
+    min-width: 48px;
+    text-align: right;
+}
+
+.search-match-prev,
+.search-match-next {
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+
+    border: 1px solid var(--tertiary);
+    border-radius: 6px;
+
+    background: transparent;
+    color: var(--primary);
+
+    font-size: 20px;
+    line-height: 24px;
+
+    cursor: pointer;
+}
+
+.search-match-prev:hover,
+.search-match-next:hover {
+    background: var(--tertiary);
+}
