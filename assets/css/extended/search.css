@@ -4,40 +4,108 @@
     font-size: 15px;
 }
 
+
+/* 搜索结果容器 */
 #searchResults {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    width: 100%;
+    margin: 10px 0;
 }
 
+
+/* 单个结果卡片 */
 .custom-search-result {
     display: block;
-    padding: 16px 18px;
+    position: relative;
+
+    padding: 0;
+
     border-radius: 8px;
+
     background: var(--entry);
-    text-decoration: none;
-    color: var(--primary);
+
+    overflow: hidden;
 }
 
+
+/*
+覆盖 PaperMod 原本的：
+
+#searchResults a {
+    position: absolute;
+}
+
+这是现在最关键的一段
+*/
+#searchResults .custom-search-link {
+    position: static;
+
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    padding: 16px 18px;
+
+    color: var(--primary);
+
+    text-decoration: none;
+
+    outline: none;
+}
+
+
+/* 鼠标悬停 */
 .custom-search-result:hover {
     background: var(--tertiary);
 }
 
+
+/* 标题 */
 .custom-search-title {
     font-size: 18px;
     font-weight: 600;
+
+    line-height: 1.4;
+
     margin-bottom: 8px;
 }
 
+
+/* 正文命中片段 */
 .custom-search-snippet {
     font-size: 15px;
-    line-height: 1.6;
-    opacity: 0.8;
+
+    line-height: 1.65;
+
+    color: var(--secondary);
+
+    opacity: 1;
 }
 
+
+/* 搜索词高亮 */
 .custom-search-snippet mark,
 .custom-search-title mark {
     background: transparent;
+
     color: #00a8ff;
+
     font-weight: 700;
+}
+
+
+/* 键盘方向键选中的结果 */
+.custom-search-result.focus {
+    outline: 2px solid var(--tertiary);
+    outline-offset: 2px;
+}
+
+
+/* 防止 PaperMod 默认 li 样式干扰 */
+#searchResults li {
+    position: static;
 }
