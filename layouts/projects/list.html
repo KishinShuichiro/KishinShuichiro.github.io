@@ -1337,6 +1337,76 @@ document.addEventListener(
     }
 
 
+    /*
+      通用页内锚点：脚注、脚注返回链接及手写锚点。
+      只搜索分页正文，避免命中隐藏的原始正文副本。
+    */
+    function findProjectTarget(targetId) {
+      if (!targetId) return null;
+
+      for (let pageIndex = 0; pageIndex < contentPages.length; pageIndex++) {
+        const target = Array.from(
+          contentPages[pageIndex].querySelectorAll("[id]")
+        ).find(function (element) {
+          return element.id === targetId;
+        });
+
+        if (target) return { pageIndex: pageIndex, target: target };
+      }
+
+      return null;
+    }
+
+    function openProjectTarget(targetId, updateHistory) {
+      const found = findProjectTarget(targetId);
+      if (!found) return false;
+
+      goToPage(found.pageIndex, found.target);
+
+      if (updateHistory) {
+        history.replaceState(
+          null, "", "#" + encodeURIComponent(targetId)
+        );
+      }
+
+      return true;
+    }
+
+    pagesContainer.addEventListener("click", function (event) {
+      if (
+        event.defaultPrevented || event.button !== 0 ||
+        event.metaKey || event.ctrlKey || event.shiftKey || event.altKey
+      ) return;
+
+      const link = event.target.closest("a[href]");
+      if (
+        !link || !pagesContainer.contains(link) ||
+        link.hasAttribute("download") ||
+        (link.target && link.target !== "_self")
+      ) return;
+
+      const url = new URL(link.getAttribute("href"), document.baseURI);
+      if (
+        url.origin !== window.location.origin ||
+        url.pathname !== window.location.pathname ||
+        url.search !== window.location.search ||
+        !url.hash
+      ) return;
+
+      const targetId = decodeHash(url.hash);
+      if (!findProjectTarget(targetId)) return;
+
+      event.preventDefault();
+      // 防止主题的全局平滑滚动脚本再次定位到隐藏副本。
+      event.stopPropagation();
+      openProjectTarget(targetId, true);
+    });
+
+    window.addEventListener("hashchange", function () {
+      openProjectTarget(decodeHash(window.location.hash), false);
+    });
+
+
     /* ======================================================
        正文分页按钮
        ====================================================== */
@@ -1415,7 +1485,7 @@ document.addEventListener(
 
 
     /*
-      如果 URL 已经带 #章节，
+      如果 URL 已经带 #章节或 #脚注，
       打开页面后直接跳过去。
     */
 
@@ -1423,7 +1493,7 @@ document.addEventListener(
       window.location.hash
     ) {
 
-      openHeading(
+      openProjectTarget(
         decodeHash(
           window.location.hash
         ),
