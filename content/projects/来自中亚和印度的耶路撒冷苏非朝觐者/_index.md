@@ -1,7 +1,7 @@
 ---
 title: "来自中亚和印度的耶路撒冷苏非朝觐者"
 date: 2026-09-14
-lastmod: 2026-09-14T18:46:26+09:00
+lastmod: 2026-09-14T18:56:20+09:00
 summary: "SUFI_PILGRIMS_FROM_CENTRAL_ASIA_AND_INDI"
 status: "active"
 ---
@@ -2084,329 +2084,170 @@ al-Zâwiyya al-Uzbakiyya 档案中保存有一张老照片（摄于第二次世�
 | Zayn al-Abidin | Abd al-Samad | 安集延 | Turki | 47/65–66 | 1925/1949–50 |
 
 # 参考文献
-
 ## 缩略语
-
 BVCE：Başvekâlet Arşivi - Cevdet Evkâf，伊斯坦布尔总理府档案馆  
 PABB：Baha al-Din Bukhari 私人档案，拉马拉  
 PAZA：Zawiyya al-Afghâniyya 私人档案，耶路撒冷  
 PAZH：Zawiyya al-Hunûd 私人档案，耶路撒冷  
 PAZU：Zawiyya al-Uzbakiyya 私人档案，耶路撒冷
-
 ## 已出版与未出版的第一手资料
-
 ### 档案、未刊手稿与博士论文
-
 “History of the Indian Hospice.” Jerusalem: Indian Lodge, 未刊影印本 [2004].
-
 MORRISON, Alexander Stephen. “Russian Rule in Samarkand 1868–1910. A Comparison with British India.” PhD, All Souls College, Oxford University, 2005.
-
 NUMAN, Nurtaç. “Mekke Emirleri ve Hicaz’da Osmanlı İdaresi, 1840–1908.” PhD, Bosphor University, Istanbul, 2006.
-
 伊斯坦布尔总理府档案馆（Başvekâlet Arşivi）Cevdet Evkâf 档案（简称 BVCE）记录：1263 (11 Ra 1275 / 1858); 1492 (无日期); 1951 (C 1173 / 1759); 4092 (7 Ra 1214 / 1799); 4201 (M 1214 / 1799); 5717 (23 S 1214 / 1799); 9506 (3 M 1190/1776); 10813 (13 R 1260 / 1844); 15600 (Ş 1143 / 1731); 17537 (17 N 1190 /1776-77); 19125 (Za 1211 / 1797); 19418 (1258 / 1842); 20962 (C 1214 / 1799); BVCE 21467 (3 R 1246 / 1830); 21766 (Ca 1142 / 1729); 23034 (1124 / 1712); 23278 (M 1189 / 1775); 23698 (S 1250 / 1834); 23948 (Z 1265 / 1849); 25420 (Z 1225 / 1810).
-
 Cemaleddin Server Revnakoğlu. “Hindiler tekkesi,” file B/66. Revnakoğlu Archives. Divan Literature Museum. Galata Mevlevihane, Istanbul.
-
 “Daftar sijill al-darawish aladhina dakhalu fi’l-Takiya al-Naqshbandiyya bi-l-Quds”（《进入耶路撒冷纳克什班迪道堂的托钵僧登记簿》）. Jerusalem: 1342/1923–24 to 1959, 49 pages, PAZU.
-
 耶路撒冷 Zâwiyya al-Uzbakiyya《访客簿》. Jerusalem: 1909–1933, 161 pages, PAZU.
-
 ### 已出版资料
-
 ‘ABD AL-‘AZÎZ, Shaykh. Hadha al-kitâb yahtawî ‘ala adhkâr tarîqa al-Naqshbandiyya al-‘ilmiyya. Quds [Jerusalem]: al-Dafâ‘, n.d.
-
 ‘ABD ALLÂH NIDÂ’Î KASHGÂRÎ. Abdullah Nidaî-yi Kâşgârî ve Hakkıyye Risâlesi. Güller Nuhoğlu 编. Istanbul: Simurg, 2004.
-
 ‘ABD AL-RASHÎD IBRÂHÎM. Tarjama-yi Hâlım yaka Bâshıma Kelenler. Saint-Pétersbourg: [1905–1907].
-
 ‘ABD AL-RASHÎD IBRÂHÎM. ‘Alem-i islâm va Jâpûnyâda intishâr-i islâmiyat. Istanbul: 1910, 2 vols.
-
 ABÛ’L-HASAN ZAYD FÂRÛQÎ MUJADDIDÎ. Maqâmât-i akhyâr. Delhi: Shâh Abû’l-Khayr Akîdîmî, 1975.
-
 Adana ve Havalisi Türkistanlılar Yardımlaşma derneği alemislama ve bütün Dûnya Türkistanlarına Yardım Beyannâmesi. Adana: Yurt Matbaası, n.d.
-
 AHMAD SIRHINDÎ. Maktûbât. Mecca: 1899–1900. Reprinted Istanbul: Istanbul: Fazilet Neşriyat).
-
 al-Sajara al-Qâdiriyya. Shâm: Matba‘a al-fayha’, 1906–07（莱顿图书馆藏有一份，Ar 4555）.
-
 ATAY, FALIH RIFKI. Zeytindağı. 1956. 重编版 Istanbul: Pozitif, 2004.
-
 BARCLAY, J.T. The City of the Great King or Jerusalem as it is, and as it is to be. Philadelphia: James Challen, 1858.
-
 ‘ALÎ BÂSHÂ MUBÂRAK. Al-Khitat al-tawfiqiyya al-jadîda li-Misr al-Qâhira wa mudunihâ wa bilâdihâ al-qadîma wa' l-shahîra. Cairo: 1982.
-
 BLISS, Frederick Jones. The Religions of Modern Syria and Palestine. Edinburgh: 1912.
-
 BARAKÂT, Bashîr ‘Abd al Ghanî. Fihris makhtûtât al-Zâwiyya al-Uzbakiyya fî’l-Quds. Quds [Jerusalem]: Zâwiyya al-Uzbakiyya, 2003.
-
 BREEN, A. E. A Diary of my Life in the Holy Land. Rochester N.Y.: John P. Smith, 1906.
-
 BROWN, John P. “The Mystical Principles of Islamism: or, a lecture on the Derviches.” Freemasons Magazine and Masonic Mirror (September 19 1863): pp. 216–219.
-
 BURCKHARDT, John Lewis. Travels in Arabia comprehending an Account of those Territories in Hedjaz with the Mohammedan Regard as Sacred. London: Henry Colburn, 1829, 2 vols.
-
 BURTON, Isabel. The Inner Life of Syria, Palestine and the Holy Land. London: Henry S. King and Co, 1875.
-
 BURTON, Richard F. Personal Narrative of a Pilgrimage to al-Madinah and Meccah. London: Tylston and Edwards, 1903, 2 vols.
-
 ILTER, Doktor. “İstanbul’daki Türkistanlıların bir cemiyesi.” Yaş Türkistan 43 (1933): pp. 22–26.
-
 DUGUET, Docteur. Le Pèlerinage de La Mecque au point de vue religieux, social et sanitaire. Paris: Rieder, 1933.
-
 ELPHINSTONE, M. An Account of the Kingdom of Caubul and its Dependencies in Persia, Tartary and India: Comprising a View of the Afghaun Nation and a History of the Dooraunee Monarchy. London: Richard Bentley, 1842, 2 vols.
-
 EVLIYA ÇELEBI. Evliya Çelebi Seyahatnamesi. Istanbul: Devlet Basımevi, 1938, vol. 10. 重编版 Ankara: Üçdal Neşriyat, 1984, vol. 9–10.
-
 FÄHREDDINEV, Rizaèddin. Bolgar va Kazan Tërekläre. Kazan: Kazan Tatarstan Kitap Näshrijaty, 1993.
-
 FINN, James. Stirring Times or Records from Jerusalem Consular Chronicles of 1853 to 1856. London: Kegan Paul, 1878, 2 vols.
-
 GOODRICH-FREER, A. Inner Jerusalem. London: Archibald Constable, 1904.
-
 IBN BATTUTA. The Travels of Ibn Battuta. H.R.A. Gibb 译. Cambridge: Hakluyt Society, 1962, 2 vols.
-
 ILTÛR, Doktor. “Istânbûl’dâkî Tûrkistânlîlârning bir Jami‘asî.” Yâsh Tûrkistân 43 (1933), pp. 22–26.
-
 JALÂL AL-DÎN RÛMÎ. The Mathnawî of Jalâlu’ddîn Rûmî. Reynold A. Nicholson 译. London: Luzac and co, 1926, vols 1 and 2.
-
 KEANF, John F. (Hajj Mohammed Amin). Six Month in the Hajiz: an Account of the Mohammedan Pilgrimages to Meccah and Medinah Accomplished by an Englishman Professing Mohammedanism. London: Ward and Downey, 1887.
-
 LE CHATELIER. A. Les Confréries musulmanes du Hedjaz. Paris: E. Leroux, 1887.
-
 “Mawt al-‘âlim, Mawt al-‘âlam.” Al-Dîn wa’l-âdab. Kazan. 2:6 (1907): pp. 182–184.
-
 MEHMED ŞEMSÜDDIN. Bursa Dergahları. M. Kara and K. Atlansoy 编. Bursa: Uludağ Y., 1997.
-
 “Misir’da Sharqî Turkistân Shahîdlerînî îslev tûplântîsî.” Yâsh Turkistân 109 (1938): pp. 34–36.
-
 MOUDJIR-ED-DY. Histoire de Jérusalem et d’Hebron. Henry Sauvaire 译为法文. Paris: E. Leroux, 1876.
-
 MUHAMMAD MURÂD RAMZÎ. Talfîq al-akhbâr wa Talqîh al-athâr fî waqâ‘î Qazân wa Bulghâr wa mulûk al-Tatâr. Orenbourg: Karîmiyya wa Husayniyya, 1908), 2 vols.
-
 MUHAMMAD MURÂD RAMZÎ. Rashahât ‘Ayn al-Hayat. Mecca: 1890.
-
 NÛR ‘ALÎ NÂDÎYEF. “Seyâhat Khâtiralarî IV. Âyâ Ândrî tekyesî, Ghalata ham Pîrâ mahallasî,” Shûrâ 14 (1915): pp. 434–436.
-
 d’OHSSON, Ignatius Muradgea. Tableau général de l’Empire othoman, divisé en deux parties, dont l’une comprend la législation mahométane, l’autre, l’histoire de l’Empire othoman. Paris: Imprimerie de Monsieur, 1788, 7 vols.
-
 Putevyja zapiski dvukh’ khadzhiev’. Kazan: Kazan Universitet, 1861–1862.
-
 QÂDÎ AL-QADÂT DAMÛLLÂ ‘ÂSHÛR A‘LAM ÂKHÛND MERHÛM UGHLÎ HÂJJ ‘ABD AL-‘AZÎZ MAKHDÛM JANGIZKHÂN. Uyghur Sarfi. Misr: al-Azhar, n.d.
-
 QURBÂN-‘ALÎ KHÂLIDÎ. Tawârîkh-i khamsa-yi sharqî. Kazan: 1910.
-
 QURBÂN-‘ALÎ KHÂLIDÎ. An Islamic Biographical Dictionary of the Eastern Kazakh Steppe, 1770–1912. Allen J. Frank and Mirkasyim A. Usmanov 编译. Leiden: Brill, 2005.
-
 RAHMAT WÂZIH. Sawânih al-masâlik wa farâsikh al-mamâlik. Dushanba: Izdatel’stvo Donish, 1986.
-
 RIDÂ AL-DÎN B. FAKHR AL-DÎN, ed. Shaykh Zayn Allâh Hazratning Tarjama-yi Hâli. Orenbourg: Tipografija Gaz. Vakt’, 1917.
-
 ROCHES, Léon. Dix ans à travers l’Islam, 1834–1844. Paris: Perrin, 1904.
-
 ROGER, Eugène. La Terre saincte ou description topographiqve très-particulière des saincts lieux et de la terre de promiffion. Paris: chez Antoine Bertier, 1846.
-
 SAKIB DEDE. Sefîne-yi Nefîse-yi Mevleviyân. Cairo: Wahbiyya, 1866, 3 vols.
-
 SÂLIH BEN THÂBIT ‘UBAYDULLÎN, ed. Marjânî. Kazan: Ma‘ârif, 1915.
-
 SEETZEN, Ulrich Jasper. Reisen durch Syrien, Palästina, Phönicien. Berlin: G. Reimer, 1854, 2. vols.
-
 SHIHÂB AL-DÎN MARJÂNÎ. Rihlat al-Marjânî. Kazan: Tipo-litografija Nasl’dnikov’ M. Chikovoj, 1897.
-
 SNOUCK-HURGRONJE, C. Mekka in the Latter Part of the 19th Century. 1931. 重印，Leiden: Brill, 1970.
-
 “Sovyet Hacıları Mısır’da.” Tarih Dünyası, I:3 (October 1953), pp. 132–133.
-
 Sufis and Soldiers in Awrangzeb’s Deccan: Malfûzât-i Naqshbandiyya. Simon Digby 由波斯语译出. Oxford: University Press, 2001.
-
 “Tekye ichin i’âne,” Ta’ârif ül-Müslimîn (Istanbul) 21:8 (1910): p. 346.
-
 TICHELEN, Th. van. Land and Volk in Palestina. Brugge: J. Houdmont-Carbonez Philip de Goede Laan, 1909.
-
 DABRY de THIERSANT, P. Le Mahométisme en Chine et dans le Turkestan oriental. Paris: Ernest Leroux, 1878, 2 vols.
-
 VAMBERY, Arminius. Travels in Central Asia: being the Account of a Journey from Teheran across the Turkoman Desert in the Eastern Shore of the Caspian to Khiva, Bokhara, and Samarkand. New York: Harper and brothers, 1865.
-
 VAMBERY, Arminius. His Life and Adventures by himself. 3rd ed. London: T. Fisher Unvin, 1884.
-
 Voyages d’Ali Bey el Abbassi en Afrique et en Asie pendant les années 1803, 1804, 1805, 1806 et 1807. Paris: P. Didot l’Aîné, 1814, 3 vols.
-
 WILLIAMS, George. The Holy Land, Historical, Topographical, and Antiquarian Notices of Jerusalem. London: John W. Parker, 1849, 2 vols.
-
 WILSON, C. W. Ordnance Survey of Jerusalem 1864/5 - Map 1/2500. Southampton, 1866.
-
 V.V. “Musulmano cinese onorato a Gerusalemme.” Oriente Moderno 15 (1935): pp. 253–254.
-
 ## 第二手资料
-
 ABU-MANNEH, Butrus. “A Note on Rashhât-ı Ain al-Hayat in the Nineteenth-Century.” In E. Özdalga, ed. Naqshbandis in Western and Central Asia: Change and Continuity. Istanbul: Curzon Press, 1999, pp. 61–66.
-
 ALGAR, Hamid. “From Kashghar to Eyüp: the Lineages and Legacy of Sheikh Abdullah Nidâî.” In E. Özdalga, ed. Naqshbandis in Western and Central Asia: Change and Continuity. Istanbul: Swedish Research Institute in Istanbul / Curzon Press, 1999, pp. 1–15.
-
 ALGAR, Hamid. “Tarîq and Tariqah: Central Asian Naqshbandî and the Road to the Haramayn.” In Alexandre Papas, Thomas Welsford, and Thierry Zarcone, eds. The Roads of Pilgrimages between Central Asia and the Hijaz (forthcoming).
-
 AL-AZMA, Nazeer. “Some notes on the Impact of the Story of the mi‘râj on Sufi Literature.” Muslim World 63:2 (1973): pp. 93–104.
-
 ‘ÂRIF AL-‘ÂRIF. Al-Mufassal fî târîkh al-Quds. 1961, reed. Quds [Jerusalem]: al-nâshr Fawzî Yûsuf, Matba‘at al-Quds, 1999, vol. 1.
-
 ARNON, Adar. “The Quarters of Jerusalem in the Ottoman Period.” Middle Eastern Studies 28:1 (Jan. 1992): pp. 1–65.
-
 AUBIN, Françoise. “Islam on the Wings of Nationalism. The case of Muslim Intellectuals in the Republic of China.” In S. A. Dudoignon; H. Komatsu; Y. Kosugi, eds. Intellectuals in the Modern Islamic World: Transmission, Transformation, Communication. London: Routledge, 2006, pp. 241–272.
-
 AUBIN BOLTANSKI, E. “Le Mawsim de Nabî Mûsâ: processions, espace en miettes et mémoire blessée. Territoires palestiniens (1998–2000).” In S. Chiffoleau and A. Madœuf, eds. Les Pèlerinages au Maghreb et au Moyen-Orient. Beyrouth: Institut Français du Proche-Orient, 2005, pp. 59–80.
-
 AULD, Sylvia and HILLENBRAND, Robert, eds. Ottoman Jerusalem: The Living City 1517–1917. London: Altajir World of Islam Trust, 2000, 2 vols.
-
 AYBEK, Zafer Hasan. “Hindîler Tekkesi.” Tarih Mecmuası (Istanbul) 7 (Temmuz 1977): p. 96.
-
 BAHAT, Dan. A Selection of Ottoman Structure in the Old City of Jerusalem. Jerusalem: Open University of Israel, 1990.
-
 BALCI, Bayram. “La communauté ouzbèke d’Arabie Saoudite: entre assimilation et renouveau identitaire.” Revue Européenne des Migrations Internationales 19:3 (2003).
-
 BALLAND, Daniel. “La Diaspora des Turcs de Basse Asie centrale soviétique au XXe siècle.” Bulletin de la section de géographie 82 (1978): pp. 23–38.
-
 BEN-ARIEH, Yehoshua. Jerusalem in the 19th Century: The Old City. Jerusalem: St Martin’s Press, 1984.
-
 BROWER, David. “Russian Roads to Mecca: Religious Tolerance and Muslim Pilgrimage in the Russian Empire.” Slavic Review 55:3 (1996): pp. 567–584.
-
 BRUINESSEN, Martin van. “The Origins and Development of the Naqshabandi Order in Indonesia.” Der Islam 67/1 (1990): pp. 150–179.
-
 BUDATOV’, Lazar’. Sravnitel’nyj slovar’ Turetsko-Tatarskikh’ Narechij. Sanktpeterburg: 1869.
-
 BUTTINO, Marco. La Rivoluzione capovolta: L’Asia centrale tra il crollo dell’impero zarista e la formazione dell’URSS. Napoli: l’Ancora del Mediterraneo, 2003.
-
 CHERIF-CHEBBI, Leila. “L’Ahong sourd.” In V. Bouillier and C. Servan-Schreiber, eds. De l’Arabie à l’Himalaya: Chemins croisés en hommage à Marc Gaborieau. Paris: Maisonneuve et Larose, 2004, pp. 407–421.
-
 CONCETTI, Eloisa, and ZARCONE, Thierry. Sufism in Xinjiang and Inner China in 19th-21th Century: Ahmad Sirhindî’s Maktûbât and the Naqshbandiyya. Forthcoming.
-
 DE JONG, Frederick. “The Sufi Orders in Nineteenth and Twentieth-Century Palestine.” Studia Islamica LVIII (1983): pp. 149–181.
-
 DE JONG, Frederick. “Les Confréries mystiques musulmanes au Machreq arabe.” In A. Popovic and G. Veinstein, eds. Les Ordres mystiques dans l’islam. Cheminements et Situation actuelle. Paris: EHESS, 1985, pp. 205–243.
-
 DE JONG, Frederick. “The Naqshbandiyya in Egypt and Syria: Aspects of its History, and Observations Concerning its Present-Day Condition.” In M. Gaborieau, A. Popovic and Th. Zarcone, eds. Naqshbandis. Historical Developments and Present Situation of a Muslim Mystical Order. Istanbul: Isis Press, 1991, pp. 589–601.
-
 DELANOUE, Gilbert. “Deux Maîtres soufis égyptiens à Jérusalem.” In Béatrice Philippe, ed. Voir Jérusalem, Pèlerins, Conquérants, Voyageurs. Paris: Association cimaise, Art et Histoire, 1997, pp. 91–96.
-
 DIGBY, Simon. “Sufis and Travellers in the Early Delhi Sultanate: the Evidence of the Fawâ'id al-Fw'âd.” In Allar Singh, ed. Socio-cultural Impact of Islam in India. Chandigarh: n. ed., 1976, pp. 171–177.
-
 DIGBY, Simon. “The Naqshbandîs in the Deccan in the Late Seventeenth and Early Eighteenth-Century A.D.: Bâbâ Palangposh, Bâbâ Musâfir and their Adherents.” In M. Gaborieau, A. Popovic and Th. Zarcone, eds. Naqshbandis: Historical Developments and Present Situation of a Muslim Mystical Order. Istanbul: Isis Press, 1991, pp. 167–207.
-
 DIYAR, Abdurakhman Mamut. “Aqsu Konishähär Ma’arip Täzkirisi.” Shinjang Tarikh Materiyalliri (Ürümchi) Shinjang Khälq Näshriyati, 24 (1988): pp. 109–144.
-
 ERŞAHIN, Seyfettin. Türkistan’da İslam ve Müslümanlar. Ankara: İlahiyat Vakfı Yay., 1999).
-
 EZZERELLI, Kaïs. “Le Pèlerinage à La Mecque au temps du chemin de fer du Hedjaz (1908-1914)”. In Sylvia Chiffoleau and Anna Madœuf, ed. Les pèlerinages au Maghreb et au Moyen-Orient. Beyrouth: Institut Français du proche-orient, 2005, 167–191.
-
 FAROOQI, Naimur Rehman. Mughal-Ottoman Relations: A Study of Political and Diplomatic relations between Mughal India and the Ottoman Empire, 1556–1748. Delhi: Idarah-i Adabiyat-i Delli, 1989.
-
 FAROQHI, Suraiya. Pilgrims and Sultans: The Hajj under the Ottomans. London: I.B. Tauris, 1994.
-
 GÄRÄEVA, Nurija. “Kem ul Morad Rämzi?” Kazan Utlari (Kazan) 2 (1990): pp. 171–175.
-
 HARTMANN, Martin. “Zentralasiatisches aus Stambul,” Islamischer Orient I (1902).
-
 HARTMANN, Martin. Çaghataisches: Die Grammatik ussi lisâni turki des Mehemed Sadiq. Heidelberg: Carl Winter’s Universitätsbuchlandlung, 1902.
-
 HAYIT, Baymirza. Islam and Turkestan under Russian Rule. Istanbul: Can Matbaa, 1987.
-
 HAYITOV, Sh. A.; SOBIROV, N.S.; and LEGAY, A.S. Khorijdagi Özbeklar. Tashkent: Fan Nashriëti, 1992.
-
 JABBARA, Taysir. Al-Muslimûn al-hunûd fî qadiyyat filistîn. Ramallah: Dar al-Shurûq, 1998.
-
 JAROVOJ-RAVSKIJ, V.I. “Palomnichestvo (hazh) ve Mekku i Medinu.” In Sbornik Materialov po Musul’manstvu. S. Peterburg: Rozenoer, 1899, vol. 2, pp. 129–153.
-
 JARRING, Gunnar. Materials to the Knowledge of Eastern Turki, IV. Lund: C.W.K. Gleerup, 1951.
-
 JARRING, Gunnar. “The Turkistan Tekke of Tarsus on the Relationship of Southern Turkey with Central Asia.” Svenska Forskningsinstitutet i Istanbul Meddelanden 8 (1983): pp. 34–40.
-
 KARA, Mustafa. “Tanzimat’ta Cumhuriyet’e Kadar Tasavvuf ve Tarikatlar.” In Tanzimat’tan Cumhuriyet’e Türkiye Ansiklopedisi. vol. 31; 32. Istanbul: İletişim, 1985, pp. 978–994.
-
 KARA, Mustafa. Bursa’da Tarikatlat ve Tekkeler. Bursa: Uludağ Y., 1990, 2 vols.
-
 KARAMUSTAFA, Ahmet. God’s Unruly Friends. Dervish Groups in the Islamic Middle Period 1200–1550. Oxford: Oneworld, 2006.
-
 KAZIMIRSKI, A. de Biberstein. Dictionnaire arabe-français. Cairo: 1875.
-
 KELLER, Soshana. To Moscow, not Mecca: The Soviet Campaign against Islam in Central Asia, 1917–1941. Westport, CN-London: Praeger Publishers, 2001.
-
 KEMPER, Michael. “Šihâbaddîn al-Marğânî als Religionsgelehrter.” In M. Kemper, A. von Kükelgen, D. Yermakov, eds. Muslim Culture in Russia and Central Asia from the 18th to the Early 20th Centuries. Berlin: Klaus Schwarz Verlag, 1996, pp. 129–165.
-
 KHENCHELAOUI, Zaïm, and ZARCONE, Thierry. “La Famille Jîlânî de Hama - Syrie (Bayt al-Jîlânî)”, Journal of the History of Sufism 1–2 (2000): pp. 53–78.
-
 KÜCÜKDAĞ, Yusuf. “Konya’da Söylemez Zâviyesi ve Vakfiyeleri.” İpek Yolu (Konya Ticaret Odası Dergisi, Konya) 1 (1998): pp. 155–194.
-
 LANDAU, Jacob. The Hejaz Railway and the Muslim Pilgrimage: A Case of Ottoman Political Propaganda. Detroit: Wayne State University Press, 1971.
-
 L’Etrange et le Merveilleux en terre d’Islam: Paris, musée du Louvre 23 avril – 23 juillet 2001. Paris: Edition de la réunion des musées nationaux, 2001.
-
 LITTLE, Donald P.; TURGAY, A. Üner. “Documents from the Ottoman Period in the Khâlidî Library in Jerusalem.” Die Welt des Islams XX:1–2 (1980): pp. 44–77.
-
 MASSIGNON, Louis. Essay on the Origins of the Technical Language of Islamic Mysticism. Notre dame - Indiana: University of Notre Dame Press, 1997.
-
 MATTAR, Philip. “The Role of the mufti of Jerusalem on the Political Struggle over the Western Wall, 1928–29.” Middle Eastern Studies 19:1 (January 1983): pp. 104–118.
-
 MATTHEWS, Charles D. “Palestine, Holy Land of Islam.” Journal of Biblical Literature 51:2 (Juin 1932): pp. 171–178.
-
 McCHESNEY, R. D. “The Central Asian Hajj-Pilgrimage in the time of the early modern empires.” In Michel Mazzaoui, ed. Safavid Iran and Her Neighbors. Salt Lake City: University of Utah Press, 2003, pp.129–156.
-
 MOEZZI, M. A., ed. Le Voyage initiatique en terre d’islam: Ascensions célestes et itinéraires spirituels. Louvain - Paris: Peeters, 1996.
-
 NATSHEH, Yusuf. “al-Zawiyya al-Naqshbandiyya.” In Sylvia Auld and Robert Hillenbrand, eds. Ottoman Jerusalem: The Living City 1517–1917. London: Altajir World of Islam Trust, 2000, vol. 2, pp. 904–911.
-
 NIZAMI, Khaliq Ahmad. The Life and Time of Shaikh Farid-ud-Din Ganj-i Shakar. Delhi: Idarah-i Adabiyat-i Delli, 1987.
-
 PAPAS, Alexandre. Mystiques et vagabonds en Islam: Portraits de trois soufis qalandars. Paris: Le Cerf, forthcoming.
-
 PEARSON, Michael N. Pilgrimage to Mecca: The Indian Experience, 1500–1800. Princeton: Markus Wiener Publishers, 1996.
-
 PETERS, F.E. The Muslim Pilgrimage to Mecca and the Holy Places. Princeton: Princeton University Press, 1994.
-
 POPOVIC, Alexandre. “Sur les Récits de pèlerinage à La Mecque de musulmans yougoslaves (1949–1972).” Studia Islamica 39 (1974): pp. 139–144.
-
 POUJOL, Catherine. “L’Introduction du chemin de fer au Turkestan entre 1880 et 1917: Reflet des mentalités et conséquences.” In Innovations techniques et civilisation. Paris: CNRS, 1989, pp. 187–206.
-
 RAFEQ, Abdul-Karim. “Ottoman Jerusalem in the Writings of Arab Travellers.” In Sylvia Auld and Robert Hillenbrand, eds. Ottoman Jerusalem: The Living City 1517–1917. London: Altajir World of Islam Trust, 2000, vol. 1, pp. 63–72.
-
 REICHMUTH, Stefan. “The Interplay of Local Developments and Transnational Relations in the Islamic World: Perceptions and Perspectives.” In A. von Kükelgen, M. Kemper, A. J. Frank, eds. Muslim Culture in Russia and Central Asia from the 18th to the 20th Centuries. Berlin: Klaus Schwarz Verlag, II, 1998? pp. 5–38.
-
 REITER, Yitzhak. “The Administration and Supervision of Waqf Properties in 20th Century Jerusalem.” In Faruk Bilici, ed. Le Waqf dans le monde musulman contemporain, XIXe-XXe siècles. Istanbul: Institut Français d’Etudes Anatoliennes, 1994), pp. 169–182.
-
 SCHWARZ, Henry. An Uyghur-English Dictionary. Washington: Washington University, 1992.
-
 SEDGWICK, Mark J. R. “Saudis Sufis: Compromise in the Hijaz, 1925–40.” Die Welt des Islams 37:3 (1997): pp. 360–368.
-
 SHAHÂBÎ, Mûsâ. “al-Zâwiyya al-Naqshbandiyya al-Uzbakiyya al-Bukhâriyya fî’l-Quds.” al-Quds 22 September 1998, p. 28.
-
 SHAMS AL-DÎN KHÂN B. DIYÂ’ AL-DÎN KHÂN B. ISHÂN BÂBÂKHÂN. Al-Muftî Diyâ’ al-Dîn Khân wa turâthu al-fikrî. n.p.: al-Ittihâd al-Sûfiyatî, USSR, 1986.
-
 SMITH, Grace Martin. “The Özbek Tekkes of Istanbul.” Der Islam 57 (1980): pp. 130–139.
-
 TAESCHNER Franz, ed. Hof-Und Volksleben: Ein turkischens miniaturen Album aus dem 17. Jahrundert. Hannover: Orient Buchhandlung Hanz Lafaire, 1925.
-
 TROITSKAJA, L. “Iz proshlogo kalandarov i maddaxov v Uzbekistane.” In Domusulmanskie verovanija i obrjady ve Srednej Azii. Moskva: Akademija Nauk SSSR, 1975, pp. 191–223.
-
 TÜTÜNCÜ, Mehmet. Turkish Jerusalem (1516–1917): Ottoman inscriptions from Jerusalem and other Palestinian cities. Haarlem: Türkestan and Azerbaijan Research Centre, 2006.
-
 TÜTÜNCÜ, Mehmet. Turkish Palestine (1069–1917): Inscriptions from al-Khalil (Hebron), Nabi Musa and Other Palestinian cities under Turkish Rule. Haarlem: Türkestan and Azerbaijan Research Centre, 2008.
-
 ZARCONE, Thierry. “Histoire et croyances des derviches turkestanais et indiens à Istanbul.” Anatolia Moderna / Yeni Anadolu II (1991): pp. 137–200.（新的修订版及土耳其语译本即将出版：İstanbul’daki Orta Asyalı ve Hintli Dervişler (Istanbul: Simurg Y.).）
-
 ZARCONE, Thierry. “Un document inédit sur les tekke kadiri de l’Empire ottoman et du monde musulman au XXe siècle. ” In J.-L. Bacqué-Grammont, and R. Dor, eds. Mélanges offerts à Louis Bazin. Paris: IFEA-L’Harmattan, 1992, pp. 275–283.
-
 ZARCONE, Thierry. “Une route de sainteté islamique entre l’Asie centrale et l’Inde: la voie Ush-Kashghar-Srinagar.” In Th. Zarcone, ed. Inde-Asie centrale: Routes du commerce et des idées, Cahiers d’Asie Centrale. Aix-en-Provence: Ed. Edisud, 1–2, 1996, pp. 227–254.
-
 ZARCONE, Thierry. “Grammaires, Dictionnaires et Littérature du Turkestan à Istanbul au tournant du siècle.” In F. Hitzel, ed. Istanbul et les Langues orientales. Paris: L’Harmattan, 1997, pp. 417–423.
-
 ZARCONE, Thierry. “Un aspect de la polémique autour du soufisme dans le monde Tatar, au début du XXe siècle: mysticisme et confrérisme chez Mûsâ Djârallâh Bîgî.” In S.A. Dudoignon; Dämir Is’haqov; and Räfyq Möhämmätshin, éds. L’islam de Russie: Conscience communautaire et autonomie politique chez les Tatars de la Volga et de l’Oural, depuis le XVIIIe siècle. Paris: Maisonneuve Larose, 1997, pp. 227–247.
-
 ZARCONE, Thierry. “Pour ou contre le monde: Une approche des sociabilités mystiques musulmanes dans l’Empire ottoman.” In F. Georgeon, ed. Vivre dans l’Empire ottoman. Sociabilités et Relations intercommunautaires (XVIIIe–XXe siècle). Paris: L’Harmattan, 1997, pp. 21–29.
-
 ZARCONE, Thierry. “Les Confréries soufies en Sibérie aux XIXe et au début du XXe siècle.” Cahiers du monde russe 41:2–3 (2000): pp. 286–287.
-
 ZARCONE, Thierry. “Sufi Lineages and Saint Veneration in Twentieth-Century Eastern Turkestan and Xinjiang.” In The Turks. Ankara: Yeni Türkiye, 2002, pp. 534–541.
 
 # 脚注
-
 [^1]: 关于朝觐（hâjj）路线，见 V. I. Jarovoj-Ravskij, “Palomnichestvo (hazh) ve Mekku i Medinu,” in Sbornik Materialov po Musul’manstvu (S. Peterburg: Rozenoer, 1899), vol. 2, pp. 143–145；Suraiya Faroqhi, Pilgrims and Sultans: The Hajj under the Ottomans (London: I. B. Tauris, 1994), pp. 32–53；Michael N. Pearson, Pilgrimage to Mecca. The Indian Experience, 1500–1800 (Princeton: Markus Wiener Publishers, 1996), pp. 131–145。
 [^2]: R. D. McChesney, “The Central Asian Hajj-pilgrimage in the time of the early modern empires,” in Michel Mazzaoui, ed., Safavid Iran and Her Neighbors (Salt Lake City: University of Utah Press, 2003), pp. 129–156；Hamid Algar, “Tarîq and Tariqah: Central Asian Naqshbandî and the Road to the Haramayn,” in Alexandre Papas, Thomas Welsford, and Thierry Zarcone, eds., The Roads of Pilgrimages between Central Asia and the Hijaz（即将出版）。
 [^3]: 见 Putevyja zapiski dvukh’ khadzhiev’ (Kazan: Kazan Universitet, 1861–1862) 和 ‘Abd al-Rashîd Ibrâhîm, Tarjama-yi Hâlım yaka Bâshıma Kelenler (Saint-Pétersbourg: [1905–1907]), p. 69。
@@ -2419,7 +2260,7 @@ ZARCONE, Thierry. “Sufi Lineages and Saint Veneration in Twentieth-Century Eas
 [^10]: Baymirza Hayit, Islam and Turkestan under Russian Rule (Istanbul: Can Matbaa, 1987), pp. 174–175。
 [^11]: Charles D. Matthews, “Palestine, Holy Land of Islam,” Journal of Biblical Literature 51:2 (June 1932), p. 173。
 [^12]: 关于苏非对登霄的阐释，见 Nazeer al-Azma, “Some Notes on the Impact of the Story of the mi‘râj on Sufi Literature,” Muslim World 63:2 (1973), pp. 93–104；尤其见 M. A. Amir-Moezzi, ed., Le Voyage initiatique en terre d’islam. Ascensions célestes et itinéraires spirituels (Louvain, Paris: Peeters, 1996)。
-[^13]: “Waqt-i ‘urûj Quds wa samawât-i ‘arshrâ/Tayy-i makân shud ‘alladhî asrâ’ Muhammad ast”；载 “Risâla-yi Haqqiyya of ‘Abd Allâh-yi Nidâ’î Kâshgârî,” Güller Nuhoğlu 编，收于 Abdullah Nidaî-yi Kâşgârî ve Hakkıyye Risâlesi (Istanbul: Simurg, 2004)，波斯文文本 p. 82，土耳其文译文 p. 113。
+[^13]: “Waqt-i ‘urûj Quds wa samawât-i ‘arshrâ/Tayy-i makân shud ‘alladhî asrâ’ Muhammad ast”（译文：登霄之时，耶路撒冷与阿尔什诸天／空间转瞬越过，夜行者正是穆罕默德）；载 “Risâla-yi Haqqiyya of ‘Abd Allâh-yi Nidâ’î Kâshgârî,” Güller Nuhoğlu 编，收于 Abdullah Nidaî-yi Kâşgârî ve Hakkıyye Risâlesi (Istanbul: Simurg, 2004)，波斯文文本 p. 82，土耳其文译文 p. 113。
 [^14]: Louis Massignon, Essay on the Origins of the Technical Language of Islamic Mysticism (Notre Dame—Indiana: University of Notre Dame Press, 1997), p. 175。
 [^15]: Mujîr al-Dîn（15世纪）, Histoire de Jérusalem et d’Hebron. Fragments de la chronique de Moudjir-ed-dyn (Paris: E. Leroux, 1876), pp. 163–168, 198–199。
 [^16]: Evliya Çelebi Seyahatnâmesi (Ankara: Üçdal Neşriyat, 1984), vol. 9–10, p. 239。
@@ -2432,245 +2273,125 @@ ZARCONE, Thierry. “Sufi Lineages and Saint Veneration in Twentieth-Century Eas
 [^23]: A. Goodrich-Freer, Inner Jerusalem (London: Archibald Constable, 1904), p. 248。如今，苏非教团在这项朝觐中仍发挥重要作用，见 Emma Aubin Boltanski, “Le Mawsim de Nabî Mûsâ: processions, espace en miettes et mémoire blessée. Territoires palestiniens (1998–2000),” in S. Chiffoleau and A. Madœuf, eds., Les Pèlerinages au Maghreb et au Moyen-Orient, pp. 59–80。关于该建筑群的建筑，见 Mehmed Tütüncü, Turkish Palestine (1069–1917). Inscriptions from al-Khalil (Hebron), Nabi Musa and Other Palestinian cities under Turkish Rule (Haarlem: Türkestan and Azerbaijan Research Centre, 2008), pp. 42–62。
 [^24]: Gilbert Delanoue, “Deux Maîtres soufis égyptiens à Jérusalem,” in Béatrice Philippe, ed., Voir Jérusalem, Pèlerins, Conquérants, Voyageurs (Paris: Association cimaise, Art et Histoire, 1997), p. 95。
 [^25]: ‘Alem-i islâm va Jâpûnyâda intishâr-i islâmiyat (Istanbul: 1910), pp. 236–243。
-
 [^26]: ‘Alî Bâshâ Mubârak, Khitat al-tawfiqiyya al-jadîda li-Misr al-Qâhira wa mudunihâ wa bilâdihâ al-qadîma wa’l-shahîra (Cairo: 1982), p. 284。
-
 [^27]: T. Zarcone, “Les Confréries soufies en Sibérie aux XIXe et au début du XXe siècle,” Cahiers du monde russe 41:2–3 (2000), pp. 286–287。尤其见 ‘Abd al-Rashîd Ibrâhîm, Tarjama-yi Hâlım, pp. 64, 68–69；以及 ‘Abd al-Rashîd Ibrâhîm, ‘Alem-i islâm, vol. 2, pp. 193–194。
-
 [^28]: Nûr ‘Alî Nâdîyef, “Seyâhat Khâtiralarî IV. Âyâ Ândrî tekyesî, Ghalata ham Pîrâ mahallasî,” Shûrâ 14 (1915), p. 434。
-
 [^29]: Isabel Burton, The Inner Life of Syria, Palestine and the Holy Land (London: Henry S. King and Co, 1875), p. 58。另见 Léon Roches, Dix ans à travers l’Islam, 1834–1844 (Paris: Perrin, 1904), p. 313。
-
 [^30]: John F. Keane (Hajj Mohammed Amin), Six Months in the Hijaz: an Account of the Mohammedan Pilgrimages to Meccah and Medinah Accomplished by an Englishman Professing Mohammedanism (London: Ward and Downey, 1887), p. 81。
-
 [^31]: Abdurakhman Mamut Diyar, “Aqsu Konishähär Ma’arip Täzkirisi,” Shinjang Tarikh Materiyalliri (Ürümchi) 24 (1988), p. 114。
-
 [^32]: 见 Richard F. Burton, Personal Narrative of a Pilgrimage to al-Madinah and Meccah (London: Tylston and Edwards, 1903), vol. 1, p. 86。关于麦加兄弟会的活动，尤其是来自东印度群岛的苏非的活动，见 C. Snouck-Hurgronje, Mekka in the Latter Part of the 19th Century (1931; reprint, Leiden: Brill, 1970), pp. 279–280。
-
 [^33]: Gunnar Jarring, Materials to the Knowledge of Eastern Turki, IV (Lund: C. W. K. Gleerup, 1951), p. 102, footnote 7。
-
 [^34]: 关于这条朝觐路线的更多资料，见 T. Zarcone, “Une route de sainteté islamique entre l’Asie centrale et l’Inde: la voie Ush-Kashghar-Srinagar,” in T. Zarcone, 编，Inde-Asie centrale. Routes du commerce et des idées, Cahiers d’Asie Centrale（Aix-en-Provence：Edisud，1–2，1996），pp. 227–254。
-
 [^35]: A. de Biberstein Kazimirski 的 Dictionnaire arabe-français（Cairo：1875）中释为“Couvent de derviches”（托钵僧修院）。关于该词在鞑靼语中含义的更多详情，见 Lazar’ Budatov’, Sravnitel’nyj slovar’ Turetsko-Tatarskikh’ Narechij（Sanktpeterburg’：1869）。
-
 [^36]: Qurbân-‘Alî Khâlidî, An Islamic Biographical Dictionary of the Eastern Kazakh Steppe, 1770–1912, Allen J. Frank and Mirkasyim A. Usmanov 编译（Leiden：Brill，2005），pp. 78–80, 154–155（译文将“Mecca”误作“Medina”！）。
-
 [^37]: “Tekye ichin i’âne,” Ta’ârif ül-Müslimîn（Istanbul）21:8（1910），p. 346。见 T. Zarcone, “Les Confréries soufies en Sibérie aux XIXe et au début du XXe siècle,” pp. 286–287。
-
 [^38]: M. Elphinstone, An Account of the Kingdom of Caubul and its Dependencies in Persia, Tartary and India. Comprising a View of the Afghaun Nation and a History of the Dooraunee Monarchy（London：Richard Bentley，1842），vol. 1, p. 280。
-
 [^39]: S. A. Hayitov, N. S. Sobirov, and A. S. Legay, Khorijdagi Özbeklar（Tashkent：Fan Nashriëti，1992），p. 88。
-
 [^40]: Başvekâlet Arşivi-Cevdet Evkâf（下文简称 BVCE），10813（13 R 1260/1844）。
-
 [^41]: 这座道堂名为 Hamza Bâbâ Zâwiyya，位于托西亚地区，由新任谢赫哈吉·穆罕默德·德德（Hâjjî Mehmed Dede）修复；此人是一位出身印度、曾四处游方的纳克什班迪苏非。BVCE 9506（3 M 1190/1776）。
-
 [^42]: BVCE 1951（C 1173/1759）。
-
 [^43]: BVCE 19125（Za 1211/1797）。
-
 [^44]: BVCE 21766（Ca 1142/1729），23278（M 1189/1775）。
-
 [^45]: BVCE 21467（3 R 1246/1830）。
-
 [^46]: BVCE 4092（7 Ra 1214/1799）；4201（M 1214/1799）；5717（23 S 1214/1799）；10813（13 R 1260/1844）。
-
 [^47]: L. Roches, Dix ans à travers l’Islam, 1834–1844, p. 312。
-
 [^48]: 关于朝觐的经济维度及印度商人发挥的特殊作用，见 M. N. Pearson, Pilgrimage to Mecca，第6、7章。
-
 [^49]: Y. Ben-Arieh, Jerusalem in the 19th Century, p. 131。
-
 [^50]: S. Faroqhi, Pilgrims and Sultans, p. 132。
-
 [^51]: John Lewis Burckhardt, Travels in Arabia Comprehending an Account of Those Territories in Hedjaz which the Mohammedans Regard as Sacred（London：Henry Colburn，1829），II, pp. 26–27。
-
 [^52]: R. F. Burton, Personal Narrative of a Pilgrimage to al-Madinah and Meccah, vol. 2, pp. 185–186。关于波斯朝觐者，见 F. E. Peters, The Muslim Pilgrimage to Mecca and the Holy Places（Princeton：Princeton University Press，1994），p. 175。
-
 [^53]: J. L. Burckhardt, Travels in Arabia, vol. 1, p. 27。
-
 [^54]: J. L. Burckhardt, Travels in Arabia, vol. 1, p. 154。
-
 [^55]: 众所周知，孟买的虔诚穆斯林会向慈善事业慷慨捐款，由此为贫穷朝觐者支付前往吉达的船费；A. S. Morrison, “Russian Rule in Samarkand 1868–1910,” p. 93。
-
 [^56]: Zeytindağı（Istanbul：1956；重编版 Istanbul：Pozitif，2004），pp. 63–66。
-
 [^57]: T. Zarcone, “Histoire et Croyances des derviches turkestanais et indiens à Istanbul,” p. 153。
-
 [^58]: 关于“伊斯坦布尔商队”，见 Ignatius Muradgea d’Ohsson, Tableau général de l’Empire othoman, divisé en deux parties, dont l’une comprend la législation mahométane, l’autre, l’histoire de l’Empire othoman（Paris：Imprimerie de Monsieur，1788），vol. 3, pp. 269, 271–272。
-
-[^59]: “Bu ecnebi dervişlerin bir çokları da zengindirler. Öyle olduğu halde Memalik-i Osmaniye’ye geldikleri vakit bir otelden evvel bir dergah araştırırlar. Az cümle Buhara dervişleri erkan-ı tarikata son derecede riayet ettiklerinden bunların Kâbe’ye gidip hacı olmak niyetinde bulunanlar bir kere Makam-ı Hilafeti ziyaret yani cuma selamlığında olsun sevgili Padışahımızı gördükten sonra o farz öyle ifa ettiklerinden çokluk çocuklar ile beraber olduğu halde bile İstanbul’a gildikleri vakt doğru Eyüp Sultan’da (Akıl Efendi) dergahının bir odasına inerler. Orada aylarca kalırlar eğer ailesinde bir rahatsızlık zuhur ederse o sene Kâbe’ye gidemezleriyse senesine kadar mezkur tekiyede misafir olurlar,” Muhibban Year 2:1（January 1911），p. 110。
-
+[^59]: “Bu ecnebi dervişlerin bir çokları da zengindirler. Öyle olduğu halde Memalik-i Osmaniye’ye geldikleri vakit bir otelden evvel bir dergah araştırırlar. Az cümle Buhara dervişleri erkan-ı tarikata son derecede riayet ettiklerinden bunların Kâbe’ye gidip hacı olmak niyetinde bulunanlar bir kere Makam-ı Hilafeti ziyaret yani cuma selamlığında olsun sevgili Padışahımızı gördükten sonra o farz öyle ifa ettiklerinden çokluk çocuklar ile beraber olduğu halde bile İstanbul’a gildikleri vakt doğru Eyüp Sultan’da (Akıl Efendi) dergahının bir odasına inerler. Orada aylarca kalırlar eğer ailesinde bir rahatsızlık zuhur ederse o sene Kâbe’ye gidemezleriyse senesine kadar mezkur tekiyede misafir olurlar,”（译文：这些外国托钵僧中有许多人十分富有。即便如此，他们来到奥斯曼帝国时，也会先寻找一座道堂，然后才找旅馆。尤其是布哈拉托钵僧极其恪守教团规制；其中打算前往克尔白履行朝觐者，会先造访哈里发驻地，也就是至少参加一次星期五仪仗，见到我们敬爱的帕迪沙阿，然后才履行这项主命。他们往往携子女同行；抵达伊斯坦布尔后，会直接住进埃于普苏丹的阿克尔·埃芬迪道堂的一间房内。他们在那里一住数月；如果家中有人身体不适，以致当年无法前往克尔白，便会在上述道堂作客直至次年。）Muhibban Year 2:1（January 1911），p. 110。
 [^60]: ‘Abd al-Rashîd Ibrâhîm, Tarjama-yi Hâlım, pp. 95–96, 99。
-
 [^61]: Yusuf Kücükdağ, “Konya’da Söylemez Zâviyesi ve Vakfiyeleri,” İpek Yolu（Konya Ticaret Odası Dergisi, Konya）1（1998），pp. 155–194。
-
 [^62]: 据 Mustafa Kara 刊布的一份文献，Bursa’da Tarikatlat ve Tekkeler（Bursa：Uludağ Y.，1990），p. 215。
-
 [^63]: R. F. Burton, Personal Narrative of a Pilgrimage to al-Madinah and Meccah, pp. 131, 217。
-
-[^64]: “Abdülhamid eyyamında Türkiye ile bir alâkalamız olmadı ve daha evvelleri hiçte olmamış, yalnız şu son birkaç sene zarfında Hijaz Şimendifer hattı münasebetiyle Hindustan Müslümanlarının himmeti sayesinde gazete sütünlerinde Türk ve Osmanlı kelimelerini öğrendik, bütün malumatımız bundan ibarettir,” ‘Abd al-Rashîd Ibrâhîm, ‘Alem-i islâm, vol. 2, p. 157。
-
+[^64]: “Abdülhamid eyyamında Türkiye ile bir alâkalamız olmadı ve daha evvelleri hiçte olmamış, yalnız şu son birkaç sene zarfında Hijaz Şimendifer hattı münasebetiyle Hindustan Müslümanlarının himmeti sayesinde gazete sütünlerinde Türk ve Osmanlı kelimelerini öğrendik, bütün malumatımız bundan ibarettir,”（译文：阿卜杜勒-哈米德在位时，我们与土耳其没有任何联系，更早以前也从未有过；只是在最近几年间，由于汉志铁路，在印度穆斯林的努力下，我们才从报纸专栏中学会了“土耳其”和“奥斯曼”这两个词；我们所知道的仅此而已。）‘Abd al-Rashîd Ibrâhîm, ‘Alem-i islâm, vol. 2, p. 157。
 [^65]: 原文为英文，耶路撒冷 al-Zâwiyya al-Uzbakiyya《访客簿》，藏于 PAZU，p. 75。
-
 [^66]: H. Algar, “Tarîq and Tariqah: Central Asian Naqshbandî and the Road to the Haramayn.”
-
-[^67]: “Les mœurs arabes s’accomoderaient peu, d’ailleurs, de l’existence de véritables couvents dans les villes saintes. Aussi les Tekkié qui s’y trouvent, ont-elles plutôt le caractère d’hôtelleries, de caravansérails pour les Derouich, que de monastères,” A. le Chatelier, Les Confréries musulmanes du Hedjaz（Paris：E. Leroux，1887），p. 48。
-
+[^67]: “Les mœurs arabes s’accomoderaient peu, d’ailleurs, de l’existence de véritables couvents dans les villes saintes. Aussi les Tekkié qui s’y trouvent, ont-elles plutôt le caractère d’hôtelleries, de caravansérails pour les Derouich, que de monastères,”（译文：此外，阿拉伯人的习俗很难容纳圣城中真正修院的存在。因此，那里的道堂与其说是修院，不如说更像旅馆，是供托钵僧居住的商队旅舍。）A. le Chatelier, Les Confréries musulmanes du Hedjaz（Paris：E. Leroux，1887），p. 48。
 [^68]: 他指出，麦加的纳克什班迪 zâwiyya 位于“Mahallat，Souk el-Halaya 附近”，当时由一位西迪克谢赫（Shaykh al-Siddîk，穆罕默德·印度谢赫 Shaykh Muhammad al-Hindî 之子）管理。F. de Jong 也证实，麦地那和麦加所有纳克什班迪苏非最初都来自布哈拉：A. le Chatelier, Les Confréries musulmanes du Hedjaz, p. 159；F. de Jong, “The Sufi Orders in Nineteenth and Twentieth-Century Palestine,” p. 233。
-
 [^69]: 关于其生平，见 Butrus Abu-Manneh, “A Note on Rashhât-ı Ain al-Hayat in the Nineteenth Century,” in E. Özdalga, ed., Naqshbandis in Western and Central Asia. Change and Continuity（Istanbul：Curzon Press，1999），pp. 61–66。
-
-[^70]: “Ahir ömüründe Mekke’de bina olunmuş bir Tâtâr hacı-hânesine bivablık gibi bir vazife ile mükellef olmuştur ki, bu da islamiyette ulema hissesine düşmüş bir zillettir. Biz de hacılar ile beraber bu zat-i muhteremin bivablık etmekte olduğu hacı-hânede mizafir bulunuyorduk. Filhakika ekser-i mücaverin-i Mekke-i Mükerreme’de bu suretle temin-i maişet ederler, fakat böyle bir sanat, avam-i mücaverin için vazife olabilirse de, ulema için pek de münasebeti yoktur, lekin ne çare medar-i ta’yiş başka türlü temin olunamazsa aile sahibi bir adam bu suretle hiç olmazsa mevsimde çektıği zahmet bedelinde on ay hane kırası vermez. Şu menfaata mukabil mevsimde hacı-hânede bivablık eder ve şühur-i sairede tekye namiyle şeyhlik eder,” ‘Abd al-Rashîd Ibrâhîm, ‘Alem-i islâm, vol. 2, p. 194。
-
+[^70]: “Ahir ömüründe Mekke’de bina olunmuş bir Tâtâr hacı-hânesine bivablık gibi bir vazife ile mükellef olmuştur ki, bu da islamiyette ulema hissesine düşmüş bir zillettir. Biz de hacılar ile beraber bu zat-i muhteremin bivablık etmekte olduğu hacı-hânede mizafir bulunuyorduk. Filhakika ekser-i mücaverin-i Mekke-i Mükerreme’de bu suretle temin-i maişet ederler, fakat böyle bir sanat, avam-i mücaverin için vazife olabilirse de, ulema için pek de münasebeti yoktur, lekin ne çare medar-i ta’yiş başka türlü temin olunamazsa aile sahibi bir adam bu suretle hiç olmazsa mevsimde çektıği zahmet bedelinde on ay hane kırası vermez. Şu menfaata mukabil mevsimde hacı-hânede bivablık eder ve şühur-i sairede tekye namiyle şeyhlik eder,”（译文：晚年，他受命在麦加一座新建的鞑靼朝觐者旅舍担任门房之类的职务；这也是伊斯兰教中落到乌莱玛头上的一种屈辱。我们和朝觐者一起住在这位可敬之人担任门房的朝觐者旅舍里。事实上，麦加尊城的大多数侨居者都以这种方式维持生计；然而，这样的行当即使适合普通侨居者，也不大适合乌莱玛。可是又有什么办法呢？如果无法以其他方式谋生，有家室的人这样做，至少可以用朝觐季的辛劳换得十个月不用支付房租。作为这种好处的交换，他在朝觐季于旅舍担任门房，其余月份则以道堂之名担任谢赫。）‘Abd al-Rashîd Ibrâhîm, ‘Alem-i islâm, vol. 2, p. 194。
 [^71]: T. Zarcone, “Histoire et Croyances des derviches turkestanais et indiens à Istanbul,” p. 160。
-
 [^72]: Mehmed Şemsüddin, Bursa Dergahları, M. Kara and K. Atlansoy 编（Bursa：Uludağ Y.，1997），pp. 301–302。
-
 [^73]: 同上，pp. 593–594。关于哈马卡迪里道堂与印度、中亚、阿富汗以及塔尔苏斯（安纳托利亚南部）和耶路撒冷阿富汗道堂之间的联系，见 Zaïm Khenchelaoui and T. Zarcone, “La Famille Jîlânî de Hama-Syrie (Bayt al-Jîlânî),” Journal of the History of Sufism 1–2（2000），pp. 67–68。
-
 [^74]: Cemaleddin Server Revnakoğlu, “Hindiler tekkesi,” B/66，Revnakoğlu Archives, Divan Literature Museum, Galata Mevlevihane, Istanbul。
-
 [^75]: 据 M. Kara 刊布的一份档案文献，Bursa’da Tarikatlat ve Tekkeler, p. 215。
-
 [^76]: BVCE 1263（11 Ra 1275/1858）。
-
 [^77]: Mehmed Şemsüddin, Bursa Dergahları, p. 594。
-
 [^78]: Arminius Vambery, His Life and Adventures by Himself（3rd ed., London：T. Fisher Unvin，1884），p. 28；Martin Hartmann, “Zentralasiatisches aus Stambul,” Islamischer Orient I（1902）；M. Hartmann, Çaghataisches. Die Grammatik ussi lisâni turki des Mehemed Sadiq（Heidelberg：Carl Winter’s Universitätsbuchlandlung，1902）；T. Zarcone, “Grammaires, Dictionnaires et Littérature du Turkestan à Istanbul au tournant du siècle,” in F. Hitzel, ed., Istanbul et les Langues orientales（Paris：L’Harmattan，1997），pp. 417–423。
-
 [^79]: 例如布尔萨的印度 Kalenderhâne：Mehmed Şemsüddin, Bursa Dergahları, p. 591。
-
 [^80]: Bashîr ‘Abd al Ghanî Barakât, Fihris makhtûtât al-Zâwiyya al-Uzbakiyya fî’l-Quds（Quds [Jerusalem]：Zâwiyya al-Uzbakiyya，2003）。
-
 [^81]: Sakıb Dede, Sefîne-yi Nefîse-yi Mevleviyân（Cairo：Wahbiyya，1866），vol. 2, pp. 151–155。
-
 [^82]: 同上，pp. 119–122。
-
 [^83]: Naimur Rehman Farooqi, Mughal–Ottoman Relations. A Study of Political and Diplomatic Relations between Mughal India and the Ottoman Empire, 1556–1748（Delhi：Idarah-i Adabiyat-i Delli，1989），pp. 113–115。
-
 [^84]: Hamid Algar, “Tarîq and Tariqah: Central Asian Naqshbandî and the Road to the Haramayn,” in Alexandre Papas, Thomas Welsford, and Thierry Zarcone, eds., The Roads of Pilgrimages between Central Asia and the Hijaz（即将出版）。
-
 [^85]: 据 ‘Abd al-Rashîd Ibrâhîm, ‘Alem-i islâm, vol. II, p. 233。
-
 [^86]: Leila Cherif-Chebbi, “L’Ahong sourd,” in V. Bouillier and C. Servan-Schreiber, eds., De l’Arabie à l’Himalaya. Chemins croisés en hommage à Marc Gaborieau（Paris：Maisonneuve et Larose，2004），p. 412；Eloisa Concetti and T. Zarcone, Sufism in Xinjiang and Inner Asia in the 19th–21st Centuries. Ahmad Sirhindî’s Maktûbât and the Naqshbandiyya（即将出版）。
-
 [^87]: 据 Snouck-Hurgronje, Mekka, pp. 288–289；以及 Martin van Bruinessen, “The Origins and Development of the Naqshabandi Order in Indonesia,” Der Islam 67/1（1990），pp. 164–168。
-
 [^88]: Abû’l-Hasan Zayd Fârûqî Mujaddidî, Maqâmât-i akhyâr（Delhi：Shâh Abû’l-Khayr Akîdîmî，1975），pp. 90–91。1880年后，重组并重建德里道堂的是马扎尔谢赫之子阿布勒-海尔（Abu’l-Khayr，卒于1923年）。
-
 [^89]: “Shihâb al-Dîn Marjânî hakkinda,” in Sâlih ben Thâbit ‘Ubaydullîn, ed., Marjânî（Kazan：Ma‘ârif，1915），p. 439；Shihâb al-Dîn Marjânî, “Tarjama-yi Hâl,” in Sâlih ben Thâbit ‘Ubaydullîn, ed., Marjânî, p. 137；Shihâb al-Dîn Marjânî, Rihlat al-Marjânî（Kazan：Tipo-litografija Nasl’dnikov’ M. Chikovoj，1897），pp. 4–5；现代鞑靼文版见 Rizaèddin Fähreddinev, Bolgar va Kazan Tërekläre（Kazan：Kazan Tatarstan Kitap Näshrijaty，1993），p. 119。
-
 [^90]: 见其艾哈迈德·西尔欣迪 Maktûbât 译本附录所刊的一篇文字；Ahmad Sirhindî, Maktûbât（Mecca：1899–1900），vol. 3, p. 189。另见 Nurija Gäräeva, “Kem ul Morad Rämzi?” Kazan Utlari（Kazan）2（1990），pp. 171–175；B. Abu-Manneh, “A Note on Rashhât-ı Ain al-Hayat in the Nineteenth Century,” p. 65。
-
 [^91]: ‘Abd al-Rashîd Ibrâhîm, ‘Alem-i islâm, vol. 2, p. 233；‘Abd al-Rashîd Ibrâhîm, Tarjama-yi Hâlım, pp. 59, 79, 110。
-
 [^92]: Shihâb al-Dîn Marjânî, Rihlat, pp. 19–20（现代鞑靼文版，p. 130）。
-
 [^93]: 见 Muhammad Murâd Ramzî, Talfîq al-akhbâr wa Talqîh al-athâr fî waqâ‘î Qazân wa Bulghâr wa mulûk al-Tatâr（Orenbourg：Karîmiyya wa Husayniyya，1908），vol. 2, p. 474；“Mawt al-‘âlim, Mawt al-‘âlam,” Al-Dîn wa’l-âdab（Kazan）2:6（1907），pp. 182–184。
-
 [^94]: Stefan Reichmuth, “The Interplay of Local Developments and Transnational Relations in the Islamic World: Perceptions and Perspectives,” in A. von Kükelgen, M. Kemper, A. J. Frank, eds., Muslim Culture in Russia and Central Asia from the 18th to the 20th Centuries（Berlin：Klaus Schwarz Verlag），p. 21。
-
 [^95]: 例如见 Michael Kemper, “Šihâbaddîn al-Marğânî als Religionsgelehrter,” in M. Kemper, A. von Kükelgen, D. Yermakov, eds., Muslim Culture in Russia and Central Asia from the 18th to the Early 20th Centuries（Berlin：Klaus Schwarz Verlag，1996），pp. 129–165。
-
 [^96]: 耶路撒冷 al-Zâwiyya al-Uzbakiyya《访客簿》（PAZU），p. 77。关于比吉耶夫对苏非主义的看法，见 T. Zarcone, “Un aspect de la polémique autour du soufisme dans le monde Tatar, au début du XXe siècle: mysticisme et confrérisme chez Mûsâ Djârallâh Bîgî,” in S. A. Dudoignon, Dämir Is’haqov and Räfyq Möhämmätshin, eds., L’islam de Russie. Conscience communautaire et autonomie politique chez les Tatars de la Volga et de l’Oural, depuis le XVIIIe siècle（Paris：Maisonneuve et Larose，1997），pp. 227–247。
-
 [^97]: Ridâ al-Dîn b. Fakhr al-Dîn, ed., Shaykh Zayn Allâh Hazratning Tarjama-yi Hâli（Orenbourg：Tipografija Gaz. Vakt’，1917），p. 15。
-
 [^98]: 库尔班·阿里·哈利迪本人在其麦加游记中提到此事；见 Qurbân ‘Alî Khâlidî, Tawârîkh-i khamsa-yi sharqî（Kazan：1910），p. 603。
-
 [^99]: ‘Abd al-Rashîd Ibrâhîm, Tarjama-yi Hâlım yaka Bâshıma Kelenler, pp. 68–69。
-
 [^100]: Qurbân ‘Alî Khâlidî, Tawârîkh-i khamsa-yi sharqî, pp. 629–630。
-
 [^101]: God’s Unruly Friends. Dervish Groups in the Islamic Middle Period 1200–1550（Oxford：Oneworld，2006），p. 18。
-
 [^102]: Mujîr al-Dîn（15世纪）, Histoire de Jérusalem et d’Hebron, pp. 198–199。
-
-[^103]: “Les sectateurs de la Loy de Mahomet tiennent pour saincts tous les fols, idiots, aueugles naiz, et tous ceux qui de leur volonté propre viuent misérablement, et qui en tout temps vont tout nuds par mefpris du monde, ainfi que j’ay remarqué pendant le feiour que j’ay fait auec eux, en la Terre saincte, où j’ay veu en diuers temps des hommes que les Turcs appellent Calenders, qui font Religieux qui vont aussi nuds qu’vn enfant qui fort du ventre de la mere. Entre autres vn de ceux-cy, agé de plus de soixante-ans, auoit vn anneau de fer auffi gros que le petit doigt, qu’il auoit passé à trauers la peau de deffous le membre viril : ce qu’ils font afin de faire connoiftre qu’ils viuent en chafteté,” Eugène Roger, La Terre saincte ou description topographiqve très-particulière des saincts lieux et de la terre de promiffion（Paris：chez Antoine Bertier，1846），p. 251。
-
+[^103]: “Les sectateurs de la Loy de Mahomet tiennent pour saincts tous les fols, idiots, aueugles naiz, et tous ceux qui de leur volonté propre viuent misérablement, et qui en tout temps vont tout nuds par mefpris du monde, ainfi que j’ay remarqué pendant le feiour que j’ay fait auec eux, en la Terre saincte, où j’ay veu en diuers temps des hommes que les Turcs appellent Calenders, qui font Religieux qui vont aussi nuds qu’vn enfant qui fort du ventre de la mere. Entre autres vn de ceux-cy, agé de plus de soixante-ans, auoit vn anneau de fer auffi gros que le petit doigt, qu’il auoit passé à trauers la peau de deffous le membre viril : ce qu’ils font afin de faire connoiftre qu’ils viuent en chafteté,”（译文：遵从穆罕默德教法的人，把所有疯子、白痴、天生的盲人，以及所有自愿过贫苦生活、为蔑视尘世而始终赤身裸体四处游历的人都奉为圣人。我在圣地与他们相处期间注意到了这一点；在那里，我曾多次见到土耳其人称作卡兰达尔的人，他们是宗教人士，却像刚从母腹出生的婴儿一样赤身裸体。其中一人年逾六十，把一个小指粗细的铁环穿过男性生殖器下方的皮肤；他们这样做，是为了让人知道自己过着贞洁生活。）Eugène Roger, La Terre saincte ou description topographiqve très-particulière des saincts lieux et de la terre de promiffion（Paris：chez Antoine Bertier，1846），p. 251。
 [^104]: 关于尼达伊及这两座道堂的更多资料，见 T. Zarcone, “Histoire et croyances des derviches turkestanais et indiens à Istanbul,” pp. 153–157, 164–165；Hamid Algar, “From Kashghar to Eyüp: the Lineages and Legacy of Sheikh Abdullah Nidaî,” in E. Özdalga, ed., Naqshbandis in Western and Central Asia. Change and Continuity（Istanbul：Swedish Research Institute in Istanbul/Curzon Press，1999），pp. 1–15。
-
 [^105]: 贝克塔希和梅夫莱维托钵僧除外，他们显然受到卡兰达里耶影响；见 T. Zarcone, “Pour ou contre le monde. Une approche des sociabilités mystiques musulmanes dans l’Empire ottoman,” in F. Georgeon, ed., Vivre dans l’Empire ottoman. Sociabilités et Relations intercommunautaires (XVIIIe–XXe siècle)（Paris：L’Harmattan，1997），pp. 21–29。
-
 [^106]: L. Troitskaja, “Iz proshlogo kalandarov i maddaxov v Uzbekistane,” in Domusulmanskie verovanija i obrjady ve Srednej Azii（Moskva：Akademija Nauk SSSR，1975），p. 194。关于中亚和东突厥斯坦卡兰达尔的更多资料，见 Alexandre Papas, Mystiques et vagabonds en Islam. Portraits de trois soufis qalandars（Paris：Le Cerf，即将出版）。
-
 [^107]: T. Zarcone, “Histoire et croyances des derviches turkestanais et indiens à Istanbul,” pp. 157–159；Sufis and Soldiers in Awrangzeb’s Deccan. Malfûzât-i Naqshbandiyya, Simon Digby 由波斯语译出（Oxford：University Press，2001），pp. 244–246。
-
 [^108]: Arminius Vambery, Travels in Central Asia, being the Account of a Journey from Teheran across the Turkoman Desert in the Eastern Shore of the Caspian to Khiva, Bokhara, and Samarkand（New York：Harper and brothers，1865），第9、10章；L. Troitskaja, “Iz proshlogo kalandarov i maddaxov v Uzbekistane,” pp. 191–223。
-
 [^109]: BVCE, 10813（13 R 1260/1844）。
-
 [^110]: Mehmed Şemsüddin, Bursa Dergahları, pp. 447–448。
-
 [^111]: J. F. Keane, Six Months in the Hijaz, p. 82。约翰·刘易斯·伯克哈特也将这些特殊的托钵僧描述为疯子，或“至少装出精神失常的样子”；Travels in Arabia Comprehending an Account of Those Territories in Hedjaz which the Mohammedans Regard as Sacred（London：Henry Colburn，1829），vol. 2, p. 27。
-
 [^112]: 这段描述出自布朗在一次共济会会议上的演讲（他本人是高级共济会成员），后刊于英国一份共济会期刊；John P. Brown, “The Mystical Principles of Islamism; or, a Lecture on the Derviches,” Freemasons Magazine and Masonic Mirror（September 19, 1863），p. 217。
-
 [^113]: I. Burton, The Inner Life of Syria, Palestine and the Holy Land, p. 59。
-
-[^114]: “Sokaklarımızda çakı, bıçak bilerek, tabak çanak kenetlerek beş on para kazanmağa çalışan beyaz sarıkla, uzun hırkalılar yokmu? İşte bunların hepsi Rusyalı bir nakşi dervişleridir. Osmanlı memleketlerine gelirler, para kazanıp yerlerine öyle giderler ve gidinceye kadar… İstanbul’da bulunanlar… Üsküdar’da Sultan Tepesinde [Özbekler] Dergah-ı Şerifinde misafir kalıp on para masraf etmezler,” Muhibban Year 2:1（1911），p. 110。
-
+[^114]: “Sokaklarımızda çakı, bıçak bilerek, tabak çanak kenetlerek beş on para kazanmağa çalışan beyaz sarıkla, uzun hırkalılar yokmu? İşte bunların hepsi Rusyalı bir nakşi dervişleridir. Osmanlı memleketlerine gelirler, para kazanıp yerlerine öyle giderler ve gidinceye kadar… İstanbul’da bulunanlar… Üsküdar’da Sultan Tepesinde [Özbekler] Dergah-ı Şerifinde misafir kalıp on para masraf etmezler,”（译文：我们的街头难道没有头缠白巾、身穿长袍的人，靠磨削折刀和刀具、修补盘碗来挣五个或十个小钱吗？这些人全是来自俄国的纳克什班迪托钵僧。他们来到奥斯曼国土，挣到钱后才返回故乡；在离开以前……身在伊斯坦布尔的人……会住在于斯屈达尔苏丹特佩的［乌兹别克］尊贵道堂作客，连十个小钱也不用花。）Muhibban Year 2:1（1911），p. 110。
 [^115]: 卢浮宫一次展览的图录中收有数幅土耳其、波斯和印度卡兰达尔图像（遗憾的是评注欠佳）：L’Étrange et le Merveilleux en terre d’Islam. Paris, musée du Louvre 23 avril–23 juillet 2001（Paris：Edition de la réunion des musées nationaux，2001），pp. 238–249。另见一幅17世纪印度游方托钵僧（Indische Fakire）的细密画，载 Hof-Und Volksleben. Ein turkischens miniaturen Album aus dem 17. Jahrundert, F. Taeschner 编（Hannover：Orient Buchhandlung Hanz Lafaire，1925），图版43。
-
 [^116]: Harry Fenn 于1870年绘制，刊于 Colonel Wilson, Picturesque Palestine（New York：D. Appleton，1881），Part 1, p. 24。
-
 [^117]: Y. Ben-Arieh, Jerusalem in the 19th Century. The Old City, p. 131。
-
 [^118]: C. Snouck-Hurgronje, Mekka in the Latter Part of the 19th Century（1931；重印，Leiden：Brill，1970），p. 5。
-
 [^119]: 同上，pp. 3–4。
-
 [^120]: “一种打击乐器，由两根木棒组成，上面装有一两个铁箍，铁箍上串有铁环”，Henry Schwarz, An Uyghur–English Dictionary（Washington：Washington University，1992），p. 453。
-
 [^121]: 据 F. de Jong 称，扎维耶创建者名为奥斯曼·布哈里（‘Uthmân al-Bukhârî，资料出自一份日期为10 Muharram 1133/1720的瓦克夫契约抄本，Mss Leiden F.Or. A. 681/2）；Frederick De Jong, “The Sufi Orders in Nineteenth and Twentieth-Century Palestine,” Studia Islamica LVIII（1983），p. 167。
-
 [^122]: Yusuf Natsheh, “al-Zawiyya al-Naqshbandiyya,” in Sylvia Auld and Robert Hillenbrand, eds., Ottoman Jerusalem: The Living City 1517–1917（London：Altajir World of Islam Trust，2000），pp. 905–906。
-
 [^123]: ‘Ârif al-‘Ârif, Al-Mufassal fî târîkh al-Quds（Quds [Jerusalem]：al-Nashr Fawzî Yûsuf, Matba‘at al-Quds，1999），vol. 1, p. 499；Y. Natsheh, “al-Zawiyya al-Naqshbandiyya.”
-
 [^124]: BVCE 19418（1258/1842）。
-
 [^125]: 根据一方带有苏丹花押（tughra）的铭文（日期已磨灭）；见 Mehmet Tütüncü, Turkish Jerusalem (1516–1917). Ottoman inscriptions from Jerusalem and other Palestinian cities（Haarlem：Türkestan and Azerbaijan Research Centre，2006），p. 143。
-
 [^126]: Y. Natsheh, “al-Zawiyya al-Naqshbandiyya,” p. 904。
-
 [^127]: Y. Natsheh, “al-Zawiyya al-Naqshbandiyya,” pp. 904–911；M. Tütüncü, Turkish Jerusalem (1516–1917), pp. 142–150。
-
 [^128]: 巴哈丁是拉希德（1989年卒于叙利亚）之子，拉希德本人则是雅库布·布哈里的长子；2009年2月于拉马拉对巴哈丁·布哈里的口述访谈。
-
 [^129]: BVCE 19418（1258/1842）和25420（Z 1225/1810）。
-
 [^130]: Ulrich Jasper Seetzen, Reisen durch Syrien, Palästina, Phönicien（Berlin：G. Reimer，1854），vol. 2, p. 36。
-
 [^131]: J. Finn, Stirring Times, vol. 1, p. 457。顺带指出，在 C. W. Wilson 1864年的耶路撒冷地图中，这座道堂也称作“Uzbekîye”；Ordnance Survey of Jerusalem 1864/5 - Map 1/2500（Southampton，1866）。
-
 [^132]: 对道堂现任主持阿卜杜勒-阿齐兹谢赫的口述访谈（耶路撒冷，2002年3月和2009年2月）。关于这一事件，另见 F. De Jong, “The Sufi Orders in Nineteenth and Twentieth-Century Palestine,” pp. 167–168。
-
 [^133]: 固定在扎维耶正立面的修复铭文及苏丹徽记（tughra）已严重风化，日期无法辨认。这幅启用仪式图最初由 Tanzimat’tan Cumhuriyet’e Türkiye Ansiklopedisi 的编辑刊布于 Mustafa Kara 的文章“Tanzimat’tan Cumhuriyet’e Kadar Tasavvuf ve Tarikatlar”中（遗憾的是未注明任何出处）（Istanbul：İletişim，1985），vol. 31–32, p. 983。
-
 [^134]: 据 F. de Jong, “The Sufi Orders in Nineteenth and Twentieth-Century Palestine,” p. 170。
-
 [^135]: 2009年2月对阿卜杜勒-阿齐兹谢赫的口述访谈。
-
 [^136]: 据一幅年代为19世纪末至20世纪初的地图，载 Adar Arnon, “The Quarters of Jerusalem in the Ottoman Period,” Middle Eastern Studies 28:1（January 1992），pp. 20, 46。
-
 [^137]: J. T. Barclay, The City of the Great King or Jerusalem as it is, and as it is to be（Philadelphia：James Challen，1858），p. 452及p. 430地图。
-
 [^138]: F. J. Bliss, The Religions of Modern Syria and Palestine, p. 255。Y. Ben-Arieh, Jerusalem in the 19th Century. The Old City, p. 163 又重复了这一错误。
-
 [^139]: PAZU 保存有伊斯坦布尔瓦克夫管理局一份日期为1333/1918–1919的法特瓦，证实雅库布将继承其父，担任扎维耶瓦克夫的管理人。
-
 [^140]: 关于这位穆夫提，见 Philip Mattar, “The Role of the mufti of Jerusalem on the Political Struggle over the Western Wall, 1928–29,” Middle Eastern Studies 19:1（January 1983），pp. 104–118。
-
 [^141]: Mûsâ al-Shahâbî, “al-Zawiyya al-Naqshbandiyya al-Uzbakiyya al-Bukhariyya fî’l-Quds,” al-Quds, 22 September 1998, p. 28；以及2009年2月对阿卜杜勒-阿齐兹谢赫的口述访谈。
-
 [^142]: Doktor Iltir, “Istanbûl’dakî Türkistanlılarning bir Jami‘asi,” Yash Türkistan 43（1933），p. 22；Grace Martin Smith, “The Özbek Tekkes of Istanbul,” Der Islam 57（1980），p. 134。
-
 [^143]: 据扎维耶档案所藏一份剪报；该文未注明日期，但由于其中引用了阿里夫·阿里夫1961年出版的耶路撒冷史著作，似乎刊于1961年以后。文章作者是马哈茂德·卡塔尔（Mahmûd al-Qattâl），报纸为 Filistin。
-
 [^144]: Shahâbî, “al-Zâwiyya al-Naqshbandiyya al-Uzbakiyya al-Bukhâriyya fî’l-Quds,” p. 28；以及2009年2月与阿卜杜勒-阿齐兹谢赫的口述交流。
-
 [^145]: Bashîr ‘Abd al Ghanî Barakât, Fihris makhtûtât al-Zâwiyya al-Uzbakiyya fî’l-Quds。
 [^146]: 雅库布的长子拉希德因工作原因居住在叙利亚，无法照料扎维耶，故未继承其父之职；Shahâbî, “al-Zâwiyya al-Naqshbandiyya al-Uzbakiyya al-Bukhâriyya fî’l-Quds,” p. 28。
 [^147]: 这两份文献均藏于 al-Zâwiyya al-Uzbakiyya 档案（PAZU）。
@@ -2695,7 +2416,7 @@ ZARCONE, Thierry. “Sufi Lineages and Saint Veneration in Twentieth-Century Eas
 [^166]: 《访客簿》，p. 132。谨在此感谢京都大学同事滨田正美，他翻译了中国穆斯林所写的中文文本。关于马松亭，见 Françoise Aubin, “Islam on the Wings of Nationalism. The case of Muslim Intellectuals in the Republic of China,” in S. A. Dudoignon, H. Komatsu, Y. Kosugi, eds., Intellectuals in the Modern Islamic World. Transmission, Transformation, Communication（London：Routledge，2006），p. 260。
 [^167]: 据1935年5月6日和7日 al-Jâmi‘a al-‘Arabiyya，转引自 V. V., “Musulmano cinese onorato a Gerusalemme,” Oriente Moderno 15（1935），pp. 253–254。
 [^168]: 这句波斯文诗出自贾拉勒丁·鲁米（Jalâl al-Dîn Rûmî）的 Mathnawî（1/711）。英译见 Reynold A. Nicholson, The Mathnawî of Jalâlu’ddîn Rûmî（London：Luzac and Co.，1926），vols. 1–2, p. 38。
-[^169]: 原文如下：  
+[^169]: 原文如下：
 [^170]: 《访客簿》，p. 8。
 [^171]: 《访客簿》，p. 9。
 [^172]: 《访客簿》，p. 72。
@@ -2735,7 +2456,7 @@ ZARCONE, Thierry. “Sufi Lineages and Saint Veneration in Twentieth-Century Eas
 [^206]: 同上。扎维耶地图见 Y. Natsheh, “al-Zawiyya al-Qadiriyya,” pp. 922–923；以及 Dan Bahat, A Selection of Ottoman Structure in the Old City of Jerusalem（Jerusalem：Open University of Israel，1990），p. 33。
 [^207]: BVCE 15600（? 1143/1731）；17537（17 N 1190/1776–77）。
 [^208]: T. Zarcone, “Un document inédit sur les tekke kadiri de l’Empire ottoman et du monde musulman au XXe siècle,” in J.-L. Bacqué-Grammont and R. Dor, eds., Mélanges offerts à Louis Bazin（Paris：IFEA-L’Harmattan，1992），pp. 275–283。
-[^209]: “On me donna pour logement la mosquée d’un saint nommé Sidi Abdelkader, situé à côté du Haram ou temple musulman,” Voyages d’Ali Bey el Abbassi en Afrique et en Asie pendant les années 1803, 1804, 1805, 1806 et 1807（Paris：P. Didot l’Aîné，1814），vol. 3, p. 129。
+[^209]: “On me donna pour logement la mosquée d’un saint nommé Sidi Abdelkader, situé à côté du Haram ou temple musulman,”（译文：人们安排我住进一位名叫西迪·阿卜杜勒卡迪尔的圣人的清真寺；它坐落在哈拉姆，即穆斯林圣殿旁边。）Voyages d’Ali Bey el Abbassi en Afrique et en Asie pendant les années 1803, 1804, 1805, 1806 et 1807（Paris：P. Didot l’Aîné，1814），vol. 3, p. 129。
 [^210]: 据 PAZA 所藏该文书抄本。
 [^211]: 关于这所经学院的更多资料，见 ‘Ârif al-‘Ârif, Al-Mufassal fî târîkh al-Quds（Quds [Jerusalem]：al-nashr Fawzî Yûsuf, Matba‘at al-Quds，1999），vol. 1, p. 253。
 [^212]: 据纳布卢西的论著“al-Haqîqa”，见 Abdul-Karim Rafeq, “Ottoman Jerusalem in the Writings of Arab Travellers,” in S. Auld and R. Hillenbrand, Ottoman Jerusalem, vol. 1, pp. 66–67。
@@ -2751,7 +2472,7 @@ ZARCONE, Thierry. “Sufi Lineages and Saint Veneration in Twentieth-Century Eas
 [^222]: Taysir Jabbara, Al-Muslimûn al-hunûd fî qadiyyat filistîn（Ramallah：Dar al-Shurûq，1998），p. 57。
 [^223]: 见 Khaliq Ahmad Nizami, The Life and Time of Shaikh Farid-ud-Din Ganj-i Shakar（Delhi：Idarah-i Adabiyat-i Delli，1987），p. 29。
 [^224]: T. Jabbara, Al-Muslimûn al-hunûd fî qadiyyat filistîn, p. 57；“History of the Indian Hospice”（Jerusalem：Indian Lodge，[2004]，未刊影印本）。
-[^225]: “La Zavieh des Indiens (el-Honoud)—en dehors de la Porte des Tribus. Elle est ancienne. Affectée d’abord aux faqîrs Rîfa‘îtes elle devint ensuite la résidence de la Communauté des Indiens et fut connue sous leur nom,” Histoire de Jérusalem et d’Hebron. Fragments de la chronique de Moudjir-ed-dyn, p. 167。
+[^225]: “La Zavieh des Indiens (el-Honoud)—en dehors de la Porte des Tribus. Elle est ancienne. Affectée d’abord aux faqîrs Rîfa‘îtes elle devint ensuite la résidence de la Communauté des Indiens et fut connue sous leur nom,”（译文：印度人扎维耶（al-Hunûd）位于部落门外，历史悠久。它最初划给里法仪耶的法基尔，后来成为印度社群的居所，并以他们的名称为人所知。）Histoire de Jérusalem et d’Hebron. Fragments de la chronique de Moudjir-ed-dyn, p. 167。
 [^226]: Ibn Battuta, The Travels of Ibn Battuta（Cambridge：Hakluyt Society，1962），vol. 2, pp. 274–275。
 [^227]: 藏于 PAZH。
 [^228]: BVCE 23034（R. 1124/1712）。
