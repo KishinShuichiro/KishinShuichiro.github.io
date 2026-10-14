@@ -1,15 +1,9 @@
 ---
 title: "真主的日子-伊朗革命及其后果"
 date: 2026-10-14
-lastmod: 2026-10-14T21:46:48+09:00
+lastmod: 2026-10-14T21:54:01+09:00
 summary: "詹姆斯·布肯"
 ---
-
-![封面](assets/ops/images/9781416597827_cover.jpg)
-
-<a id="doc-dedication"></a>
-
-<a id="dedication--page_v"></a>*献给罗斯*<a id="dedication--page_vi"></a>
 
 <a id="doc-maps"></a>
 
