@@ -1,11 +1,98 @@
----
-title: "真主的日子：伊朗革命及其后果"
-date: 2026-10-14
-lastmod: 2026-10-14T21:18:23+09:00
-status: "active"
----
+# 上帝的日子：伊朗革命及其后果（校订中草稿）
 
-## <a id="intro--page_xv"></a><a id="intro--intro"></a>前言
+詹姆斯·布肯
+
+<a id="doc-cover"></a>
+
+![封面](assets/ops/images/9781416597827_cover.jpg)
+
+<a id="doc-ebookregfront"></a>
+
+感谢您下载这本西蒙与舒斯特电子书。
+
+加入我们的邮件订阅名单，获取西蒙与舒斯特的新书、优惠、额外内容及其他精彩图书的最新消息。
+
+[点击此处订阅](http://eBookNews.SimonandSchuster.com/front/9781416597827)
+
+也可访问我们的网站订阅：<br/>[eBookNews.SimonandSchuster.com](http://eBookNews.SimonandSchuster.com/front/9781416597827)
+
+<a id="doc-title"></a>
+
+<a id="title--page_iii"></a>![标题页](assets/ops/images/title.jpg)
+
+<a id="doc-contents"></a>
+
+# <a id="contents--page_vii"></a>目录
+
+[地图](#maps--maps)
+
+[巴列维王朝统治下的伊朗](#maps--maps)
+
+[两伊战争的南部战线](#maps--map1)
+
+[德黑兰，1979年2月](#maps--map2)
+
+[前言](#intro--intro)
+
+[1. 巴列维国家的起源](#ch01--ch01)
+
+[2. 哥萨克政府](#ch02--ch02)
+
+[3. 少年](#ch03--ch03)
+
+[4. 鲁霍拉](#ch04--ch04)
+
+[5. 鲁里塔尼亚](#ch05--ch05)
+
+[6. 风暴酝酿](#ch06--ch06)
+
+[7. 印度人](#ch07--ch07)
+
+[8. 被焚毁的电影院](#ch08--ch08)
+
+[9. 会师](#ch09--ch09)
+
+[10. 一箱泥土](#ch10--ch10)
+
+[11. 真主至大](#ch11--ch11)
+
+[12. 群狗的喜宴](#ch12--ch12)
+
+[13. 西瓜的气味](#ch13--ch13)
+
+[14. 光明的队列](#ch14--ch14)
+
+[后记](#epilogue--epilogue)
+
+[附录：霍梅尼1988年7月16日的信](#appendix--appendix)
+
+[照片](#doc-insert)
+
+[关于詹姆斯·布肯](#doc-authorbio)
+
+[致谢](#ack--ack)
+
+[图片版权说明](#doc-illustrat)
+
+[注释](#notes--notes)
+
+[索引](#index--index)
+
+<a id="doc-dedication"></a>
+
+<a id="dedication--page_v"></a>*献给罗斯*<a id="dedication--page_vi"></a>
+
+<a id="doc-maps"></a>
+
+<a id="maps--page_viii"></a><a id="maps--maps"></a>![巴列维王朝统治下的伊朗](assets/ops/images/map01.jpg)<a id="maps--page_ix"></a><a id="maps--page_x"></a>
+
+<a id="maps--page_xi"></a><a id="maps--map1"></a>![两伊战争的南部战线](assets/ops/images/map02.jpg)
+
+<a id="maps--page_xii"></a><a id="maps--map2"></a>![德黑兰，1979年2月](assets/ops/images/map03.jpg)<a id="maps--page_xiii"></a><a id="maps--page_xiv"></a>
+
+<a id="doc-intro"></a>
+
+# <a id="intro--page_xv"></a><a id="intro--intro"></a>前言
 
 我第一次到伊朗是在1974年。那一年，原油价格涨到原来的四倍，欧洲关闭了发电站。穿过漆黑的高速公路后，我发现大不里士灯火通明，仿佛一场永不散席的婚宴。我到首都德黑兰的第一天，就被一所向伊朗帝国空军学员教授英语的学校录用了。一排排课桌向远处延伸，看不到尽头。当时正值斋月，穆斯林在白昼禁食，学生们趴在笔盒上打瞌睡，或瞪着他们带来、准备日落后再吃的包好的三明治。那些土库曼少年里，总该有至少一个具备成为军事飞行员的潜质，而启蒙他的任务就落在了我身上。在有史以来规模最大的几次军事扩张之一中，我是一个最微不足道的零件。学校的老板是位准将，我常在下午看见他身穿军装，殴打男秘书。发薪日，出纳——一个下巴上长着胡茬的老头，也是准将的父亲——花了半个小时才在我的支票上签字。一位印度同事悄悄告诉我，他在等小费。我辞职了。
 
@@ -25,11 +112,11 @@ status: "active"
 
 <a id="doc-ch01"></a>
 
-## <a id="ch01--page_1"></a><a id="ch01--ch01"></a>第一章
+# <a id="ch01--page_1"></a><a id="ch01--ch01"></a>第一章
 
 ### 巴列维国家的起源
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *世间不义的根基，起初不过微乎其微。*
 
@@ -213,11 +300,11 @@ status: "active"
 
 <a id="doc-ch02"></a>
 
-## <a id="ch02--page_27"></a><a id="ch02--ch02"></a>第二章
+# <a id="ch02--page_27"></a><a id="ch02--ch02"></a>第二章
 
 ### 哥萨克政府
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *每个国家都有某一种政体。我们的是一人政体。*
 
@@ -385,11 +472,11 @@ status: "active"
 
 <a id="doc-ch03"></a>
 
-## <a id="ch03--page_53"></a><a id="ch03--ch03"></a>第三章
+# <a id="ch03--page_53"></a><a id="ch03--ch03"></a>第三章
 
 ### 少年
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *一个人一旦决定实际执政，而不只是君临，就再没有比这更孤独、更不幸的人生了。*
 
@@ -553,11 +640,11 @@ status: "active"
 
 <a id="doc-ch04"></a>
 
-## <a id="ch04--page_79"></a><a id="ch04--ch04"></a>第四章
+# <a id="ch04--page_79"></a><a id="ch04--ch04"></a>第四章
 
 ### 鲁霍拉
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *做一个毛拉很难。做一个人不可能。*
 
@@ -677,11 +764,11 @@ status: "active"
 
 <a id="doc-ch05"></a>
 
-## <a id="ch05--page_99"></a><a id="ch05--ch05"></a>第五章
+# <a id="ch05--page_99"></a><a id="ch05--ch05"></a>第五章
 
 ### 鲁里塔尼亚
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *王位不过一瞬，好好享受吧。*
 
@@ -783,11 +870,11 @@ status: "active"
 
 <a id="doc-ch06"></a>
 
-## <a id="ch06--page_115"></a><a id="ch06--ch06"></a>第六章
+# <a id="ch06--page_115"></a><a id="ch06--ch06"></a>第六章
 
 ### 风暴酝酿
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *倘若沙阿说白昼是黑夜，*
 
@@ -993,11 +1080,11 @@ status: "active"
 
 <a id="doc-ch07"></a>
 
-## <a id="ch07--page_147"></a><a id="ch07--ch07"></a>第七章
+# <a id="ch07--page_147"></a><a id="ch07--ch07"></a>第七章
 
 ### 印度人
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *沙阿就像一个男人，多年来把一切都倾注在一个美丽女人身上，却发现她从头到尾都不忠。*
 
@@ -1079,11 +1166,11 @@ status: "active"
 
 <a id="doc-ch08"></a>
 
-## <a id="ch08--page_159"></a><a id="ch08--ch08"></a>第八章
+# <a id="ch08--page_159"></a><a id="ch08--ch08"></a>第八章
 
 ### 被焚毁的电影院
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *因此，我为以色列的子孙规定：凡杀一人，除非为了抵偿人命或惩罚在大地上作乱，就如杀了整个世界。*
 
@@ -1189,11 +1276,11 @@ status: "active"
 
 <a id="doc-ch09"></a>
 
-## <a id="ch09--page_177"></a><a id="ch09--ch09"></a>第九章
+# <a id="ch09--page_177"></a><a id="ch09--ch09"></a>第九章
 
 ### 会师
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *君主不可凭流同胞的血，保住王位。*
 
@@ -1305,11 +1392,11 @@ status: "active"
 
 <a id="doc-ch10"></a>
 
-## <a id="ch10--page_195"></a><a id="ch10--ch10"></a>第十章
+# <a id="ch10--page_195"></a><a id="ch10--ch10"></a>第十章
 
 ### 一箱泥土
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *我为伊朗做的，比两千年来任何沙阿都多。*
 
@@ -1425,11 +1512,11 @@ status: "active"
 
 <a id="doc-ch11"></a>
 
-## <a id="ch11--page_215"></a><a id="ch11--ch11"></a>第十一章
+# <a id="ch11--page_215"></a><a id="ch11--ch11"></a>第十一章
 
 ### 真主至大
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *若真主的先知此刻在这里，他会说：“为什么给我的儿子三声欢呼，却只给我一声？”*
 
@@ -1627,11 +1714,11 @@ status: "active"
 
 <a id="doc-ch12"></a>
 
-## <a id="ch12--page_243"></a><a id="ch12--ch12"></a>第十二章
+# <a id="ch12--page_243"></a><a id="ch12--ch12"></a>第十二章
 
 ### 群狗的喜宴
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *死驴是群狗的婚宴。*
 
@@ -1857,11 +1944,11 @@ status: "active"
 
 <a id="doc-ch13"></a>
 
-## <a id="ch13--page_281"></a><a id="ch13--ch13"></a>第十三章
+# <a id="ch13--page_281"></a><a id="ch13--ch13"></a>第十三章
 
 ### 西瓜的气味
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *几个初出茅庐的革命卫兵，把美国的美梦变成了噩梦。*<sup><a id="ch13--ch13ena1"></a>[1](#notes--ch13en1)</sup>
 
@@ -2021,11 +2108,11 @@ status: "active"
 
 <a id="doc-ch14"></a>
 
-## <a id="ch14--page_307"></a><a id="ch14--ch14"></a>第十四章
+# <a id="ch14--page_307"></a><a id="ch14--ch14"></a>第十四章
 
 ### 光明的队列
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *以殉道离世者有福！在光明队列中献生命者有福！膝头养育这些宝石者有福！*
 
@@ -2183,9 +2270,9 @@ status: "active"
 
 <a id="doc-epilogue"></a>
 
-## <a id="epilogue--page_329"></a><a id="epilogue--epilogue"></a>后记
+# <a id="epilogue--page_329"></a><a id="epilogue--epilogue"></a>后记
 
-![装饰图案](assets/ops/images/common.jpg)
+
 
 *我喊：命运啊，你沉睡不醒，如今日已高升！她说：尽管往事已逝，也莫绝望。*
 
@@ -2219,7 +2306,7 @@ status: "active"
 
 <a id="doc-appendix"></a>
 
-## <a id="appendix--page_335"></a><a id="appendix--appendix"></a>附录
+# <a id="appendix--page_335"></a><a id="appendix--appendix"></a>附录
 
 ### 霍梅尼1988年7月16日致文武领导人、接受联合国停火的信
 
@@ -2441,7 +2528,7 @@ status: "active"
 
 <a id="doc-ack"></a>
 
-## <a id="ack--page_387"></a><a id="ack--ack"></a>致谢
+# <a id="ack--page_387"></a><a id="ack--ack"></a>致谢
 
 谨感谢费雷敦·阿拉博士、卡罗琳·道内、克里斯托弗·德·贝莱格、比詹·戈尔沙扬、安德鲁·古德森、约翰·格尼博士、彼得·詹姆斯、迈赫迪·贾米、贾姆希德·卡什库利、埃米莉·卢斯、菲利普·曼塞尔博士、沙布纳姆·米拉夫扎利、特雷弗·莫斯廷、詹姆斯·芒福德博士、阿尔达希尔·纳格希内、罗兰·菲利普斯、加里·西克博士、特威兹缪尔勋爵、卡罗琳·韦斯特莫尔、斯特凡·维尔德教授博士和格尔琳德·维尔克—维尔德，以及安东尼·温。我最深的感激，献给伊斯法罕已故的阿里·博鲁曼德。
 
@@ -2463,7 +2550,7 @@ status: "active"
 
 <a id="doc-notes"></a>
 
-## <a id="notes--page_339"></a><a id="notes--notes"></a>注释
+# <a id="notes--page_339"></a><a id="notes--notes"></a>注释
 
 ### 1. 巴列维国家的起源
 
@@ -4945,7 +5032,7 @@ status: "active"
 
 <a id="doc-index"></a>
 
-## <a id="index--page_389"></a><a id="index--index"></a>索引
+# <a id="index--page_389"></a><a id="index--index"></a>索引
 
 索引沿用英文原版的条目顺序；以下页码均为英文原版页码。
 
@@ -8062,3 +8149,55 @@ status: "active"
 - 琐罗亚斯德教徒（Zoroastrians），[11](#ch01--page_11), [13](#ch01--page_13), [105](#ch05--page_105), [110](#ch05--page_110), [253](#ch12--page_253)
 
 <a id="doc-copyright"></a>
+
+<a id="copyright--page_iv"></a>![图像](assets/ops/images/logo.jpg)
+
+西蒙与舒斯特出版社
+
+美洲大道1230号
+
+纽约州纽约市，邮政编码10020
+
+[www.SimonandSchuster.com](http://www.SimonandSchuster.com)
+
+版权 © 2012，詹姆斯·布肯
+
+前言及后记版权 © 2013，詹姆斯·布肯
+
+保留所有权利，包括以任何形式复制本书全部或部分内容的权利。如需有关信息，请致函西蒙与舒斯特出版社附属版权部，地址：纽约州纽约市美洲大道1230号，邮政编码10020。
+
+西蒙与舒斯特出版社精装第一版，2013年9月
+
+本书最初于2012年在英国由阿歇特英国集团旗下的约翰·默里出版社出版。
+
+插图版权信息见[第387页](#ack--page_387)。
+
+SIMON & SCHUSTER及其社标均为西蒙与舒斯特公司的注册商标。
+
+西蒙与舒斯特演讲人事务部可以安排作家参加您的现场活动。如需更多信息或预约活动，请拨打1-866-248-3049联系西蒙与舒斯特演讲人事务部，或访问我们的网站：[www.simonspeakers.com](http://www.simonspeakers.com)。
+
+护封照片由Shutterstock提供
+
+美国国会图书馆在版编目数据
+
+布肯，詹姆斯。
+
+上帝的日子：伊朗革命及其后果／詹姆斯·布肯。
+
+——西蒙与舒斯特出版社精装第一版。
+
+页数　厘米
+
+“最初于2012年在英国由约翰·默里出版社出版。”——附参考文献及索引。
+
+1. 伊朗——历史——1979年革命。2. 伊朗——历史——1979年革命——影响。3. 伊朗——历史——1979年革命——原因。4. 伊朗——历史——1979—1997年。5. 鲁霍拉·霍梅尼——影响。6. 政治暴力——伊朗——历史——20世纪。I. 题名。
+
+DS318.8.B82 2013
+
+955.05’4—dc23
+
+2013008890
+
+ISBN 978-1-4165-9777-3
+
+ISBN 978-1-4165-9782-7（电子书）
