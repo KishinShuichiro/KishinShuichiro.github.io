@@ -1,834 +1,210 @@
 import * as params from '@params';
 
-let fuse;
-
+const searchBox = document.getElementById('searchbox');
 const resList = document.getElementById('searchResults');
 const sInput = document.getElementById('searchInput');
 const countBox = document.getElementById('searchCount');
+const DEBOUNCE_MS = 150;
 
-let resultsAvailable = false;
+let worker;
+let ready = false;
+let busy = false;
+let composing = false;
+let revision = 0;
+let sentRevision = -1;
+let searchDue = false;
+let debounceTimer;
+let results = [];
 
-
-/* =========================================================
-   加载搜索索引
-   ========================================================= */
-
-window.onload = function () {
-
-    const xhr = new XMLHttpRequest();
-
-    xhr.onreadystatechange = function () {
-
-        if (xhr.readyState !== 4) {
-            return;
-        }
-
-        if (xhr.status !== 200) {
-            console.log(xhr.responseText);
-            return;
-        }
-
-        const data = JSON.parse(xhr.responseText);
-
-        if (!data) {
-            return;
-        }
-
-        let options = {
-            distance: 1000,
-            threshold: 0.4,
-            ignoreLocation: true,
-            includeMatches: true,
-
-            keys: [
-                'title',
-                'permalink',
-                'summary',
-                'content'
-            ]
-        };
-
-
-        if (params.fuseOpts) {
-
-            options = {
-
-                isCaseSensitive:
-                    params.fuseOpts.iscasesensitive ?? false,
-
-                includeScore:
-                    params.fuseOpts.includescore ?? false,
-
-                /*
-                 * 必须打开。
-                 * 我们自己的结果显示会使用 Fuse，
-                 * 但正文位置仍然另外精确计算。
-                 */
-                includeMatches: true,
-
-                minMatchCharLength:
-                    params.fuseOpts.minmatchcharlength ?? 1,
-
-                shouldSort:
-                    params.fuseOpts.shouldsort ?? true,
-
-                findAllMatches:
-                    params.fuseOpts.findallmatches ?? false,
-
-                keys:
-                    params.fuseOpts.keys ??
-                    [
-                        'title',
-                        'permalink',
-                        'summary',
-                        'content'
-                    ],
-
-                location:
-                    params.fuseOpts.location ?? 0,
-
-                threshold:
-                    params.fuseOpts.threshold ?? 0.4,
-
-                distance:
-                    params.fuseOpts.distance ?? 1000,
-
-                ignoreLocation:
-                    params.fuseOpts.ignorelocation ?? true
-            };
-        }
-
-
-        fuse = new Fuse(
-            data,
-            options
-        );
-    };
-
-
-    xhr.open(
-        'GET',
-        '../index.json'
-    );
-
-    xhr.send();
-};
-
-
-/* =========================================================
-   HTML 转义
-   ========================================================= */
-
-function escapeHTML(str) {
-
-    return String(str || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
+function setStatus(message, loading = false) {
+    countBox.textContent = message;
+    resList.setAttribute('aria-busy', String(loading));
 }
 
-
-/* =========================================================
-   Regex 转义
-   ========================================================= */
-
-function escapeRegExp(str) {
-
-    return String(str)
-        .replace(
-            /[.*+?^${}()|[\]\\]/g,
-            '\\$&'
-        );
+function escapeHTML(value) {
+    return String(value ?? '').replace(/[&<>"']/g, character => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+    }[character]));
 }
 
-
-/* =========================================================
-   高亮
-   ========================================================= */
-
+// Match the original text before escaping so queries such as "&" cannot
+// corrupt HTML entities or turn indexed text into markup.
 function highlight(text, query) {
-
-    const safe =
-        escapeHTML(text);
-
-    if (!query) {
-        return safe;
+    text = String(text || '');
+    const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(escapedQuery, 'gi');
+    let html = '';
+    let position = 0;
+    for (const match of text.matchAll(regex)) {
+        html += escapeHTML(text.slice(position, match.index));
+        html += `<mark>${escapeHTML(match[0])}</mark>`;
+        position = match.index + match[0].length;
     }
-
-    const regex =
-        new RegExp(
-            '(' +
-            escapeRegExp(query) +
-            ')',
-            'gi'
-        );
-
-    return safe.replace(
-        regex,
-        '<mark>$1</mark>'
-    );
+    return html + escapeHTML(text.slice(position));
 }
 
-
-/* =========================================================
-   找出一篇文章里的所有精确命中
-   ========================================================= */
-
-function findSnippets(
-    content,
-    query
-) {
-
-    if (
-        !content ||
-        !query
-    ) {
-        return [];
-    }
-
-
-    const clean =
-        String(content)
-            .replace(
-                /\s+/g,
-                ' '
-            )
-            .trim();
-
-
-    const lower =
-        clean.toLowerCase();
-
-    const q =
-        query.toLowerCase();
-
-
-    const before = 90;
-    const after = 160;
-
-    const snippets = [];
-
-    let pos = 0;
-
-
-    while (true) {
-
-        const found =
-            lower.indexOf(
-                q,
-                pos
-            );
-
-        if (found === -1) {
-            break;
-        }
-
-
-        const start =
-            Math.max(
-                0,
-                found - before
-            );
-
-
-        const end =
-            Math.min(
-                clean.length,
-                found +
-                query.length +
-                after
-            );
-
-
-        let snippet =
-            clean.substring(
-                start,
-                end
-            );
-
-
-        if (start > 0) {
-            snippet =
-                '…' + snippet;
-        }
-
-        if (
-            end <
-            clean.length
-        ) {
-            snippet += '…';
-        }
-
-
-        snippets.push(
-            snippet
-        );
-
-
-        /*
-         * 不再限制 500。
-         * 所以 1 / 732、1 / 1250 都可以。
-         */
-        pos =
-            found +
-            Math.max(
-                q.length,
-                1
-            );
-    }
-
-
-    /*
-     * Fuse 模糊搜到了，
-     * 但正文没有完全相同字符串。
-     */
-    if (
-        snippets.length === 0
-    ) {
-
-        let snippet =
-            clean.substring(
-                0,
-                250
-            );
-
-        if (
-            clean.length >
-            250
-        ) {
-            snippet += '…';
-        }
-
-        snippets.push(
-            snippet
-        );
-    }
-
-
-    return snippets;
-}
-
-
-/* =========================================================
-   给搜索结果标题生成“跳到具体命中”的 URL
-   ========================================================= */
-
-function makeMatchURL(
-    permalink,
-    query,
-    matchNumber
-) {
-
-    const url =
-        new URL(
-            permalink,
-            window.location.origin
-        );
-
-
-    url.searchParams.set(
-        'search',
-        query
-    );
-
-
-    url.searchParams.set(
-        'match',
-        String(matchNumber)
-    );
-
-
+function makeMatchURL(permalink, query, matchNumber) {
+    const url = new URL(permalink, window.location.origin);
+    url.searchParams.set('search', query);
+    url.searchParams.set('match', String(matchNumber));
     return url.toString();
 }
 
-
-/* =========================================================
-   清空
-   ========================================================= */
-
-function reset() {
-
-    resultsAvailable =
-        false;
-
-    resList.innerHTML =
-        '';
-
-    sInput.value =
-        '';
-
-    if (countBox) {
-        countBox.innerHTML =
-            '';
-    }
-
-    sInput.focus();
+function failSearch(activeWorker) {
+    if (worker !== activeWorker) return;
+    worker?.terminate();
+    worker = null;
+    ready = false;
+    busy = false;
+    sentRevision = -1;
+    results = [];
+    resList.replaceChildren();
+    setStatus('搜索加载失败，请重新输入重试。');
 }
 
-
-/* =========================================================
-   搜索
-   ========================================================= */
-
-sInput.onkeyup =
-function () {
-
-    if (!fuse) {
-        return;
-    }
-
-
-    const query =
-        this.value.trim();
-
-
-    if (!query) {
-
-        resList.innerHTML =
-            '';
-
-        if (countBox) {
-            countBox.innerHTML =
-                '';
-        }
-
-        resultsAvailable =
-            false;
-
-        return;
-    }
-
-
-    let results;
-
-
-    if (
-        params.fuseOpts &&
-        params.fuseOpts.limit
-    ) {
-
-        results =
-            fuse.search(
-                query,
-                {
-                    limit:
-                        params
-                            .fuseOpts
-                            .limit
-                }
-            );
-
-    } else {
-
-        results =
-            fuse.search(
-                query,
-                {
-                    limit: 50
-                }
-            );
-    }
-
-
-    if (countBox) {
-
-        countBox.textContent =
-            `Results Found: ${results.length}`;
-    }
-
-
-    if (
-        results.length === 0
-    ) {
-
-        resultsAvailable =
-            false;
-
-        resList.innerHTML =
-            '';
-
-        return;
-    }
-
-
-    let resultSet =
-        '';
-
-
-    for (
-        let resultIndex = 0;
-        resultIndex <
-            results.length;
-        resultIndex++
-    ) {
-
-        const result =
-            results[
-                resultIndex
-            ];
-
-        const item =
-            result.item;
-
-
-        const snippets =
-            findSnippets(
-                item.content,
-                query
-            );
-
-
-        const snippetsEncoded =
-            encodeURIComponent(
-                JSON.stringify(
-                    snippets
-                )
-            );
-
-
-        const firstURL =
-            makeMatchURL(
-                item.permalink,
-                query,
-                1
-            );
-
-
-        resultSet += `
-            <article
-                class="custom-search-result"
-                data-result-index="${resultIndex}"
-                data-snippets="${snippetsEncoded}"
-                data-current-match="0"
-                data-permalink="${escapeHTML(item.permalink)}"
-            >
-
-                <div class="custom-search-top">
-
-                    <a
-                        class="custom-search-link"
-                        href="${escapeHTML(firstURL)}"
-                        aria-label="${escapeHTML(item.title)}"
-                    >
-
-                        <div class="custom-search-title">
-                            ${highlight(item.title, query)}
-                        </div>
-
-                    </a>
-
-
-                    ${
-                        snippets.length > 1
-                        ?
-                        `
-                        <div class="search-match-nav">
-
-                            <span class="search-match-count">
-                                1 / ${snippets.length}
-                            </span>
-
-                            <button
-                                type="button"
-                                class="search-match-prev"
-                                aria-label="上一个匹配"
-                                title="上一个匹配"
-                            >
-                                ‹
-                            </button>
-
-                            <button
-                                type="button"
-                                class="search-match-next"
-                                aria-label="下一个匹配"
-                                title="下一个匹配"
-                            >
-                                ›
-                            </button>
-
-                        </div>
-                        `
-                        :
-                        ''
-                    }
-
-                </div>
-
-
-                <div class="custom-search-snippet">
-                    ${highlight(snippets[0], query)}
-                </div>
-
-            </article>
-        `;
-    }
-
-
-    resList.innerHTML =
-        resultSet;
-
-
-    /* =====================================================
-       给每个结果绑定上一处 / 下一处
-       ===================================================== */
-
-    resList
-        .querySelectorAll(
-            '.custom-search-result'
-        )
-        .forEach(
-            function (card) {
-
-                const encoded =
-                    card.dataset.snippets;
-
-
-                const snippets =
-                    JSON.parse(
-                        decodeURIComponent(
-                            encoded
-                        )
-                    );
-
-
-                const permalink =
-                    card.dataset.permalink;
-
-
-                const snippetBox =
-                    card.querySelector(
-                        '.custom-search-snippet'
-                    );
-
-
-                const count =
-                    card.querySelector(
-                        '.search-match-count'
-                    );
-
-
-                const prev =
-                    card.querySelector(
-                        '.search-match-prev'
-                    );
-
-
-                const next =
-                    card.querySelector(
-                        '.search-match-next'
-                    );
-
-
-                const link =
-                    card.querySelector(
-                        '.custom-search-link'
-                    );
-
-
-                function showMatch(
-                    index
-                ) {
-
-                    if (
-                        index < 0
-                    ) {
-
-                        index =
-                            snippets.length -
-                            1;
-                    }
-
-
-                    if (
-                        index >=
-                        snippets.length
-                    ) {
-
-                        index = 0;
-                    }
-
-
-                    card.dataset.currentMatch =
-                        String(index);
-
-
-                    snippetBox.innerHTML =
-                        highlight(
-                            snippets[
-                                index
-                            ],
-                            query
-                        );
-
-
-                    if (count) {
-
-                        count.textContent =
-                            `${index + 1} / ${snippets.length}`;
-                    }
-
-
-                    /*
-                     * 很重要：
-                     *
-                     * 用户翻到 487 / 732 后，
-                     * 标题链接自动变成：
-                     *
-                     * ?search=土耳其&match=487
-                     */
-                    if (link) {
-
-                        link.href =
-                            makeMatchURL(
-                                permalink,
-                                query,
-                                index + 1
-                            );
-                    }
-                }
-
-
-                /*
-                 * 即使只有一个精确命中，
-                 * 标题也已经带：
-                 *
-                 * ?search=xxx&match=1
-                 */
-                showMatch(0);
-
-               /* =====================================================
-                  整张搜索结果卡片都可以点击
-                  但左右翻页按钮除外
-                  ===================================================== */
-
-               card.addEventListener(
-                   'click',
-                   function (event) {
-
-                       /*
-                        * 点 ‹ › 时只切换命中，
-                        * 不跳转页面。
-                        */
-                       if (
-                           event.target.closest(
-                                  '.search-match-prev, .search-match-next'
-                           )
-                       ) {
-                              return;
-                          }
-               
-                          /*
-                           * 如果本身点的就是标题链接，
-                           * 浏览器自己处理，不重复跳转。
-                           */
-                          if (
-                              event.target.closest(
-                               '.custom-search-link'
-                              )
-                            ) {
-                           return;
-                          }
-
-                          if (link && link.href) {
-            window.location.href =
-                link.href;
-        }
-    }
-);
-
-
-                if (
-                    !prev ||
-                    !next
-                ) {
-                    return;
-                }
-
-
-                prev.addEventListener(
-                    'click',
-                    function (event) {
-
-                        event.preventDefault();
-                        event.stopPropagation();
-
-
-                        const current =
-                            Number(
-                                card
-                                    .dataset
-                                    .currentMatch
-                            );
-
-
-                        showMatch(
-                            current - 1
-                        );
-                    }
-                );
-
-
-                next.addEventListener(
-                    'click',
-                    function (event) {
-
-                        event.preventDefault();
-                        event.stopPropagation();
-
-
-                        const current =
-                            Number(
-                                card
-                                    .dataset
-                                    .currentMatch
-                            );
-
-
-                        showMatch(
-                            current + 1
-                        );
-                    }
-                );
+function startWorker() {
+    if (worker) return;
+    try {
+        const activeWorker = new Worker(searchBox.dataset.workerUrl);
+        worker = activeWorker;
+        activeWorker.addEventListener('error', () => failSearch(activeWorker));
+        activeWorker.addEventListener('messageerror', () => failSearch(activeWorker));
+        activeWorker.addEventListener('message', ({ data }) => {
+            if (worker !== activeWorker) return;
+            if (data.type === 'error') {
+                failSearch(activeWorker);
+            } else if (data.type === 'ready') {
+                ready = true;
+                if (!sInput.value.trim()) setStatus('');
+                sendSearch();
+            } else if (data.type === 'results') {
+                busy = false;
+                // A query can change while the worker is searching. Never let
+                // its old response replace the current results or a reset.
+                if (data.revision === revision && !composing) renderResults(data);
+                sendSearch();
+            } else if (data.type === 'match' && data.revision === revision) {
+                const result = results[data.resultIndex];
+                if (!result || result.matchIndex !== data.matchIndex) return;
+                const card = resList.children[data.resultIndex];
+                card.querySelector('.custom-search-snippet').innerHTML =
+                    highlight(data.snippet, data.query);
+                card.querySelector('.search-match-count').textContent =
+                    `${data.matchIndex + 1} / ${result.matchCount}`;
+                card.querySelector('.custom-search-link').href =
+                    makeMatchURL(result.permalink, data.query, data.matchIndex + 1);
             }
-        );
-
-
-    resultsAvailable =
-        true;
-};
-
-
-/* =========================================================
-   搜索框 ×
-   ========================================================= */
-
-sInput.addEventListener(
-    'search',
-    function () {
-
-        if (!this.value) {
-            reset();
-        }
+        });
+        activeWorker.postMessage({
+            type: 'init',
+            indexURL: new URL(searchBox.dataset.indexUrl, window.location.href).href,
+            options: params.fuseOpts || {}
+        });
+    } catch {
+        failSearch(worker);
     }
-);
+}
 
+function sendSearch() {
+    // Keep at most one search in flight. If typing outpaces the worker, send
+    // only the newest query after it finishes, not a queue of obsolete work.
+    if (!ready || busy || composing || !searchDue || sentRevision === revision) return;
+    const query = sInput.value.trim();
+    if (!query) return;
+    busy = true;
+    sentRevision = revision;
+    worker.postMessage({ type: 'search', revision, query });
+}
 
-/* =========================================================
-   Escape
-   ========================================================= */
-
-document.addEventListener(
-    'keydown',
-    function (event) {
-
-        if (
-            event.key ===
-            'Escape'
-        ) {
-
-            reset();
-        }
+function scheduleSearch() {
+    revision++;
+    clearTimeout(debounceTimer);
+    searchDue = false;
+    results = [];
+    resList.replaceChildren();
+    if (!sInput.value.trim() || composing) {
+        setStatus('');
+        return;
     }
-);
+    setStatus('搜索中……', true);
+    startWorker();
+    debounceTimer = setTimeout(() => {
+        searchDue = true;
+        sendSearch();
+    }, DEBOUNCE_MS);
+}
+
+function renderResults(data) {
+    results = data.results.map(result => ({ ...result, matchIndex: 0 }));
+    resList.innerHTML = results.map((result, index) => `
+        <article class="custom-search-result" data-result-index="${index}">
+            <div class="custom-search-top">
+                <a class="custom-search-link"
+                   href="${escapeHTML(makeMatchURL(result.permalink, data.query, 1))}"
+                   aria-label="${escapeHTML(result.title)}">
+                    <div class="custom-search-title">${highlight(result.title, data.query)}</div>
+                </a>
+                ${result.matchCount > 1 ? `
+                    <div class="search-match-nav">
+                        <span class="search-match-count">1 / ${result.matchCount}</span>
+                        <button type="button" class="search-match-prev"
+                                aria-label="上一个匹配" title="上一个匹配">‹</button>
+                        <button type="button" class="search-match-next"
+                                aria-label="下一个匹配" title="下一个匹配">›</button>
+                    </div>` : ''}
+            </div>
+            <div class="custom-search-snippet">${highlight(result.snippet, data.query)}</div>
+        </article>
+    `).join('');
+    setStatus(`Results Found: ${results.length}`);
+}
+
+// One delegated listener survives result updates. Full article text and all
+// match offsets stay in the worker; only the selected excerpt crosses over.
+resList.addEventListener('click', event => {
+    const card = event.target.closest('.custom-search-result');
+    if (!card) return;
+    const resultIndex = Number(card.dataset.resultIndex);
+    const result = results[resultIndex];
+    if (!result) return;
+    const button = event.target.closest('.search-match-prev, .search-match-next');
+    if (button) {
+        event.preventDefault();
+        const direction = button.classList.contains('search-match-next') ? 1 : -1;
+        result.matchIndex = (result.matchIndex + direction + result.matchCount) % result.matchCount;
+        worker.postMessage({ type: 'match', revision, resultIndex, matchIndex: result.matchIndex });
+        return;
+    }
+    if (event.target.closest('a') || window.getSelection()?.toString()) return;
+    const href = card.querySelector('.custom-search-link').href;
+    if (event.ctrlKey || event.metaKey) {
+        window.open(href, '_blank', 'noopener');
+    } else {
+        window.location.href = href;
+    }
+});
+
+sInput.addEventListener('input', scheduleSearch);
+sInput.addEventListener('compositionstart', () => {
+    composing = true;
+    scheduleSearch();
+});
+sInput.addEventListener('compositionend', () => {
+    composing = false;
+    scheduleSearch();
+});
+sInput.addEventListener('search', () => {
+    if (!sInput.value) scheduleSearch();
+});
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !event.isComposing && !composing) {
+        sInput.value = '';
+        scheduleSearch();
+        sInput.focus();
+    }
+});
+
+// Start before window.load and also honor text entered/restored before the
+// index is ready. Parsing and indexing happen entirely inside the worker.
+startWorker();
+if (sInput.value.trim()) scheduleSearch();
