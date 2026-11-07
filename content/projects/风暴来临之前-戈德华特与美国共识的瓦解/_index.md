@@ -15,7 +15,7 @@ tags: ["AMERIHIS", "中文翻译"]
 
 > 本项目采用逐章全文翻译。首批已完成序言、第一章及其对应注释；其余正文、前置书页与书末材料待译。中文书名及章名为本项目译名。
 
-[阅读序言](#preface) · [阅读第一章](#chapter-01) · [查看注释](#notes) · [返回美国政治史书目](/projects/#amerihis)
+[阅读序言](#preface) · [阅读第一章](#chapter-01) · [查看注释](#notes) · [返回项目列表](/projects/)
 
 ## 全书目录与进度 {#book-contents}
 
