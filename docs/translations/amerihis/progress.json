@@ -1,0 +1,1138 @@
+{
+  "series": "AMERIHIS",
+  "updated": "2026-11-08T05:20:36+09:00",
+  "total_chapters": 147,
+  "completed_chapters": 1,
+  "source_archive": "AMERIHIS.zip",
+  "books": [
+    {
+      "source": "Before_the_Storm.md",
+      "sha256": "7799df583e7c8b835f329d15b817c61bab10288f5b3d3e5fa06508ed5bae33cb",
+      "word_count": 295257,
+      "line_count": 13711,
+      "target": "content/projects/风暴来临之前-戈德华特与美国共识的瓦解/_index.md",
+      "category": "保守主义运动与政治转型",
+      "chapter_count": 22,
+      "chapters": [
+        {
+          "number": 1,
+          "line": 286,
+          "heading": "THE MANIONITES",
+          "title_zh": "曼尼恩派",
+          "status": "translated"
+        },
+        {
+          "number": 2,
+          "line": 414,
+          "heading": "MERCHANT PRINCE",
+          "title_zh": "商业王子",
+          "status": "pending"
+        },
+        {
+          "number": 3,
+          "line": 673,
+          "heading": "WORKING TOGETHER FOR THE WORLD",
+          "title_zh": "为世界携手合作",
+          "status": "pending"
+        },
+        {
+          "number": 4,
+          "line": 849,
+          "heading": "CONSCIENCE",
+          "title_zh": "良知",
+          "status": "pending"
+        },
+        {
+          "number": 5,
+          "line": 929,
+          "heading": "THE MEETING OF THE BLUE AND WHITE NILE",
+          "title_zh": "青尼罗河与白尼罗河的交汇",
+          "status": "pending"
+        },
+        {
+          "number": 6,
+          "line": 1246,
+          "heading": "QUICKENING",
+          "title_zh": "萌动",
+          "status": "pending"
+        },
+        {
+          "number": 7,
+          "line": 1440,
+          "heading": "STORIES OF ORANGE COUNTY",
+          "title_zh": "橙县故事",
+          "status": "pending"
+        },
+        {
+          "number": 8,
+          "line": 1624,
+          "heading": "APOCALYPTICS",
+          "title_zh": "末日论者",
+          "status": "pending"
+        },
+        {
+          "number": 9,
+          "line": 1770,
+          "heading": "OFF YEAR",
+          "title_zh": "中期选举年",
+          "status": "pending"
+        },
+        {
+          "number": 10,
+          "line": 1902,
+          "heading": "SUITE 3505",
+          "title_zh": "3505号套房",
+          "status": "pending"
+        },
+        {
+          "number": 11,
+          "line": 2210,
+          "heading": "MOBS",
+          "title_zh": "群众",
+          "status": "pending"
+        },
+        {
+          "number": 12,
+          "line": 2667,
+          "heading": "NEW MOOD IN POLITICS",
+          "title_zh": "政治的新情绪",
+          "status": "pending"
+        },
+        {
+          "number": 13,
+          "line": 2870,
+          "heading": "GRANITE STATE",
+          "title_zh": "花岗岩之州",
+          "status": "pending"
+        },
+        {
+          "number": 14,
+          "line": 3222,
+          "heading": "PRESIDENT OF ALL THE PEOPLE",
+          "title_zh": "全体人民的总统",
+          "status": "pending"
+        },
+        {
+          "number": 15,
+          "line": 3344,
+          "heading": "UNITED AND AT PEACE WITH ITSELF ...",
+          "title_zh": "团结一致，与自身和解……",
+          "status": "pending"
+        },
+        {
+          "number": 16,
+          "line": 3544,
+          "heading": "GOLDEN STATE",
+          "title_zh": "黄金之州",
+          "status": "pending"
+        },
+        {
+          "number": 17,
+          "line": 3782,
+          "heading": "DUTY",
+          "title_zh": "责任",
+          "status": "pending"
+        },
+        {
+          "number": 18,
+          "line": 3928,
+          "heading": "CONVENTIONS",
+          "title_zh": "党代会",
+          "status": "pending"
+        },
+        {
+          "number": 19,
+          "line": 4353,
+          "heading": "DON’T MENTION THE GREAT PUMPKIN",
+          "title_zh": "别提大南瓜",
+          "status": "pending"
+        },
+        {
+          "number": 20,
+          "line": 4589,
+          "heading": "CAMPAIGN TRAILS",
+          "title_zh": "竞选征途",
+          "status": "pending"
+        },
+        {
+          "number": 21,
+          "line": 5013,
+          "heading": "CITIZENS",
+          "title_zh": "公民",
+          "status": "pending"
+        },
+        {
+          "number": 22,
+          "line": 5186,
+          "heading": "FOREGONE CONCLUSIONS",
+          "title_zh": "早已注定的结局",
+          "status": "pending"
+        }
+      ],
+      "completed_ranges": [
+        {
+          "section": "preface",
+          "start_line": 215,
+          "end_line": 278,
+          "paragraphs": 20
+        },
+        {
+          "section": "chapter-01",
+          "start_line": 281,
+          "end_line": 411,
+          "paragraphs": 44
+        },
+        {
+          "section": "about-notes",
+          "start_line": 5710,
+          "end_line": 5716
+        },
+        {
+          "section": "preface-notes",
+          "start_line": 5720,
+          "end_line": 5740
+        },
+        {
+          "section": "chapter-01-notes",
+          "start_line": 5744,
+          "end_line": 5806
+        }
+      ]
+    },
+    {
+      "source": "Nixonland.md",
+      "sha256": "3cb047b3910c525a6ed7ac5a3d7b61d61d67dc5e63319d0dc053230645d00bd2",
+      "word_count": 402121,
+      "line_count": 13647,
+      "target": "content/projects/尼克松之国-总统的崛起与美国的分裂/_index.md",
+      "category": "保守主义运动与政治转型",
+      "chapter_count": 34,
+      "chapters": [
+        {
+          "number": 1,
+          "line": 169,
+          "heading": "Hell in the City of Angels",
+          "title_zh": "天使之城的地狱",
+          "status": "pending"
+        },
+        {
+          "number": 2,
+          "line": 401,
+          "heading": "The Orthogonian",
+          "title_zh": "正角社成员（The Orthogonian）",
+          "status": "pending"
+        },
+        {
+          "number": 3,
+          "line": 667,
+          "heading": "The Stench",
+          "title_zh": "恶臭",
+          "status": "pending"
+        },
+        {
+          "number": 4,
+          "line": 1001,
+          "heading": "Ronald Reagan",
+          "title_zh": "罗纳德·里根",
+          "status": "pending"
+        },
+        {
+          "number": 5,
+          "line": 1295,
+          "heading": "Long, Hot Summer",
+          "title_zh": "漫长而炎热的夏天",
+          "status": "pending"
+        },
+        {
+          "number": 6,
+          "line": 1675,
+          "heading": "School Was in Session…",
+          "title_zh": "学校正在上课……",
+          "status": "pending"
+        },
+        {
+          "number": 7,
+          "line": 1799,
+          "heading": "Batting Average",
+          "title_zh": "击球率",
+          "status": "pending"
+        },
+        {
+          "number": 8,
+          "line": 2141,
+          "heading": "The Bombing",
+          "title_zh": "轰炸",
+          "status": "pending"
+        },
+        {
+          "number": 9,
+          "line": 2291,
+          "heading": "Summer of Love",
+          "title_zh": "爱之夏",
+          "status": "pending"
+        },
+        {
+          "number": 10,
+          "line": 2455,
+          "heading": "In Which a Cruise Ship Full of Governors Inspires Considerations on the Nature of Old and New Politics",
+          "title_zh": "一船州长引发的关于新旧政治本质的思考",
+          "status": "pending"
+        },
+        {
+          "number": 11,
+          "line": 2749,
+          "heading": "Fed-up-niks",
+          "title_zh": "受够了的人们",
+          "status": "pending"
+        },
+        {
+          "number": 12,
+          "line": 3075,
+          "heading": "The Sky’s the Limit",
+          "title_zh": "没有极限",
+          "status": "pending"
+        },
+        {
+          "number": 13,
+          "line": 3347,
+          "heading": "Violence",
+          "title_zh": "暴力",
+          "status": "pending"
+        },
+        {
+          "number": 14,
+          "line": 3575,
+          "heading": "From Miami to the Siege of Chicago",
+          "title_zh": "从迈阿密到芝加哥之围",
+          "status": "pending"
+        },
+        {
+          "number": 15,
+          "line": 3887,
+          "heading": "Wednesday, August 28, 1968",
+          "title_zh": "1968年8月28日，星期三",
+          "status": "pending"
+        },
+        {
+          "number": 16,
+          "line": 4211,
+          "heading": "Winning",
+          "title_zh": "获胜",
+          "status": "pending"
+        },
+        {
+          "number": 17,
+          "line": 4573,
+          "heading": "The First One Hundred Days",
+          "title_zh": "最初的一百天",
+          "status": "pending"
+        },
+        {
+          "number": 18,
+          "line": 4753,
+          "heading": "Trust",
+          "title_zh": "信任",
+          "status": "pending"
+        },
+        {
+          "number": 19,
+          "line": 5113,
+          "heading": "If Gold Rust",
+          "title_zh": "如果黄金生锈",
+          "status": "pending"
+        },
+        {
+          "number": 20,
+          "line": 5245,
+          "heading": "The Presidential Offensive",
+          "title_zh": "总统的攻势",
+          "status": "pending"
+        },
+        {
+          "number": 21,
+          "line": 5625,
+          "heading": "The Polarization",
+          "title_zh": "两极分化",
+          "status": "pending"
+        },
+        {
+          "number": 22,
+          "line": 5839,
+          "heading": "Tourniquet",
+          "title_zh": "止血带",
+          "status": "pending"
+        },
+        {
+          "number": 23,
+          "line": 6055,
+          "heading": "Mayday",
+          "title_zh": "五一节",
+          "status": "pending"
+        },
+        {
+          "number": 24,
+          "line": 6425,
+          "heading": "Purity",
+          "title_zh": "纯粹",
+          "status": "pending"
+        },
+        {
+          "number": 25,
+          "line": 6683,
+          "heading": "Agnew’s Election",
+          "title_zh": "阿格纽的选举",
+          "status": "pending"
+        },
+        {
+          "number": 26,
+          "line": 6843,
+          "heading": "How to Survive the Debacle",
+          "title_zh": "如何熬过惨败",
+          "status": "pending"
+        },
+        {
+          "number": 27,
+          "line": 6951,
+          "heading": "Cruelest Month",
+          "title_zh": "最残酷的月份",
+          "status": "pending"
+        },
+        {
+          "number": 28,
+          "line": 7223,
+          "heading": "Ping-Pong",
+          "title_zh": "乒乓",
+          "status": "pending"
+        },
+        {
+          "number": 29,
+          "line": 7421,
+          "heading": "The Coven",
+          "title_zh": "女巫集会",
+          "status": "pending"
+        },
+        {
+          "number": 30,
+          "line": 7695,
+          "heading": "The Party of Jefferson, Jackson, and George Wallace",
+          "title_zh": "杰斐逊、杰克逊与乔治·华莱士的党",
+          "status": "pending"
+        },
+        {
+          "number": 31,
+          "line": 7965,
+          "heading": "The Spring Offensive",
+          "title_zh": "春季攻势",
+          "status": "pending"
+        },
+        {
+          "number": 32,
+          "line": 8231,
+          "heading": "Celebrities",
+          "title_zh": "名人",
+          "status": "pending"
+        },
+        {
+          "number": 33,
+          "line": 8583,
+          "heading": "In Which Playboy Bunnies, and Barbarella, and Tanya Inspire Theoretical Considerations upon the Nature of Democracy",
+          "title_zh": "花花公子兔女郎、芭芭丽娜与塔妮娅引发的关于民主本质的理论思考",
+          "status": "pending"
+        },
+        {
+          "number": 34,
+          "line": 9039,
+          "heading": "Not Half Enough",
+          "title_zh": "连一半都远远不够",
+          "status": "pending"
+        }
+      ],
+      "completed_ranges": []
+    },
+    {
+      "source": "The_Invisible_Bridge.md",
+      "sha256": "5e6de3b7dbfad23510540e850e7504284a8fa3f4bb6c00e1e01f8ecb3b823cc8",
+      "word_count": 374415,
+      "line_count": 15714,
+      "target": "content/projects/无形之桥-尼克松的陨落与里根的崛起/_index.md",
+      "category": "保守主义运动与政治转型",
+      "chapter_count": 32,
+      "chapters": [
+        {
+          "number": 1,
+          "line": 157,
+          "heading": "“Small and Suspicious Circles”",
+          "title_zh": "“狭小而多疑的圈子”",
+          "status": "pending"
+        },
+        {
+          "number": 2,
+          "line": 393,
+          "heading": "Stories",
+          "title_zh": "故事",
+          "status": "pending"
+        },
+        {
+          "number": 3,
+          "line": 635,
+          "heading": "Let Them Eat Brains",
+          "title_zh": "让他们吃脑子吧",
+          "status": "pending"
+        },
+        {
+          "number": 4,
+          "line": 767,
+          "heading": "Executive Privilege",
+          "title_zh": "行政特权",
+          "status": "pending"
+        },
+        {
+          "number": 5,
+          "line": 909,
+          "heading": "“A Whale of a Good Cheerleader”",
+          "title_zh": "“一个了不起的啦啦队长”",
+          "status": "pending"
+        },
+        {
+          "number": 6,
+          "line": 1075,
+          "heading": "Sam Ervin",
+          "title_zh": "萨姆·欧文",
+          "status": "pending"
+        },
+        {
+          "number": 7,
+          "line": 1295,
+          "heading": "John Dean",
+          "title_zh": "约翰·迪安",
+          "status": "pending"
+        },
+        {
+          "number": 8,
+          "line": 1627,
+          "heading": "Nostalgia",
+          "title_zh": "怀旧",
+          "status": "pending"
+        },
+        {
+          "number": 9,
+          "line": 1957,
+          "heading": "The Year Without Christmas Lights",
+          "title_zh": "没有圣诞灯的那一年",
+          "status": "pending"
+        },
+        {
+          "number": 10,
+          "line": 2251,
+          "heading": "“That Thing Upstairs Isn’t My Daughter”",
+          "title_zh": "“楼上那东西不是我女儿”",
+          "status": "pending"
+        },
+        {
+          "number": 11,
+          "line": 2431,
+          "heading": "Hank Aaron",
+          "title_zh": "汉克·阿伦",
+          "status": "pending"
+        },
+        {
+          "number": 12,
+          "line": 2603,
+          "heading": "“Here Comes the Pitch!”",
+          "title_zh": "“球来了！”",
+          "status": "pending"
+        },
+        {
+          "number": 13,
+          "line": 2753,
+          "heading": "Judging",
+          "title_zh": "评判",
+          "status": "pending"
+        },
+        {
+          "number": 14,
+          "line": 2883,
+          "heading": "“There Used to Be a President Who Didn’t Lie”",
+          "title_zh": "“从前有一位不说谎的总统”",
+          "status": "pending"
+        },
+        {
+          "number": 15,
+          "line": 3001,
+          "heading": "New Right?",
+          "title_zh": "新右翼？",
+          "status": "pending"
+        },
+        {
+          "number": 16,
+          "line": 3347,
+          "heading": "Watergate Babies",
+          "title_zh": "水门事件的新人们",
+          "status": "pending"
+        },
+        {
+          "number": 17,
+          "line": 3469,
+          "heading": "Star",
+          "title_zh": "明星",
+          "status": "pending"
+        },
+        {
+          "number": 18,
+          "line": 4059,
+          "heading": "Governing",
+          "title_zh": "执政",
+          "status": "pending"
+        },
+        {
+          "number": 19,
+          "line": 4157,
+          "heading": "“Disease, Disease, Disease”",
+          "title_zh": "“疾病，疾病，疾病”",
+          "status": "pending"
+        },
+        {
+          "number": 20,
+          "line": 4397,
+          "heading": "New Right",
+          "title_zh": "新右翼",
+          "status": "pending"
+        },
+        {
+          "number": 21,
+          "line": 4569,
+          "heading": "Weimar Summer",
+          "title_zh": "魏玛之夏",
+          "status": "pending"
+        },
+        {
+          "number": 22,
+          "line": 4911,
+          "heading": "The Nation’s Soul",
+          "title_zh": "国家的灵魂",
+          "status": "pending"
+        },
+        {
+          "number": 23,
+          "line": 5159,
+          "heading": "“Has the Gallup Poll Gone Bananas?”",
+          "title_zh": "“盖洛普民调疯了吗？”",
+          "status": "pending"
+        },
+        {
+          "number": 24,
+          "line": 5437,
+          "heading": "Negatives Are Positives",
+          "title_zh": "负面就是正面",
+          "status": "pending"
+        },
+        {
+          "number": 25,
+          "line": 5687,
+          "heading": "“Not the Candidate of Kooks”",
+          "title_zh": "“不是怪人的候选人”",
+          "status": "pending"
+        },
+        {
+          "number": 26,
+          "line": 5887,
+          "heading": "Born Again",
+          "title_zh": "重生",
+          "status": "pending"
+        },
+        {
+          "number": 27,
+          "line": 6109,
+          "heading": "“Always Shuck the Tamale”",
+          "title_zh": "“吃塔马莱一定要剥掉外皮”",
+          "status": "pending"
+        },
+        {
+          "number": 28,
+          "line": 6323,
+          "heading": "They Yearned to Believe",
+          "title_zh": "他们渴望相信",
+          "status": "pending"
+        },
+        {
+          "number": 29,
+          "line": 6653,
+          "heading": "Bicentennial",
+          "title_zh": "建国二百周年",
+          "status": "pending"
+        },
+        {
+          "number": 30,
+          "line": 6871,
+          "heading": "“You’re in the Catbird Seat”",
+          "title_zh": "“你占尽了优势”",
+          "status": "pending"
+        },
+        {
+          "number": 31,
+          "line": 7047,
+          "heading": "“Don’t Let Satan Have His Way—Stop the ERA”",
+          "title_zh": "“别让撒旦得逞——阻止平等权利修正案”",
+          "status": "pending"
+        },
+        {
+          "number": 32,
+          "line": 7249,
+          "heading": "The End?",
+          "title_zh": "结束了吗？",
+          "status": "pending"
+        }
+      ],
+      "completed_ranges": []
+    },
+    {
+      "source": "Reaganland.md",
+      "sha256": "2df213307be188ea09573462b9c2ff60b70ae523e06fb0bef1daccbb3d0de53e",
+      "word_count": 489611,
+      "line_count": 17787,
+      "target": "content/projects/里根之国-美国的右转-1976-1980/_index.md",
+      "category": "保守主义运动与政治转型",
+      "chapter_count": 38,
+      "chapters": [
+        {
+          "number": 1,
+          "line": 27,
+          "heading": "“Nibbled to Death by Ducks”",
+          "title_zh": "“被鸭子一点点啄死”",
+          "status": "pending"
+        },
+        {
+          "number": 2,
+          "line": 339,
+          "heading": "“What Is an Orrin Hatch?”",
+          "title_zh": "“奥林·哈奇是什么人？”",
+          "status": "pending"
+        },
+        {
+          "number": 3,
+          "line": 521,
+          "heading": "“Hi, Jimmy!”",
+          "title_zh": "“嗨，吉米！”",
+          "status": "pending"
+        },
+        {
+          "number": 4,
+          "line": 711,
+          "heading": "Iceberg",
+          "title_zh": "冰山",
+          "status": "pending"
+        },
+        {
+          "number": 5,
+          "line": 1047,
+          "heading": "Human Rights",
+          "title_zh": "人权",
+          "status": "pending"
+        },
+        {
+          "number": 6,
+          "line": 1183,
+          "heading": "“Little Hot Squat”",
+          "title_zh": "“小小的热座”（电椅）",
+          "status": "pending"
+        },
+        {
+          "number": 7,
+          "line": 1431,
+          "heading": "Lancegate",
+          "title_zh": "兰斯门",
+          "status": "pending"
+        },
+        {
+          "number": 8,
+          "line": 1587,
+          "heading": "“The Moral Womanly Woman Is Alive and Well in Mississippi”",
+          "title_zh": "“有道德、有女人味的女人，在密西西比依然活得好好的”",
+          "status": "pending"
+        },
+        {
+          "number": 9,
+          "line": 1689,
+          "heading": "“God Made Adam and Eve, Not Adam and Steve”",
+          "title_zh": "“上帝造了亚当与夏娃，不是亚当与史蒂夫”",
+          "status": "pending"
+        },
+        {
+          "number": 10,
+          "line": 1969,
+          "heading": "Boardroom Jacobins",
+          "title_zh": "董事会里的雅各宾派",
+          "status": "pending"
+        },
+        {
+          "number": 11,
+          "line": 2173,
+          "heading": "“Hang Sen. Dick Clark on a Telephone Pole”",
+          "title_zh": "“把迪克·克拉克参议员吊在电线杆上”",
+          "status": "pending"
+        },
+        {
+          "number": 12,
+          "line": 2463,
+          "heading": "In Which the President of the United States Is Said to Have Nearly Killed an Indian",
+          "title_zh": "据说美国总统差点杀死了一名印第安人",
+          "status": "pending"
+        },
+        {
+          "number": 13,
+          "line": 2603,
+          "heading": "Capital Gains",
+          "title_zh": "资本利得",
+          "status": "pending"
+        },
+        {
+          "number": 14,
+          "line": 2819,
+          "heading": "No One Shoots Santa Claus",
+          "title_zh": "没人会枪击圣诞老人",
+          "status": "pending"
+        },
+        {
+          "number": 15,
+          "line": 3117,
+          "heading": "“The White, American Middle Class Plus Blacks Who Want the Same Thing”",
+          "title_zh": "“美国白人中产阶级，加上想要同样东西的黑人”",
+          "status": "pending"
+        },
+        {
+          "number": 16,
+          "line": 3411,
+          "heading": "“High and Dry”",
+          "title_zh": "“孤立无援”",
+          "status": "pending"
+        },
+        {
+          "number": 17,
+          "line": 3533,
+          "heading": "Almighty Politics",
+          "title_zh": "万能的政治",
+          "status": "pending"
+        },
+        {
+          "number": 18,
+          "line": 3733,
+          "heading": "Election Season",
+          "title_zh": "选举季",
+          "status": "pending"
+        },
+        {
+          "number": 19,
+          "line": 4129,
+          "heading": "Basements",
+          "title_zh": "地下室",
+          "status": "pending"
+        },
+        {
+          "number": 20,
+          "line": 4315,
+          "heading": "Conventional Wisdom",
+          "title_zh": "通行的看法",
+          "status": "pending"
+        },
+        {
+          "number": 21,
+          "line": 4591,
+          "heading": "*Superman*",
+          "title_zh": "《超人》",
+          "status": "pending"
+        },
+        {
+          "number": 22,
+          "line": 4813,
+          "heading": "Christian Soldiers",
+          "title_zh": "基督精兵",
+          "status": "pending"
+        },
+        {
+          "number": 23,
+          "line": 5163,
+          "heading": "The “Front-Runner”",
+          "title_zh": "“领跑者”",
+          "status": "pending"
+        },
+        {
+          "number": 24,
+          "line": 5431,
+          "heading": "Energy",
+          "title_zh": "能源",
+          "status": "pending"
+        },
+        {
+          "number": 25,
+          "line": 5811,
+          "heading": "To the Mountaintop",
+          "title_zh": "登上山巅",
+          "status": "pending"
+        },
+        {
+          "number": 26,
+          "line": 6263,
+          "heading": "“Refusing to Fan the Flames of Moderation”",
+          "title_zh": "“拒绝煽起温和主义的火焰”",
+          "status": "pending"
+        },
+        {
+          "number": 27,
+          "line": 6407,
+          "heading": "“Do You Ever Feel That We Might Be the Generation That Sees Armageddon?”",
+          "title_zh": "“你有没有觉得，我们也许就是将要见证末日决战的一代？”",
+          "status": "pending"
+        },
+        {
+          "number": 28,
+          "line": 6589,
+          "heading": "Shocks",
+          "title_zh": "冲击",
+          "status": "pending"
+        },
+        {
+          "number": 29,
+          "line": 6849,
+          "heading": "Kickoffs",
+          "title_zh": "开场",
+          "status": "pending"
+        },
+        {
+          "number": 30,
+          "line": 7199,
+          "heading": "Patriotisms",
+          "title_zh": "各种爱国主义",
+          "status": "pending"
+        },
+        {
+          "number": 31,
+          "line": 7417,
+          "heading": "“The Imam Does Not Often Respond”",
+          "title_zh": "“伊玛目不常回应”",
+          "status": "pending"
+        },
+        {
+          "number": 32,
+          "line": 7561,
+          "heading": "“Do You Believe in Miracles?”",
+          "title_zh": "“你相信奇迹吗？”",
+          "status": "pending"
+        },
+        {
+          "number": 33,
+          "line": 7851,
+          "heading": "“Jimmy’s Depression Is Gonna Be *Worse* than Herbert’s”",
+          "title_zh": "“吉米的大萧条会比赫伯特的更糟”",
+          "status": "pending"
+        },
+        {
+          "number": 34,
+          "line": 8077,
+          "heading": "“Feed Your Faith and Starve Your Doubts!”",
+          "title_zh": "“喂养你的信仰，饿死你的疑虑！”",
+          "status": "pending"
+        },
+        {
+          "number": 35,
+          "line": 8405,
+          "heading": "Conventions",
+          "title_zh": "党代会",
+          "status": "pending"
+        },
+        {
+          "number": 36,
+          "line": 8943,
+          "heading": "“Meanness”",
+          "title_zh": "“刻薄”",
+          "status": "pending"
+        },
+        {
+          "number": 37,
+          "line": 9357,
+          "heading": "“A Shabby Business”",
+          "title_zh": "“一桩卑劣的勾当”",
+          "status": "pending"
+        },
+        {
+          "number": 38,
+          "line": 9615,
+          "heading": "“Carter Is Smarter Than Reagan”",
+          "title_zh": "“卡特比里根聪明”",
+          "status": "pending"
+        }
+      ],
+      "completed_ranges": []
+    },
+    {
+      "source": "Rule_and_Ruin.md",
+      "sha256": "c0fa04af5e1ef781c7716b8f3915290ba3cd911ea9449516f435c5aaceae53cd",
+      "word_count": 224663,
+      "line_count": 8975,
+      "target": "content/projects/统治与毁灭-温和派的衰落与共和党的瓦解/_index.md",
+      "category": "政党组织与共和党史",
+      "chapter_count": 12,
+      "chapters": [
+        {
+          "number": 1,
+          "line": 237,
+          "heading": "The Widening Gyre",
+          "title_zh": "不断扩大的旋涡——1960年全国代表大会上的共和党",
+          "status": "pending"
+        },
+        {
+          "number": 2,
+          "line": 397,
+          "heading": "Things Fall Apart",
+          "title_zh": "万物崩解——《前进》杂志与温和派建制的衰败，1961—1963",
+          "status": "pending"
+        },
+        {
+          "number": 3,
+          "line": 629,
+          "heading": "The Center Cannot Hold",
+          "title_zh": "中心无法维系——1964年的共和党初选",
+          "status": "pending"
+        },
+        {
+          "number": 4,
+          "line": 769,
+          "heading": "The Blood-Dimmed Tide Is Loosed",
+          "title_zh": "血色潮流决堤——共和党与戈德华特竞选，1964",
+          "status": "pending"
+        },
+        {
+          "number": 5,
+          "line": 913,
+          "heading": "The Ceremony of Innocence Is Drowned",
+          "title_zh": "纯真的仪式被淹没——温和派试图重掌共和党，1965",
+          "status": "pending"
+        },
+        {
+          "number": 6,
+          "line": 1103,
+          "heading": "Full of Passionate Intensity",
+          "title_zh": "满怀狂热——从“卑鄙小人”到里根，1966",
+          "status": "pending"
+        },
+        {
+          "number": 7,
+          "line": 1267,
+          "heading": "The Best Lack All Conviction",
+          "title_zh": "最优秀者毫无信念——温和主义的顶峰与乔治·罗姆尼的兴衰，1967",
+          "status": "pending"
+        },
+        {
+          "number": 8,
+          "line": 1413,
+          "heading": "Mere Anarchy",
+          "title_zh": "唯有混乱——温和派的半场胜利与1968年的痛苦",
+          "status": "pending"
+        },
+        {
+          "number": 9,
+          "line": 1551,
+          "heading": "Some Revelation Is at Hand",
+          "title_zh": "某种启示即将来临——理查德·尼克松执政第一年，1969",
+          "status": "pending"
+        },
+        {
+          "number": 10,
+          "line": 1749,
+          "heading": "The Rough Beast",
+          "title_zh": "粗野的巨兽——尼克松与温和派共和党运动的分裂，1970",
+          "status": "pending"
+        },
+        {
+          "number": 11,
+          "line": 1947,
+          "heading": "Darkness Drops",
+          "title_zh": "黑暗降临——从尼克松、福特到里根：温和派共和党人的衰落，1971—1980",
+          "status": "pending"
+        },
+        {
+          "number": 12,
+          "line": 2133,
+          "heading": "Slouching Toward Bethlehem",
+          "title_zh": "蹒跚走向伯利恒——温和派共和党人的崩溃，1980—2010",
+          "status": "pending"
+        }
+      ],
+      "completed_ranges": []
+    },
+    {
+      "source": "The_Hollow_Parties.md",
+      "sha256": "c6c632b524cd07c7cf2705a5e4e432fe0912cc68ee8f5a5f55c946e8e2024606",
+      "word_count": 165191,
+      "line_count": 10148,
+      "target": "content/projects/空心化的政党-美国政党政治的多重过去与失序现在/_index.md",
+      "category": "政党组织与共和党史",
+      "chapter_count": 9,
+      "chapters": [
+        {
+          "number": 1,
+          "line": 70,
+          "heading": "The Problem of Hollow Parties",
+          "title_zh": "空心化政党的问题",
+          "status": "pending"
+        },
+        {
+          "number": 2,
+          "line": 243,
+          "heading": "The Affirmation of Party in Antebellum America",
+          "title_zh": "内战前美国对政党的肯定",
+          "status": "pending"
+        },
+        {
+          "number": 3,
+          "line": 421,
+          "heading": "Free Labor Republicanism as a Party Project",
+          "title_zh": "作为政党事业的自由劳动共和主义",
+          "status": "pending"
+        },
+        {
+          "number": 4,
+          "line": 585,
+          "heading": "The Politics of Industrialism and the Progressive Transformation of Party",
+          "title_zh": "工业主义政治与政党的进步主义转型",
+          "status": "pending"
+        },
+        {
+          "number": 5,
+          "line": 787,
+          "heading": "Visions of Party from the New Deal to McGovern-Fraser",
+          "title_zh": "从新政到麦戈文—弗雷泽改革的政党愿景",
+          "status": "pending"
+        },
+        {
+          "number": 6,
+          "line": 1053,
+          "heading": "The Long New Right and the World It Made",
+          "title_zh": "漫长的新右翼运动及其塑造的世界",
+          "status": "pending"
+        },
+        {
+          "number": 7,
+          "line": 1273,
+          "heading": "The Politics of Listlessness",
+          "title_zh": "意兴阑珊的政治",
+          "status": "pending"
+        },
+        {
+          "number": 8,
+          "line": 1503,
+          "heading": "Politics without Guardrails",
+          "title_zh": "没有护栏的政治",
+          "status": "pending"
+        },
+        {
+          "number": 9,
+          "line": 1725,
+          "heading": "Toward Party Renewal",
+          "title_zh": "走向政党重建",
+          "status": "pending"
+        }
+      ],
+      "completed_ranges": []
+    }
+  ]
+}
