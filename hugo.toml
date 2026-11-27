@@ -56,3 +56,6 @@ timeZone = "Asia/Tokyo"
   startLevel = 1
   endLevel = 3
   ordered = false
+
+[cascade.params]
+  robotsNoIndex = true
